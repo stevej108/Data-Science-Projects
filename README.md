@@ -41,3 +41,5 @@
 12. **Banking Customer Segmentation**
     Using a variety of unsupervised ML techniques, customers from a local financial institution were segmented based on a variety factors including bank history, demographics, and banking interactions.  Based on the available data, areas for improvement in how the banks were interacting with customers were suggested to improve customer satisfaction.  Additionally, customers segments were identified in which additional product marketing efforts should be directed.
     
+13. **Chatbot training using NLP**
+    Using an LSTM Deep Learning technique based on the GloVe model, a chatbot training model was constructed in an effort to create seemless conversations between end users and Company X.
