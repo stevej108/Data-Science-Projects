@@ -43,3 +43,6 @@
     
 13. **Chatbot training using NLP**
     Using an LSTM Deep Learning technique based on the GloVe model, a chatbot training model was constructed in an effort to create seemless conversations between end users and Company X.
+
+14. **Credit Card Churn Predictive Analytics**
+   Built a highly predictive, robust, and generalizable model to identify key features resulting in credit card customer churn/attrition rates.
