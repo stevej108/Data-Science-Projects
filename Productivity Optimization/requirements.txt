@@ -1,0 +1,33 @@
+# ==========================================================
+# Enterprise Knowledge Assistant
+# Runtime Dependencies
+# ==========================================================
+
+# ---------- AI / LLM ----------
+langchain>=0.3
+langgraph>=0.6
+langchain-ollama>=0.3
+ollama>=0.5
+
+# ---------- Data ----------
+pandas>=2.2
+numpy>=2.2
+
+# ---------- Document Parsing ----------
+python-pptx>=1.0
+python-docx>=1.1
+PyMuPDF>=1.26
+openpyxl>=3.1
+
+# ---------- User Interface ----------
+streamlit>=1.47
+
+# ---------- Utilities ----------
+typing-extensions>=4.12
+
+# ---------- Optional Development ----------
+black>=25.0
+ruff>=0.12
+pytest>=8.4
+pytest-cov>=6.2
+ipykernel>=6.30

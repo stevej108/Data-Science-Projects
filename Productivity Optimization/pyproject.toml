@@ -1,0 +1,108 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enterprise-knowledge-assistant"
+version = "1.0.0"
+description = "AI-powered enterprise document search, retrieval, and executive summarization using LangGraph."
+readme = "README.md"
+requires-python = ">=3.11"
+
+authors = [
+    { name = "Your Team" }
+]
+
+license = { text = "MIT" }
+
+keywords = [
+    "enterprise-search",
+    "knowledge-management",
+    "langgraph",
+    "langchain",
+    "ollama",
+    "streamlit",
+    "rag",
+    "onedrive",
+    "document-search",
+    "executive-summary"
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "langgraph",
+    "langchain",
+    "langchain-ollama",
+    "streamlit",
+    "python-docx",
+    "python-pptx",
+    "PyMuPDF",
+    "openpyxl",
+    "pandas",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "pytest",
+    "pytest-cov",
+    "ipykernel",
+]
+
+[project.urls]
+Homepage = "https://github.com/<organization>/enterprise-knowledge-assistant"
+Repository = "https://github.com/<organization>/enterprise-knowledge-assistant"
+Issues = "https://github.com/<organization>/enterprise-knowledge-assistant/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "agents*",
+    "core*",
+    "helpers*",
+    "prompts*",
+    "ui*",
+]
+
+[tool.setuptools.package-data]
+prompts = ["*.py"]
+
+[tool.setuptools.exclude-package-data]
+"*" = [
+    "*.ipynb",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
