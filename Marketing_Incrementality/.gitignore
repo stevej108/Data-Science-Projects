@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Generated output
+output/
+
+# Test cache
+.pytest_cache/
+
+# Ruff
+.ruff_cache/
+
+# MyPy
+.mypy_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local configuration
+.env
+.env.*
+
+# Temporary files
+*.tmp

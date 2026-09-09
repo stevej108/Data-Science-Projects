@@ -1,0 +1,36 @@
+Spend_DMA,Suggested_DMA,Approved_DMA,Status
+Atlanta,"Atlanta, GA","Atlanta, GA",AUTO
+Baltimore,"Baltimore, MD","Baltimore, MD",AUTO
+Boston,"Boston, MA (Manchester, NH)","Boston, MA (Manchester, NH)",AUTO
+Buffalo,"Buffalo, NY","Buffalo, NY",AUTO
+Charlotte,"Charlotte, NC","Charlotte, NC",AUTO
+Chicago,"Chicago, IL","Chicago, IL",AUTO
+Cincinnati,"Cincinnati, OH","Cincinnati, OH",AUTO
+Cleveland,"Cleveland-Akron (Canton), OH","Cleveland-Akron (Canton), OH",AUTO
+Columbus,"Columbus, OH","Columbus, OH",MANUAL
+Dallas,"Dallas-Ft. Worth, TX","Dallas-Ft. Worth, TX",AUTO
+Detroit,"Detroit, MI","Detroit, MI",AUTO
+El Paso,"El Paso, TX (Las Cruces, NM)","El Paso, TX (Las Cruces, NM)",AUTO
+Fort Myers,"Ft. Myers-Naples, FL","Ft. Myers-Naples, FL",AUTO_FUZZY
+Harlingen/McAllen,"Harlingen-Weslaco-Brownsville-McAllen, TX","Harlingen-Weslaco-Brownsville-McAllen, TX",MANUAL
+Hartford,"Hartford & New Haven, CT","Hartford & New Haven, CT",MANUAL
+Houston,"Houston, TX","Houston, TX",AUTO
+Includes Chelsea Event in April,,,"MISSING"
+Las Vegas,"Las Vegas, NV","Las Vegas, NV",AUTO
+Los Angeles,"Los Angeles, CA","Los Angeles, CA",AUTO
+Miami,"Miami-Ft. Lauderdale, FL","Miami-Ft. Lauderdale, FL",AUTO
+Minneapolis,"Minneapolis-St. Paul, MN","Minneapolis-St. Paul, MN",AUTO
+New York,"New York, NY","New York, NY",AUTO
+Oklahoma City,"Oklahoma City, OK","Oklahoma City, OK",AUTO
+Orlando,"Orlando-Daytona Beach-Melbourne, FL","Orlando-Daytona Beach-Melbourne, FL",AUTO
+Philadelphia,"Philadelphia, PA","Philadelphia, PA",AUTO
+Phoenix,"Phoenix (Prescott), AZ","Phoenix (Prescott), AZ",AUTO
+Providence,"Providence, RI-New Bedford, MA","Providence, RI-New Bedford, MA",AUTO
+Puerto Rico,"Puerto Rico","Puerto Rico",AUTO
+Sacramento,"Sacramento-Stockton-Modesto, CA","Sacramento-Stockton-Modesto, CA",AUTO
+San Antonio,"San Antonio, TX","San Antonio, TX",AUTO
+San Diego,"San Diego, CA","San Diego, CA",AUTO
+Seattle,"Seattle-Tacoma, WA","Seattle-Tacoma, WA",AUTO
+Tampa,"Tampa-St. Petersburg (Sarasota), FL","Tampa-St. Petersburg (Sarasota), FL",AUTO
+Washington DC,"Washington, DC (Hagerstown, MD)","Washington, DC (Hagerstown, MD)",AUTO_FUZZY
+West Palm,"West Palm Beach-Ft. Pierce, FL","West Palm Beach-Ft. Pierce, FL",MANUAL

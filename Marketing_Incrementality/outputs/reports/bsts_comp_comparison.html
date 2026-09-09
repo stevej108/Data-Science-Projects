@@ -1,0 +1,827 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+>
+
+<title>
+BSTS / Comp Traffic Comparison
+</title>
+
+<style>
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    margin: 0;
+
+    background: #f4f6f8;
+
+    color: #1f2933;
+
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 30px;
+}
+
+header {
+    background: #102a43;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0 0 8px 0;
+
+    font-size: 32px;
+}
+
+h2 {
+    color: #243b53;
+
+    margin-top: 0;
+}
+
+h3 {
+    color: #334e68;
+}
+
+section {
+    background: white;
+
+    padding: 24px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0,0,0,.08);
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                210px,
+                1fr
+            )
+        );
+
+    gap: 12px;
+}
+
+.card {
+    background: #eef2f7;
+
+    border-radius: 10px;
+
+    padding: 16px;
+}
+
+.label {
+    font-size: 12px;
+
+    color: #627d98;
+}
+
+.value {
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: #102a43;
+
+    margin-top: 4px;
+}
+
+.detail {
+    font-size: 12px;
+
+    color: #627d98;
+
+    margin-top: 4px;
+}
+
+.takeaway {
+    background: #eef6ff;
+
+    border-left:
+        4px solid
+        #3578c6;
+
+    padding:
+        16px 20px;
+
+    border-radius: 6px;
+
+    margin-top: 20px;
+}
+
+.warning {
+    background: #fff8e6;
+
+    border-left:
+        4px solid
+        #d99a00;
+
+    padding:
+        16px 20px;
+
+    border-radius: 6px;
+}
+
+.report-table {
+    border-collapse:
+        collapse;
+
+    width: 100%;
+
+    background: white;
+
+    font-size: 13px;
+}
+
+.report-table th,
+.report-table td {
+    border:
+        1px solid #ddd;
+
+    padding: 8px;
+
+    text-align: right;
+}
+
+.report-table th {
+    background: #eef2f7;
+
+    color: #243b53;
+}
+
+.report-table td:first-child,
+.report-table th:first-child {
+    text-align: left;
+}
+
+.figure {
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.figure img {
+    max-width: 100%;
+
+    height: auto;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 6px;
+}
+
+.formula {
+    background: #f7f9fb;
+
+    padding: 15px;
+
+    border-radius: 6px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    margin:
+        12px 0;
+}
+
+.small {
+    font-size: 12px;
+
+    color: #627d98;
+}
+
+footer {
+    color: #627d98;
+
+    font-size: 11px;
+
+    margin-top: 20px;
+}
+
+@media (
+    max-width: 750px
+) {
+
+    .container {
+        padding: 15px;
+    }
+
+}
+
+# .dma-results-table {
+#     width: 100%;
+#     table-layout: fixed;
+#     border-collapse: collapse;
+#     font-size: 9px;
+# }
+
+# .dma-results-table th,
+# .dma-results-table td {
+#     padding: 4px 5px;
+#     border: 1px solid #ddd;
+#     word-wrap: break-word;
+#     overflow-wrap: anywhere;
+#     white-space: normal;
+# }
+
+# .dma-results-table th {
+#     font-weight: bold;
+# }
+
+# .dma-results-table th:first-child,
+# .dma-results-table td:first-child {
+#     width: 18%;
+# }
+
+# .dma-results-table th:nth-child(2),
+# .dma-results-table td:nth-child(2) {
+#     width: 6%;
+# }
+
+# .dma-results-table th:nth-child(3),
+# .dma-results-table td:nth-child(3) {
+#     width: 11%;
+# }
+
+# .dma-results-table th:nth-child(4),
+# .dma-results-table td:nth-child(4) {
+#     width: 9%;
+# }
+
+# .dma-results-table th:nth-child(5),
+# .dma-results-table td:nth-child(5) {
+#     width: 9%;
+# }
+
+# .dma-results-table th:nth-child(6),
+# .dma-results-table td:nth-child(6) {
+#     width: 10%;
+# }
+
+# .dma-results-table th:nth-child(7),
+# .dma-results-table td:nth-child(7) {
+#     width: 10%;
+# }
+
+# .dma-results-table th:nth-child(8),
+# .dma-results-table td:nth-child(8) {
+#     width: 10%;
+# }
+
+# .dma-results-table th:nth-child(9),
+# .dma-results-table td:nth-child(9) {
+#     width: 8%;
+# }
+
+# .dma-results-table th:nth-child(10),
+# .dma-results-table td:nth-child(10) {
+#     width: 9%;
+# }
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>
+BSTS / Comp Traffic Comparison
+</h1>
+
+<div>
+The implied counterfactual comp is mathematically derived from the BSTS relative lift and observed comp performance. It is not independently modeled comp performance and should not be interpreted as a separate causal estimate
+</div>
+
+</header>
+
+<section>
+
+<h2>
+Treatment Population
+</h2>
+
+<div class="cards">
+
+
+    <div class="card">
+        <div class="label">
+            Positive Impact
+        </div>
+
+        <div class="value">
+            2
+        </div>
+
+        <div class="detail">
+            positive BSTS effect and positive observed comp
+        </div>
+    </div>
+    
+
+
+    <div class="card">
+        <div class="label">
+            Mitigated Decline
+        </div>
+
+        <div class="value">
+            3
+        </div>
+
+        <div class="detail">
+            positive estimated effect despite negative observed comp
+        </div>
+    </div>
+    
+
+
+    <div class="card">
+        <div class="label">
+            Offsetting Drag
+        </div>
+
+        <div class="value">
+            1
+        </div>
+
+        <div class="detail">
+            negative estimated effect despite positive observed comp
+        </div>
+    </div>
+    
+
+
+    <div class="card">
+        <div class="label">
+            Negative Impact
+        </div>
+
+        <div class="value">
+            4
+        </div>
+
+        <div class="detail">
+            negative BSTS effect and negative observed comp
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="takeaway">
+
+<strong>
+Headline:
+</strong>
+
+Across production-valid DMAs, the BSTS results translate into a negative average theoretical contribution to comp traffic.
+
+<p>
+Across the production-valid DMAs, the BSTS model estimated an average relative traffic lift of -0.28%. Actual comp performance averaged -0.48%, while the BSTS-implied counterfactual comp averaged 0.24%. The resulting theoretical incremental comp contribution averaged -0.72%.
+</p>
+
+<section>
+
+<h2>
+DMA Response Classification
+</h2>
+
+<p>
+2 DMAs were classified as Positive Impact, 3 as Mitigated Decline, 1 as Offsetting Drag, and 4 as Negative Impact. This distribution highlights substantial DMA-level heterogeneity in the estimated intervention response.
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h2>
+How to Interpret the Comparison
+</h2>
+
+<p>
+The BSTS model estimates the incremental traffic
+associated with the intervention by comparing observed
+traffic with a modeled counterfactual.
+</p>
+
+<p>
+The comp-traffic dataset measures year-over-year traffic
+performance among stores currently classified as comp stores.
+Because the BSTS traffic population and comp-store population
+are not identical, the two measures should not be directly
+divided against one another.
+</p>
+
+<p>
+Instead, the BSTS relative lift is used to construct a
+theoretical comp counterfactual.
+</p>
+
+<div class="formula">
+
+Implied Counterfactual Comp
+=
+((1 + Actual Comp) /
+(1 + BSTS Relative Lift)) - 1
+
+</div>
+
+<div class="formula">
+
+Implied Incremental Comp
+=
+Actual Comp -
+Implied Counterfactual Comp
+
+</div>
+
+<p class="small">
+
+This is a translation of the BSTS result into comp-traffic
+terms. It is not a separate causal model of comp traffic and
+should not be interpreted as an independent causal estimate.
+
+</p>
+
+</section>
+
+
+<section>
+
+<h2>
+DMA-Level Results
+</h2>
+
+<table border="1" class="dataframe report-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>DMA</th>
+      <th>Comp Months</th>
+      <th>BSTS Incremental Traffic</th>
+      <th>BSTS Lift</th>
+      <th>Probability Positive</th>
+      <th>Actual Comp</th>
+      <th>Implied Counterfactual Comp</th>
+      <th>Implied Incremental Comp</th>
+      <th>Impact Classification</th>
+      <th>Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Atlanta, GA</td>
+      <td>7</td>
+      <td>-184,005</td>
+      <td>-3.61%</td>
+      <td>27.01%</td>
+      <td>2.75%</td>
+      <td>6.59%</td>
+      <td>-3.85%</td>
+      <td>Offsetting Drag</td>
+      <td>Observed comp traffic remained positive, but the BSTS counterfactual implies performance could have been stronger without the intervention.</td>
+    </tr>
+    <tr>
+      <td>Boston, MA (Manchester, NH)</td>
+      <td>7</td>
+      <td>-115,123</td>
+      <td>-2.48%</td>
+      <td>33.77%</td>
+      <td>-1.76%</td>
+      <td>0.74%</td>
+      <td>-2.50%</td>
+      <td>Negative Impact</td>
+      <td>Negative BSTS-estimated intervention effect accompanied by negative observed comp traffic.</td>
+    </tr>
+    <tr>
+      <td>Chicago, IL</td>
+      <td>7</td>
+      <td>-597,897</td>
+      <td>-6.91%</td>
+      <td>18.34%</td>
+      <td>-0.22%</td>
+      <td>7.18%</td>
+      <td>-7.40%</td>
+      <td>Negative Impact</td>
+      <td>Negative BSTS-estimated intervention effect accompanied by negative observed comp traffic.</td>
+    </tr>
+    <tr>
+      <td>Dallas-Ft. Worth, TX</td>
+      <td>7</td>
+      <td>32,590</td>
+      <td>0.83%</td>
+      <td>53.30%</td>
+      <td>-0.16%</td>
+      <td>-0.99%</td>
+      <td>0.82%</td>
+      <td>Mitigated Decline</td>
+      <td>Observed comp traffic declined, but the BSTS counterfactual implies the decline may have been larger without the intervention.</td>
+    </tr>
+    <tr>
+      <td>Houston, TX</td>
+      <td>7</td>
+      <td>-532,486</td>
+      <td>-6.99%</td>
+      <td>12.12%</td>
+      <td>-4.41%</td>
+      <td>2.78%</td>
+      <td>-7.19%</td>
+      <td>Negative Impact</td>
+      <td>Negative BSTS-estimated intervention effect accompanied by negative observed comp traffic.</td>
+    </tr>
+    <tr>
+      <td>Los Angeles, CA</td>
+      <td>7</td>
+      <td>664,230</td>
+      <td>6.96%</td>
+      <td>91.94%</td>
+      <td>0.57%</td>
+      <td>-5.97%</td>
+      <td>6.54%</td>
+      <td>Positive Impact</td>
+      <td>Positive BSTS-estimated intervention effect with positive observed comp traffic.</td>
+    </tr>
+    <tr>
+      <td>Miami-Ft. Lauderdale, FL</td>
+      <td>4</td>
+      <td>251,764</td>
+      <td>6.43%</td>
+      <td>83.45%</td>
+      <td>-3.33%</td>
+      <td>-9.17%</td>
+      <td>5.84%</td>
+      <td>Mitigated Decline</td>
+      <td>Observed comp traffic declined, but the BSTS counterfactual implies the decline may have been larger without the intervention.</td>
+    </tr>
+    <tr>
+      <td>New York, NY</td>
+      <td>7</td>
+      <td>963,299</td>
+      <td>5.35%</td>
+      <td>81.39%</td>
+      <td>-0.01%</td>
+      <td>-5.09%</td>
+      <td>5.08%</td>
+      <td>Mitigated Decline</td>
+      <td>Observed comp traffic declined, but the BSTS counterfactual implies the decline may have been larger without the intervention.</td>
+    </tr>
+    <tr>
+      <td>Philadelphia, PA</td>
+      <td>7</td>
+      <td>-698,524</td>
+      <td>-12.08%</td>
+      <td>2.10%</td>
+      <td>-0.66%</td>
+      <td>12.99%</td>
+      <td>-13.65%</td>
+      <td>Negative Impact</td>
+      <td>Negative BSTS-estimated intervention effect accompanied by negative observed comp traffic.</td>
+    </tr>
+    <tr>
+      <td>Puerto Rico</td>
+      <td>4</td>
+      <td>463,815</td>
+      <td>9.72%</td>
+      <td>91.79%</td>
+      <td>2.46%</td>
+      <td>-6.61%</td>
+      <td>9.08%</td>
+      <td>Positive Impact</td>
+      <td>Positive BSTS-estimated intervention effect with positive observed comp traffic.</td>
+    </tr>
+  </tbody>
+</table>
+
+</section>
+
+
+<section>
+
+<h2>
+BSTS Lift vs Actual Comp
+</h2>
+
+<p>
+This comparison shows whether DMAs with positive or negative
+BSTS-estimated intervention effects also exhibited positive
+or negative year-over-year comp performance.
+</p>
+
+
+    <div class="figure">
+        <h3>
+            BSTS Relative Lift vs Actual Comp Traffic
+        </h3>
+
+        <img
+            src="../figures/bsts_comp_comparison/bsts_vs_actual_comp.png"
+            alt="BSTS Relative Lift vs Actual Comp Traffic"
+        >
+    </div>
+    
+
+</section>
+
+
+<section>
+
+<h2>
+Actual Comp vs Implied Counterfactual
+</h2>
+
+<p>
+The implied counterfactual represents the theoretical comp
+performance after removing the BSTS-estimated intervention
+lift from the observed comp result.
+</p>
+
+
+    <div class="figure">
+        <h3>
+            Actual vs BSTS-Implied Counterfactual Comp
+        </h3>
+
+        <img
+            src="../figures/bsts_comp_comparison/actual_vs_counterfactual_comp.png"
+            alt="Actual vs BSTS-Implied Counterfactual Comp"
+        >
+    </div>
+    
+
+</section>
+
+
+<section>
+
+<h2>
+Implied Incremental Comp
+</h2>
+
+<p>
+This represents the theoretical percentage-point contribution
+of the intervention to comp traffic under the translation
+assumption described above.
+</p>
+
+
+    <div class="figure">
+        <h3>
+            BSTS-Implied Incremental Comp Traffic
+        </h3>
+
+        <img
+            src="../figures/bsts_comp_comparison/implied_incremental_comp.png"
+            alt="BSTS-Implied Incremental Comp Traffic"
+        >
+    </div>
+    
+
+</section>
+
+
+<section>
+
+<h2>
+Important Analytical Caveat
+</h2>
+
+<div class="warning">
+
+<strong>
+This is a reconciliation analysis, not a second causal model.
+</strong>
+
+<p>
+The BSTS model is the causal framework used to estimate
+incremental traffic. The comp calculation provides an
+additional business interpretation of that result.
+</p>
+
+<p>
+In particular, the translation assumes that the relative
+BSTS intervention lift can be applied proportionally to the
+observed comp traffic rate. This assumption allows us to
+express the BSTS result in familiar comp-traffic terms, but
+it does not prove that the intervention independently caused
+the calculated comp percentage-point change.
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>
+Management Interpretation
+</h2>
+
+<p>
+<section>
+
+<h2>
+Management Interpretation
+</h2>
+
+<p>
+The BSTS / comp comparison indicates that response to the
+marketing intervention varied materially across DMAs.
+The four classifications distinguish observed year-over-year
+comp performance from the modeled intervention-associated
+traffic effect.
+</p>
+
+<p>
+<strong>Positive Impact</strong> markets exhibited both a
+positive BSTS-estimated intervention effect and positive
+observed comp traffic. These represent the most consistently
+favorable results.
+</p>
+
+<p>
+<strong>Mitigated Decline</strong> markets experienced negative
+observed comp traffic, but the BSTS counterfactual suggests
+performance could have been weaker without the intervention.
+The intervention therefore appears to have partially offset
+underlying traffic pressure.
+</p>
+
+<p>
+<strong>Offsetting Drag</strong> markets retained positive
+observed comp traffic, but the BSTS estimate indicates that
+performance may have been stronger absent the intervention.
+These markets warrant closer investigation because positive
+headline comp performance may mask an unfavorable modeled
+intervention effect.
+</p>
+
+<p>
+<strong>Negative Impact</strong> markets exhibited both negative
+observed comp traffic and a negative BSTS-estimated intervention
+effect. These markets provide the clearest unfavorable signal
+within the comparison framework.
+</p>
+
+</section>
+
+
+<footer>
+
+Generated from persisted BSTS causal-impact outputs and
+DMA-level comp traffic outputs.
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

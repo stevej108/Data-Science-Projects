@@ -1,0 +1,7 @@
+Relationship,Spend_Metric,Impact_Metric,N,Pearson_R,Pearson_P_Value,Spearman_Rho,Spearman_P_Value
+Spend Change vs Incremental Traffic,Monthly_Spend_Change,Incremental_Traffic_Mean,9,0.5722644574660541,0.10735294762131788,0.21666666666666667,0.5755148957119259
+Spend % Change vs Incremental Traffic,Monthly_Spend_Change_Pct,Incremental_Traffic_Mean,9,0.2424308416485287,0.5296774073804641,0.13333333333333333,0.7323675052362973
+Spend % Change vs Relative Lift,Monthly_Spend_Change_Pct,Relative_Lift_Median,9,0.08842552881425517,0.8210306326539716,-0.15,0.7000942309691418
+Post Spend Level vs Incremental Traffic,Post_Monthly_Spend_Mean,Incremental_Traffic_Mean,9,0.6304566329073296,0.06872481287164836,0.35,0.35581957250178897
+Incremental Post Spend vs Incremental Traffic,Incremental_Post_Spend,Incremental_Traffic_Mean,9,0.5722644574660539,0.10735294762131788,0.21666666666666667,0.5755148957119259
+Incremental Post Spend vs Relative Lift,Incremental_Post_Spend,Relative_Lift_Median,9,0.3060322008666737,0.42318627056891034,-0.11666666666666665,0.765007942926146

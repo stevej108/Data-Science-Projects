@@ -1,0 +1,11 @@
+Metric,Value
+Valid,True
+Months,8
+Controls,33
+Start_Date,2025-02-01 00:00:00
+End_Date,2025-09-01 00:00:00
+Missing_Months,0
+Controls_With_Missing,0
+Insufficient_Controls,33
+Zero_Variance_Controls,0
+Negative_Values,0

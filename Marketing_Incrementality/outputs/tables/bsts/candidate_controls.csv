@@ -1,0 +1,34 @@
+DMA,Observations,Months,Missing_Traffic,Avg_Traffic,Is_Treated
+"Atlanta, GA",11,11,0,652537.0,0
+"Baltimore, MD",11,11,0,324787.36363636365,0
+"Boston, MA (Manchester, NH)",11,11,0,521410.7272727273,0
+"Buffalo, NY",11,11,0,59956.0,0
+"Charlotte, NC",11,11,0,271714.45454545453,0
+"Chicago, IL",11,11,0,1007325.0909090909,0
+"Cincinnati, OH",11,11,0,164846.0909090909,0
+"Cleveland-Akron (Canton), OH",11,11,0,191557.54545454544,0
+"Columbus, OH",11,11,0,132691.27272727274,0
+"Dallas-Ft. Worth, TX",11,11,0,884433.4545454546,0
+"Detroit, MI",11,11,0,343189.0909090909,0
+"El Paso, TX (Las Cruces, NM)",11,11,0,324671.1818181818,0
+"Ft. Myers-Naples, FL",11,11,0,204975.27272727274,0
+"Harlingen-Weslaco-Brownsville-McAllen, TX",11,11,0,400742.1818181818,0
+"Hartford & New Haven, CT",11,11,0,256076.72727272726,0
+"Houston, TX",11,11,0,1008022.0,0
+"Las Vegas, NV",11,11,0,270053.7272727273,0
+"Los Angeles, CA",11,11,0,1373461.5454545454,0
+"Miami-Ft. Lauderdale, FL",11,11,0,1132285.7272727273,0
+"Minneapolis-St. Paul, MN",11,11,0,265987.45454545453,0
+"New York, NY",11,11,0,2987800.0,0
+"Oklahoma City, OK",11,11,0,156890.27272727274,0
+"Orlando-Daytona Beach-Melbourne, FL",11,11,0,670421.0,0
+"Philadelphia, PA",11,11,0,731850.6363636364,0
+"Phoenix (Prescott), AZ",11,11,0,393943.2727272727,0
+"Providence, RI-New Bedford, MA",11,11,0,219454.72727272726,0
+Puerto Rico,11,11,0,1287344.6363636365,0
+"Sacramento-Stockton-Modesto, CA",11,11,0,375555.9090909091,0
+"San Antonio, TX",11,11,0,430221.36363636365,0
+"San Diego, CA",11,11,0,268069.54545454547,0
+"Seattle-Tacoma, WA",11,11,0,335280.0,0
+"Tampa-St. Petersburg (Sarasota), FL",11,11,0,544259.7272727273,0
+"Washington, DC (Hagerstown, MD)",11,11,0,551231.2727272727,0

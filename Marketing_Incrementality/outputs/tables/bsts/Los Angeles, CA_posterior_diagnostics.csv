@@ -1,0 +1,2 @@
+DMA,Chains,Draws_Per_Chain,Total_Draws,Max_Rhat,Min_ESS_Bulk,Min_ESS_Tail,Divergences,Divergence_Rate,Parameters_Evaluated,Problematic_Parameters,Worst_Rhat_Parameter,Worst_Rhat,Worst_Bulk_ESS_Parameter,Worst_Bulk_ESS,Worst_Tail_ESS_Parameter,Worst_Tail_ESS,Rhat_OK,ESS_Bulk_OK,ESS_Tail_OK,Divergences_OK,Parameter_Diagnostics_OK
+"Los Angeles, CA",4,2000,8000,1.0012,3279.7672,3756.7649,0,0.0,8,0,beta[3],1.0012,sigma_obs,3279.7672,sigma_obs,3756.7649,True,True,True,True,True

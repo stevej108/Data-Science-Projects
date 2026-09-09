@@ -1,0 +1,2 @@
+DMA_Count,Valid_Comp_Comparisons,Positive_BSTS_DMAs,Negative_BSTS_DMAs,Positive_Actual_Comp_DMAs,Negative_Actual_Comp_DMAs,Mean_BSTS_Relative_Lift,Mean_Actual_Comp,Mean_Theoretical_Counterfactual_Comp,Mean_Theoretical_Incremental_Comp,Aligned_DMAs,Divergent_DMAs
+1,1,1,0,1,0,0.0972077425801982,0.16011743686723573,228.87129660346199,-228.71117916659475,1,0

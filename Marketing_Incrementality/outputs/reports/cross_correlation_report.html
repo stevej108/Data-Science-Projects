@@ -1,0 +1,740 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Marketing Cross-Correlation Report</title>
+
+<style>
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+    background: #f7f7f7;
+    color: #222;
+
+}
+
+h1 {
+
+    color: #003B5C;
+    border-bottom: 3px solid #003B5C;
+    padding-bottom: 10px;
+
+}
+
+h2 {
+
+    color: #003B5C;
+    margin-top: 40px;
+
+}
+
+h3 {
+
+    color: #444;
+
+}
+
+p {
+
+    line-height: 1.6;
+
+}
+
+table {
+
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+}
+
+th {
+
+    background: #003B5C;
+    color: white;
+    padding: 10px;
+
+}
+
+td {
+
+    border: 1px solid #ddd;
+    padding: 8px;
+
+}
+
+tr:nth-child(even) {
+
+    background: #f2f2f2;
+
+}
+
+.section {
+
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+
+}
+
+.card-container {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 25px 0;
+
+}
+
+.card {
+
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.10);
+
+}
+
+.card-title {
+
+    color: #666;
+    font-size: 14px;
+
+}
+
+.card-value {
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #003B5C;
+    margin-top: 10px;
+
+}
+
+.figure {
+
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.figure img {
+
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+}
+
+.footer {
+
+    margin-top: 60px;
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>
+Marketing Spend vs Traffic<br>
+Cross-Correlation Analysis Report
+</h1>
+
+<p>
+
+This report summarizes the temporal relationship between
+marketing spend and store traffic using Pearson correlation,
+lagged correlation analysis, rolling correlations, DMA-level
+correlations, and cross-correlation functions (CCF).
+
+</p>
+
+
+
+<div class="section">
+
+<h2>Executive Summary</h2>
+
+<p>
+
+This dashboard summarizes the primary findings from the
+national cross-correlation analysis between marketing spend
+and store traffic.
+
+</p>
+
+
+<div class="card-container">
+
+    <div class="card">
+
+        <div class="card-title">
+            Monthly Observations
+        </div>
+
+        <div class="card-value">
+            18
+        </div>
+
+        <small>
+            Feb 2025 – Jul 2026
+        </small>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-title">
+            Overall Correlation
+        </div>
+
+        <div class="card-value">
+            0.629
+        </div>
+
+        <small>
+            Pearson Correlation
+        </small>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-title">
+            Raw Peak CCF
+        </div>
+
+        <div class="card-value">
+            Lag 0
+        </div>
+
+        <small>
+            Corr = 0.629
+        </small>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-title">
+            Detrended Peak CCF
+        </div>
+
+        <div class="card-value">
+            Lag 0
+        </div>
+
+        <small>
+            Corr = 0.589
+        </small>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-title">
+            Strongest DMA
+        </div>
+
+        <div class="card-value">
+            Orlando-Daytona Beach-Melbourne, FL
+        </div>
+
+        <small>
+            Corr = 0.731
+        </small>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Overall Correlation</h2>
+
+<p>
+
+The overall Pearson correlation summarizes the linear
+relationship between national marketing spend and store
+traffic across the study period.
+
+</p>
+
+<table>
+
+<tr>
+
+<th>Metric</th>
+
+<th>Value</th>
+
+</tr>
+
+<tr>
+
+<td>Overall Correlation</td>
+
+<td>0.629</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Lagged Correlation Analysis</h2>
+
+<p>
+
+Lagged correlations evaluate whether marketing spend
+is more strongly associated with traffic occurring
+several months into the future.
+
+</p>
+
+<h3>Raw Series</h3>
+
+<div class="figure">
+
+<img src="../figures/cross_correlation/lag_analysis/raw_lagged_correlation.png"
+width="900">
+
+</div>
+
+<table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Analysis</th>
+      <th>Lag</th>
+      <th>Correlation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>raw</td>
+      <td>0</td>
+      <td>0.629</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>1</td>
+      <td>0.177</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>2</td>
+      <td>-0.275</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>3</td>
+      <td>-0.318</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>4</td>
+      <td>0.180</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>5</td>
+      <td>0.474</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>6</td>
+      <td>-0.087</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>7</td>
+      <td>-0.046</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>8</td>
+      <td>-0.002</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>9</td>
+      <td>0.021</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>10</td>
+      <td>-0.280</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>11</td>
+      <td>-0.092</td>
+    </tr>
+    <tr>
+      <td>raw</td>
+      <td>12</td>
+      <td>0.213</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<h3>Detrended Series</h3>
+
+<div class="figure">
+
+<img src="../figures/cross_correlation/lag_analysis/detrended_lagged_correlation.png"
+width="900">
+
+</div>
+
+<table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Analysis</th>
+      <th>Lag</th>
+      <th>Correlation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>detrended</td>
+      <td>0</td>
+      <td>0.589</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>1</td>
+      <td>0.127</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>2</td>
+      <td>-0.390</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>3</td>
+      <td>-0.433</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>4</td>
+      <td>0.097</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>5</td>
+      <td>0.431</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>6</td>
+      <td>-0.186</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>7</td>
+      <td>-0.187</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>8</td>
+      <td>-0.047</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>9</td>
+      <td>0.118</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>10</td>
+      <td>-0.266</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>11</td>
+      <td>-0.320</td>
+    </tr>
+    <tr>
+      <td>detrended</td>
+      <td>12</td>
+      <td>0.070</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Rolling Correlation</h2>
+
+<p>
+
+Rolling six-month correlations illustrate how the
+relationship between marketing spend and traffic
+changed throughout the study period.
+
+</p>
+
+<div class="figure">
+
+<img src="../figures/cross_correlation/rolling/rolling_correlation.png"
+width="900">
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>DMA Correlation Rankings</h2>
+
+<p>
+
+DMA-level correlations identify geographic markets
+where historical marketing spend has shown the strongest
+association with store traffic.
+
+</p>
+
+<table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>DMA</th>
+      <th>Correlation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Orlando-Daytona Beach-Melbourne, FL</td>
+      <td>0.731</td>
+    </tr>
+    <tr>
+      <td>El Paso, TX (Las Cruces, NM)</td>
+      <td>0.730</td>
+    </tr>
+    <tr>
+      <td>Boston, MA (Manchester, NH)</td>
+      <td>0.706</td>
+    </tr>
+    <tr>
+      <td>Oklahoma City, OK</td>
+      <td>0.701</td>
+    </tr>
+    <tr>
+      <td>Washington, DC (Hagerstown, MD)</td>
+      <td>0.647</td>
+    </tr>
+    <tr>
+      <td>Philadelphia, PA</td>
+      <td>0.642</td>
+    </tr>
+    <tr>
+      <td>San Antonio, TX</td>
+      <td>0.636</td>
+    </tr>
+    <tr>
+      <td>Houston, TX</td>
+      <td>0.597</td>
+    </tr>
+    <tr>
+      <td>Los Angeles, CA</td>
+      <td>0.593</td>
+    </tr>
+    <tr>
+      <td>San Diego, CA</td>
+      <td>0.590</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Cross-Correlation Function (Raw)</h2>
+
+<div class="figure">
+
+<img src="../figures/cross_correlation/overall/cross_correlation_function_raw.png"
+width="900">
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Cross-Correlation Function (Detrended)</h2>
+
+<div class="figure">
+
+<img src="../figures/cross_correlation/overall/cross_correlation_function_detrended.png"
+width="900">
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Raw vs. Detrended Comparison</h2>
+
+<p>
+
+Comparing the raw and detrended cross-correlation
+functions helps distinguish relationships driven by
+shared trends from those that persist after removing
+long-term movement and seasonality.
+
+</p>
+
+<div class="figure">
+
+<img src="../figures/cross_correlation/adjusted/raw_vs_detrended_ccf.png"
+width="900">
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Key Findings</h2>
+
+<ul>
+
+<li>
+
+Overall national spend and traffic exhibited a
+<b>moderate</b> positive relationship
+(Pearson Correlation = <b>0.629</b>).
+
+</li>
+
+<li>
+
+The strongest relationship in the raw data occurs contemporaneously (Lag 0), suggesting that changes in marketing spend and traffic tend to occur during the same month.
+
+</li>
+
+<li>
+
+The maximum raw cross-correlation occurred at
+<b>Lag 0</b>
+(Correlation = <b>0.629</b>).
+
+</li>
+
+<li>
+
+The maximum detrended cross-correlation occurred at
+<b>Lag 0</b>
+(Correlation = <b>0.589</b>).
+
+</li>
+
+<li>
+
+Detrending did not materially change the location of the peak correlation, indicating that the observed lag structure is relatively stable.
+
+</li>
+
+<li>
+
+The strongest DMA-level relationship was observed in <b>Orlando-Daytona Beach-Melbourne, FL</b> (Correlation = 0.731), suggesting this market exhibited the strongest historical association between spend and traffic.
+
+</li>
+
+<li>
+
+Rolling six-month correlations varied substantially throughout the study period (Range: 0.081 to 0.899; Mean: 0.559). This indicates that the relationship between marketing spend and traffic was not stable through time.
+
+</li>
+
+<li>
+
+Overall, the cross-correlation analysis provides
+preliminary evidence that marketing spend and store
+traffic exhibit measurable temporal association,
+although additional causal modeling is required to
+estimate true incremental impact.
+
+</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="footer">
+
+<hr>
+
+<p>
+
+Generated automatically by
+<b>06_cross_correlation.py</b>
+
+</p>
+
+<p>
+
+Marketing Incrementality Project
+
+</p>
+
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,40 @@
+{
+    "target_dma": "Washington, DC (Hagerstown, MD)",
+    "dates": [
+        "2025-02-01T00:00:00",
+        "2025-03-01T00:00:00",
+        "2025-04-01T00:00:00",
+        "2025-05-01T00:00:00",
+        "2025-06-01T00:00:00",
+        "2025-07-01T00:00:00",
+        "2025-08-01T00:00:00",
+        "2025-09-01T00:00:00",
+        "2025-10-01T00:00:00",
+        "2025-11-01T00:00:00",
+        "2025-12-01T00:00:00",
+        "2026-01-01T00:00:00",
+        "2026-02-01T00:00:00",
+        "2026-03-01T00:00:00",
+        "2026-04-01T00:00:00",
+        "2026-05-01T00:00:00",
+        "2026-06-01T00:00:00",
+        "2026-07-01T00:00:00"
+    ],
+    "intervention_date": "2026-01-01T00:00:00",
+    "n_pre": 11,
+    "y_mean": 551231.2727272727,
+    "y_std": 123686.29805725224,
+    "include_trend": true,
+    "include_seasonality": false,
+    "seasonal_period": 12,
+    "seasonal_harmonics": 1,
+    "control_dmas": [
+        "Cleveland-Akron (Canton), OH",
+        "Baltimore, MD",
+        "Cincinnati, OH",
+        "El Paso, TX (Las Cruces, NM)",
+        "Puerto Rico"
+    ],
+    "model_type": "deterministic_trend_control_fourier_bsts",
+    "model_version": "v3_regularized"
+}

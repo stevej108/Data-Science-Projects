@@ -1,0 +1,18 @@
+Metric,Value
+Rows,612
+Columns,39
+DMAs,34
+Months,18
+Expected Rows,612
+Actual Rows,612
+Panel Coverage,1.0
+Date Start,2025-02-01 00:00:00
+Date End,2026-07-01 00:00:00
+Missing DMA,0
+Missing Traffic,0
+Missing Spend,0
+Missing Transactions,0
+Missing Store Count,0
+Negative Spend,1
+Negative Traffic,0
+Duplicate DMA-Month,0

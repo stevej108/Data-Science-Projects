@@ -1,0 +1,34 @@
+Treated_DMA,Control_DMA,Correlation,RMSE,Mean_Absolute_Difference,Observations,Rank,Selected
+"West Palm Beach-Ft. Pierce, FL","Harlingen-Weslaco-Brownsville-McAllen, TX",0.9821491328343788,148678.42886873335,145173.625,8,1,1
+"West Palm Beach-Ft. Pierce, FL","El Paso, TX (Las Cruces, NM)",0.9818306332532251,61621.385440648766,60935.875,8,2,1
+"West Palm Beach-Ft. Pierce, FL","Boston, MA (Manchester, NH)",0.9617478520780358,255518.7865008657,252635.625,8,3,1
+"West Palm Beach-Ft. Pierce, FL","Los Angeles, CA",0.9602268927813347,1082337.4827947035,1069584.375,8,4,1
+"West Palm Beach-Ft. Pierce, FL","Hartford & New Haven, CT",0.9600855772102145,15030.144443750367,12285.75,8,5,1
+"West Palm Beach-Ft. Pierce, FL","Sacramento-Stockton-Modesto, CA",0.9581427460453477,127369.44977947028,123827.375,8,6,0
+"West Palm Beach-Ft. Pierce, FL","Houston, TX",0.935052063758656,740765.5238886324,730230.0,8,7,0
+"West Palm Beach-Ft. Pierce, FL","Miami-Ft. Lauderdale, FL",0.9189863400532109,850410.6028308473,840819.625,8,8,0
+"West Palm Beach-Ft. Pierce, FL","San Diego, CA",0.9082680687211988,26173.507137466313,22325.125,8,9,0
+"West Palm Beach-Ft. Pierce, FL","Charlotte, NC",0.9081055948611467,15304.252877060024,12547.125,8,10,0
+"West Palm Beach-Ft. Pierce, FL","Dallas-Ft. Worth, TX",0.9079321803718934,616550.2150413217,603717.75,8,11,0
+"West Palm Beach-Ft. Pierce, FL","Seattle-Tacoma, WA",0.903163104668289,94978.08553292701,87497.5,8,12,0
+"West Palm Beach-Ft. Pierce, FL","Tampa-St. Petersburg (Sarasota), FL",0.9030220223043182,294365.2566903489,286860.375,8,13,0
+"West Palm Beach-Ft. Pierce, FL",Puerto Rico,0.8887340031420469,959013.2754297513,950418.5,8,14,0
+"West Palm Beach-Ft. Pierce, FL","Baltimore, MD",0.8882728815711349,75895.9322839505,67353.0,8,15,0
+"West Palm Beach-Ft. Pierce, FL","Orlando-Daytona Beach-Melbourne, FL",0.8774952776473597,387307.77009295207,380593.625,8,16,0
+"West Palm Beach-Ft. Pierce, FL","Detroit, MI",0.8750493974316603,104715.97858552916,100458.375,8,17,0
+"West Palm Beach-Ft. Pierce, FL","New York, NY",0.870737103763184,2726281.120130681,2691721.75,8,18,0
+"West Palm Beach-Ft. Pierce, FL","Philadelphia, PA",0.8631560428312043,455498.1452469099,446873.375,8,19,0
+"West Palm Beach-Ft. Pierce, FL","Ft. Myers-Naples, FL",0.8547660083069996,54687.87313815559,51516.875,8,20,0
+"West Palm Beach-Ft. Pierce, FL","Washington, DC (Hagerstown, MD)",0.8547391656240763,279569.48374017864,269515.5,8,21,0
+"West Palm Beach-Ft. Pierce, FL","Chicago, IL",0.8470910737575885,719166.3563028203,700688.125,8,22,0
+"West Palm Beach-Ft. Pierce, FL","Cleveland-Akron (Canton), OH",0.8422837082768098,61896.87526240723,58310.0,8,23,0
+"West Palm Beach-Ft. Pierce, FL","Providence, RI-New Bedford, MA",0.8362455195769302,37111.21003820813,32520.5,8,24,0
+"West Palm Beach-Ft. Pierce, FL","Cincinnati, OH",0.8149207882305551,83398.23168164298,80690.375,8,25,0
+"West Palm Beach-Ft. Pierce, FL","San Antonio, TX",0.8098579540395296,186086.92040314118,179369.875,8,26,0
+"West Palm Beach-Ft. Pierce, FL","Atlanta, GA",0.8091692744705699,395014.72022603155,388225.75,8,27,0
+"West Palm Beach-Ft. Pierce, FL","Las Vegas, NV",0.7829460049192573,48768.4239749451,40563.0,8,28,0
+"West Palm Beach-Ft. Pierce, FL","Minneapolis-St. Paul, MN",0.7810051262307526,37649.0253509304,28809.625,8,29,0
+"West Palm Beach-Ft. Pierce, FL","Phoenix (Prescott), AZ",0.7760372026425402,135603.8293158604,131652.875,8,30,0
+"West Palm Beach-Ft. Pierce, FL","Columbus, OH",0.769127047323753,105764.86701996085,102964.5,8,31,0
+"West Palm Beach-Ft. Pierce, FL","Buffalo, NY",0.75244342777227,173706.1502235888,171870.75,8,32,0
+"West Palm Beach-Ft. Pierce, FL","Oklahoma City, OK",0.7184153429898097,109493.98701926513,106705.125,8,33,0

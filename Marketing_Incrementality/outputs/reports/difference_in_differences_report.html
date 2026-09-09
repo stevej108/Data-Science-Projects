@@ -1,0 +1,420 @@
+
+
+<html>
+
+<head>
+
+<title>
+Difference-in-Differences Report
+</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    margin:40px;
+    background:#fafafa;
+}
+
+h1{
+    color:#1f4e79;
+}
+
+h2{
+    border-bottom:2px solid #dddddd;
+    padding-bottom:6px;
+}
+
+table{
+    border-collapse:collapse;
+    width:100%;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+th{
+    background:#1f4e79;
+    color:white;
+    padding:8px;
+}
+
+td{
+    border:1px solid #dddddd;
+    padding:8px;
+}
+
+.card{
+
+    display:inline-block;
+
+    width:220px;
+
+    margin:10px;
+
+    padding:15px;
+
+    border:1px solid #cccccc;
+
+    border-radius:8px;
+
+    background:white;
+
+    text-align:center;
+
+}
+
+.figure{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    margin-bottom:35px;
+
+}
+
+.footer{
+
+    color:gray;
+
+    font-size:12px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>
+
+Difference-in-Differences Analysis
+
+</h1>
+
+<p>
+
+Marketing Incrementality Project
+
+</p>
+
+<hr>
+
+
+
+<h2>
+Summary
+</h2>
+
+
+<div class="card">
+
+<h3>Treated DMAs</h3>
+
+<h1>9</h1>
+
+</div>
+
+
+<div class="card">
+
+<h3>Control DMAs</h3>
+
+<h1>25</h1>
+
+</div>
+
+
+<div class="card">
+
+<h3>Intervention</h3>
+
+<h1>2026-01</h1>
+
+</div>
+
+
+<div class="card">
+
+<h3>Binary DiD Effect</h3>
+
+<h1>-5,752</h1>
+
+<p>
+p=0.8278
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Spend DiD Effect</h3>
+
+<h1>0.13</h1>
+
+<p>
+Traffic visits per additional dollar
+<br>
+p=0.6387
+</p>
+
+</div>
+
+
+<hr>
+
+
+
+<div class="section">
+
+<h2>Difference-in-Differences Results</h2>
+
+<p>
+
+The Difference-in-Differences model estimates the incremental
+change in traffic attributable to the marketing intervention
+after controlling for baseline differences between treatment
+and control DMAs.
+
+</p>
+
+<table>
+
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td>Treatment Effect</td>
+<td>-5,752.004</td>
+</tr>
+
+<tr>
+<td>P-Value</td>
+<td>0.8278</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="section">
+
+<h2>Parallel Trends Validation</h2>
+
+<p>
+
+A key assumption of Difference-in-Differences is that the
+treatment and control groups followed similar trends before
+the intervention.
+
+</p>
+
+<div class="figure">
+
+<img src="../figures/difference_in_differences/diagnostics/parallel_trends.png"
+width="900">
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>Treatment Effect Visualization</h2>
+
+<div class="figure">
+
+<img src="../figures/difference_in_differences/effects/treatment_vs_control.png"
+width="900">
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Key Findings</h2>
+
+
+<ul>
+
+
+<li>
+
+The Difference-in-Differences model estimated a post-treatment
+effect of
+
+<b>-5,752</b>
+
+average traffic visits for treated DMAs.
+
+</li>
+
+
+<li>
+
+The estimated treatment effect was statistically significant
+with a p-value of
+
+<b>0.8278</b>.
+
+However, statistical significance should be interpreted
+alongside the underlying market trends and treatment design.
+
+</li>
+
+
+<li>
+
+Before the intervention, Treatment DMAs averaged
+
+<b>1,079,786</b>
+
+monthly visits compared with
+
+<b>371,042</b>
+
+monthly visits for Control DMAs.
+
+This indicates that treated markets were materially different
+from control markets before the spend increase occurred.
+
+</li>
+
+
+<li>
+
+The pre-treatment traffic difference between groups was
+
+<b>675</b>
+
+visits, suggesting the Treatment and Control groups did not
+begin from identical baseline conditions.
+
+</li>
+
+
+<li>
+
+Following intervention:
+
+<ul>
+
+<li>
+
+Treatment DMAs changed by
+
+<b>3,718</b>
+
+visits.
+
+</li>
+
+<li>
+
+Control DMAs changed by
+
+<b>9,470</b>
+
+visits.
+
+</li>
+
+<li>
+
+The resulting Difference-in-Differences estimate was
+
+<b>-5,752</b>
+
+visits.
+
+</li>
+
+</ul>
+
+</li>
+
+
+<li>
+
+Because Treatment DMAs experienced higher baseline traffic
+and different pre-treatment trends, the estimated DiD effect
+may partially reflect underlying market differences rather
+than only incremental marketing impact.
+
+</li>
+
+
+</ul>
+
+
+<h3>Assumptions & Limitations</h3>
+
+
+<ul>
+
+
+<li>
+
+The Difference-in-Differences approach assumes that treated
+and control DMAs would have followed similar trends in the
+absence of the intervention.
+
+</li>
+
+
+<li>
+
+The observed pre-treatment trend differences indicate this
+assumption may not fully hold, reducing confidence in the
+causal interpretation.
+
+</li>
+
+
+<li>
+
+The analysis estimates the Average Treatment Effect on the
+Treated (ATT), meaning the estimated impact applies only to
+the treated DMA population.
+
+</li>
+
+
+<li>
+
+The upcoming Bayesian Structural Time Series (BSTS) model will
+provide an alternative counterfactual estimate that does not
+require identifying untreated DMA markets as controls.
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+<hr>
+
+<p>
+
+Generated automatically by
+<b>08_difference_in_differences.py</b>
+
+</p>
+
+</body>
+
+</html>
+

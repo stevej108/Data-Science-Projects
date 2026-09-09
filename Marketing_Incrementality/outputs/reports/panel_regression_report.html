@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+Panel Regression Analysis Report
+</title>
+
+
+<style>
+
+
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 40px;
+
+}
+
+
+h1 {
+
+    color: #333;
+
+}
+
+
+h2 {
+
+    color: #444;
+
+    border-bottom:
+    1px solid #ddd;
+
+    padding-bottom: 5px;
+
+}
+
+
+.section {
+
+    margin-bottom: 40px;
+
+}
+
+
+.cards {
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+
+.card {
+
+    border:1px solid #ddd;
+
+    padding:20px;
+
+    border-radius:8px;
+
+    width:220px;
+
+}
+
+
+.card h3 {
+
+    margin-top:0;
+
+}
+
+
+.figure {
+
+    margin-top:20px;
+
+}
+
+
+table {
+
+    border-collapse:collapse;
+
+    width:100%;
+
+}
+
+
+th {
+
+    background:#f2f2f2;
+
+}
+
+
+td, th {
+
+    padding:8px;
+
+    border:1px solid #ddd;
+
+}
+
+
+.footer {
+
+    margin-top:50px;
+
+    color:#777;
+
+    font-size:12px;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<h1>
+Marketing Incrementality -
+Panel Regression Analysis
+</h1>
+
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Best Model</h3>
+
+<p>
+Pooled OLS
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Within R²</h3>
+
+<p>
+0.496
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Spend Coefficient</h3>
+
+<p>
+2.5698
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Spend P-Value</h3>
+
+<p>
+0.0000
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Model Comparison</h2>
+
+<p>
+
+Three regression specifications were evaluated:
+
+<ul>
+
+<li>Pooled OLS</li>
+
+<li>DMA Fixed Effects</li>
+
+<li>DMA + Month Fixed Effects</li>
+
+</ul>
+
+The progression evaluates whether the relationship
+between marketing spend and traffic remains after
+controlling for market differences and seasonal effects.
+
+</p>
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Spend Coefficient</th>
+      <th>Spend P-Value</th>
+      <th>R-Squared</th>
+      <th>Observations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pooled OLS</td>
+      <td>2.5698</td>
+      <td>0.0000</td>
+      <td>0.4965</td>
+      <td>612.0000</td>
+    </tr>
+    <tr>
+      <td>DMA Fixed Effects</td>
+      <td>0.5195</td>
+      <td>0.0000</td>
+      <td>0.1942</td>
+      <td>612.0000</td>
+    </tr>
+    <tr>
+      <td>DMA + Time Fixed Effects</td>
+      <td>0.3439</td>
+      <td>0.0000</td>
+      <td>0.1720</td>
+      <td>612.0000</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Marketing Spend Coefficients</h2>
+
+
+<div class="figure">
+
+<img src="../figures/panel_regression/coefficients/spend_coefficients.png"
+width="900">
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="section">
+
+<h2>Actual vs Predicted Traffic</h2>
+
+
+<div class="figure">
+
+<img src="../figures/panel_regression/comparisons/actual_vs_predicted_dma_+_time_fixed_effects.png"
+width="900">
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="section">
+
+<h2>Residual Diagnostics</h2>
+
+
+<div class="figure">
+
+<img src="../figures/panel_regression/residuals/residual_plot.png"
+width="900">
+
+</div>
+
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Key Findings</h2>
+
+<ul>
+
+
+<li>
+
+The strongest explanatory model was:
+
+<b>
+Pooled OLS
+</b>
+
+with a within R² of
+
+<b>
+0.496
+</b>.
+
+</li>
+
+
+
+<li>
+
+After controlling for DMA and time effects,
+the estimated marketing spend coefficient was:
+
+<b>
+0.3439
+</b>.
+
+</li>
+
+
+
+<li>
+
+The spend relationship was
+
+<b>
+statistically significant
+</b>
+
+with a p-value of
+
+<b>
+0.0000
+</b>.
+
+</li>
+
+
+
+<li>
+
+The regression framework helps separate
+incremental marketing effects from differences
+caused by market size, geography, and seasonality.
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+<div class="footer">
+
+<hr>
+
+<p>
+Generated automatically by
+<b>07_panel_regression.py</b>
+</p>
+
+<p>
+Marketing Incrementality Project
+</p>
+
+
+</div>
+
+
+</body>
+
+</html>
+

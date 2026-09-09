@@ -1,0 +1,39 @@
+Feature,Group,Type,Missing,Missing_Pct
+DMA,Identifier,str,0,0.0
+Month,Identifier,datetime64[us],0,0.0
+Traffic,Target,float64,0,0.0
+Transactions,Target,float64,0,0.0
+Spend,Marketing,int64,0,0.0
+Log_Spend,Marketing,float64,0,0.0
+Spend_Index,Marketing,float64,0,0.0
+High_Spend,Marketing,int64,0,0.0
+Spend_Lag_1,Marketing Lags,float64,34,5.56
+Spend_Lag_2,Marketing Lags,float64,68,11.11
+Spend_Lag_3,Marketing Lags,float64,102,16.67
+Spend_Lag_6,Marketing Lags,float64,204,33.33
+Rolling_Spend_3,Marketing Rolling,float64,0,0.0
+Rolling_Spend_6,Marketing Rolling,float64,0,0.0
+Rolling_Spend_12,Marketing Rolling,float64,0,0.0
+Cumulative_Spend,Marketing Rolling,int64,0,0.0
+Traffic_Lag_1,Traffic History,float64,34,5.56
+Traffic_Lag_12,Traffic History,float64,408,66.67
+Rolling_Traffic_3,Traffic History,float64,0,0.0
+Store_Count,Store Metrics,int64,0,0.0
+Total_Selling_SqFt,Store Metrics,float64,0,0.0
+Avg_Selling_SqFt,Store Metrics,float64,0,0.0
+Spend_per_Store,Store Metrics,float64,0,0.0
+Spend_per_1000SqFt,Store Metrics,float64,0,0.0
+Traffic_per_Store,Store Metrics,float64,0,0.0
+Traffic_per_1000SqFt,Store Metrics,float64,0,0.0
+Year,Calendar,int32,0,0.0
+Quarter,Calendar,int32,0,0.0
+Month_Number,Calendar,int32,0,0.0
+Holiday_Season,Calendar,int64,0,0.0
+Month_Sin,Seasonality,float64,0,0.0
+Month_Cos,Seasonality,float64,0,0.0
+Quarter_Sin,Seasonality,float64,0,0.0
+Quarter_Cos,Seasonality,float64,0,0.0
+Fourier_Sin_1,Fourier,float64,0,0.0
+Fourier_Cos_1,Fourier,float64,0,0.0
+Fourier_Sin_2,Fourier,float64,0,0.0
+Fourier_Cos_2,Fourier,float64,0,0.0

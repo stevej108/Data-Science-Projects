@@ -1,0 +1,37 @@
+{
+    "target_dma": "Puerto Rico",
+    "dates": [
+        "2025-02-01T00:00:00",
+        "2025-03-01T00:00:00",
+        "2025-04-01T00:00:00",
+        "2025-05-01T00:00:00",
+        "2025-06-01T00:00:00",
+        "2025-07-01T00:00:00",
+        "2025-08-01T00:00:00",
+        "2025-09-01T00:00:00",
+        "2025-10-01T00:00:00",
+        "2025-11-01T00:00:00",
+        "2025-12-01T00:00:00",
+        "2026-01-01T00:00:00",
+        "2026-02-01T00:00:00",
+        "2026-03-01T00:00:00",
+        "2026-04-01T00:00:00"
+    ],
+    "intervention_date": "2026-01-01T00:00:00",
+    "n_pre": 11,
+    "y_mean": 1287344.6363636365,
+    "y_std": 239659.9853987359,
+    "include_trend": true,
+    "include_seasonality": false,
+    "seasonal_period": 12,
+    "seasonal_harmonics": 1,
+    "control_dmas": [
+        "El Paso, TX (Las Cruces, NM)",
+        "Orlando-Daytona Beach-Melbourne, FL",
+        "Chicago, IL",
+        "Oklahoma City, OK",
+        "Cleveland-Akron (Canton), OH"
+    ],
+    "model_type": "deterministic_trend_control_fourier_bsts",
+    "model_version": "v3_regularized"
+}

@@ -1,0 +1,2 @@
+dma_count,mean_partial_r2,median_partial_r2,mean_beta,positive_beta_count,negative_beta_count,significant_positive_count,significant_negative_count,strong_relationship_count,high_instability_count,loo_robust_count,loo_moderate_count,loo_sensitive_count,loo_highly_sensitive_count
+34,0.24279188077647262,0.24301576606797493,0.024832895958107785,33,1,8,0,11,9,0,10,23,1

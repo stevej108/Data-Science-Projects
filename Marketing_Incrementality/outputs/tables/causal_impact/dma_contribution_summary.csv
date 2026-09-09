@@ -1,0 +1,2 @@
+Included_DMAs,Excluded_DMAs,Posterior_Draws,Aggregate_Incremental_Traffic_Mean,Aggregate_Incremental_Traffic_Median,Aggregate_Impact_Lower_95,Aggregate_Impact_Upper_95,Total_Positive_DMA_Impact,Total_Negative_DMA_Impact,Positive_DMA_Count,Negative_DMA_Count,Aggregate_Probability_Positive,Aggregate_Probability_Negative
+9,2,8000,362785.26237336814,357720.58981659974,-3036959.506728773,3777990.560359527,2375697.0821589096,-2012911.8197855419,5,4,0.595625,0.404375

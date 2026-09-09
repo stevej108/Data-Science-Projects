@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>
+DMA Spend Explanatory Power
+</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #1f2933;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 32px;
+}
+
+header {
+    background: #102a43;
+    color: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+section {
+    background: white;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
+    gap: 14px;
+}
+
+.card {
+    background: #eef2f7;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.label {
+    font-size: 12px;
+    color: #627d98;
+}
+
+.value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.takeaway {
+    background: #eef6ff;
+    border-left: 4px solid #3578c6;
+    padding: 16px;
+    margin-top: 18px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 7px;
+    text-align: right;
+}
+
+th:first-child,
+td:first-child {
+    text-align: left;
+}
+
+th {
+    background: #eef2f7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+}
+
+.small {
+    font-size: 12px;
+    color: #627d98;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>
+DMA Spend Explanatory Power
+</h1>
+
+<p>
+Within-market regression analysis of marketing spend and traffic
+after controlling for trend and seasonality.
+</p>
+
+</header>
+
+
+<section>
+
+<h2>
+Portfolio Summary
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="label">
+DMAs Modeled
+</div>
+<div class="value">
+34
+</div>
+</div>
+
+<div class="card">
+<div class="label">
+Mean Spend Partial R²
+</div>
+<div class="value">
+24.3%
+</div>
+</div>
+
+<div class="card">
+<div class="label">
+Median Spend Partial R²
+</div>
+<div class="value">
+24.3%
+</div>
+</div>
+
+<div class="card">
+<div class="label">
+Positive Spend Coefficients
+</div>
+<div class="value">
+33
+</div>
+</div>
+
+<div class="card">
+<div class="label">
+Significant Positive Relationships
+</div>
+<div class="value">
+8
+</div>
+</div>
+
+<div class="card">
+<div class="label">
+Significant Negative Relationships
+</div>
+<div class="value">
+0
+</div>
+</div>
+
+</div>
+
+<div class="takeaway">
+
+<strong>
+Portfolio interpretation:
+</strong>
+
+<p>
+Marketing spend provides moderate incremental explanatory power across the typical DMA, although the strength of the relationship varies materially by market.
+</p>
+
+<p>
+No DMA produced a statistically significant negative spend coefficient under the current specification. This does not establish causality, but it provides little evidence of a systematic negative spend–traffic relationship.
+</p>
+
+<p>
+Approximately 97.1% of modeled DMAs produced
+positive spend coefficients.
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>
+Spend Explanatory Power by DMA
+</h2>
+
+<p>
+Spend partial R² measures the share of traffic variation remaining
+after trend and seasonality controls that becomes explained when
+marketing spend is added to the DMA-specific regression.
+</p>
+
+<img src="../figures/dma_spend_explanatory_power/spend_partial_r2_by_dma.png">
+
+</section>
+
+
+<section>
+
+<h2>
+Spend / Traffic Relationship
+</h2>
+
+<p>
+The spend coefficient describes the direction of the modeled
+relationship between log marketing spend and log traffic after
+controlling for trend and seasonality.
+</p>
+
+<img src="../figures/dma_spend_explanatory_power/spend_coefficients_by_dma.png">
+
+<img src="../figures/dma_spend_explanatory_power/partial_r2_vs_spend_beta.png">
+
+</section>
+
+
+<section>
+
+<h2>
+Influence & Leave-One-Out Sensitivity
+</h2>
+
+<p>
+Each DMA model was re-estimated after removing the single
+observation with the largest Cook's distance.
+This tests whether the estimated spend relationship depends
+heavily on one unusually influential month.
+</p>
+
+<img src="../figures/dma_spend_explanatory_power/leave_one_out_partial_r2_comparison.png">
+
+<div class="cards">
+
+<div class="card">
+<div class="label">
+Robust
+</div>
+<div class="value">
+0
+</div>
+</div>
+
+<div class="card">
+<div class="label">
+Moderately Sensitive
+</div>
+<div class="value">
+10
+</div>
+</div>
+
+<div class="card">
+<div class="label">
+Sensitive
+</div>
+<div class="value">
+23
+</div>
+</div>
+
+<div class="card">
+<div class="label">
+Highly Sensitive
+</div>
+<div class="value">
+1
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>
+DMA-Level Results
+</h2>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>DMA</th>
+      <th>Spend_Partial_R2</th>
+      <th>Spend_Beta</th>
+      <th>Spend_P_Value</th>
+      <th>Spend_Explanatory_Strength</th>
+      <th>Influence_Severity</th>
+      <th>LOO_Sensitivity_Classification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Boston, MA (Manchester, NH)</td>
+      <td>35.700</td>
+      <td>0.039</td>
+      <td>0.579</td>
+      <td>Strong</td>
+      <td>High</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <td>New York, NY</td>
+      <td>28.850</td>
+      <td>0.029</td>
+      <td>0.612</td>
+      <td>Moderate</td>
+      <td>High</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <td>Atlanta, GA</td>
+      <td>23.643</td>
+      <td>0.032</td>
+      <td>0.646</td>
+      <td>Moderate</td>
+      <td>High</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <td>Philadelphia, PA</td>
+      <td>22.575</td>
+      <td>0.031</td>
+      <td>0.647</td>
+      <td>Moderate</td>
+      <td>High</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <td>Washington, DC (Hagerstown, MD)</td>
+      <td>20.337</td>
+      <td>0.024</td>
+      <td>0.154</td>
+      <td>Moderate</td>
+      <td>Moderate</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <td>Los Angeles, CA</td>
+      <td>19.971</td>
+      <td>0.027</td>
+      <td>0.724</td>
+      <td>Moderate</td>
+      <td>High</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <td>Houston, TX</td>
+      <td>17.062</td>
+      <td>0.029</td>
+      <td>0.859</td>
+      <td>Moderate</td>
+      <td>High</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <td>Miami-Ft. Lauderdale, FL</td>
+      <td>14.478</td>
+      <td>0.023</td>
+      <td>0.664</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <td>Chicago, IL</td>
+      <td>12.604</td>
+      <td>0.028</td>
+      <td>0.260</td>
+      <td>Low</td>
+      <td>Moderate</td>
+      <td>Sensitive</td>
+    </tr>
+    <tr>
+      <td>Dallas-Ft. Worth, TX</td>
+      <td>10.035</td>
+      <td>0.022</td>
+      <td>0.699</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Highly Sensitive</td>
+    </tr>
+    <tr>
+      <td>Puerto Rico</td>
+      <td>0.356</td>
+      <td>-0.003</td>
+      <td>0.877</td>
+      <td>Minimal</td>
+      <td>Moderate</td>
+      <td>Sensitive</td>
+    </tr>
+  </tbody>
+</table>
+
+</section>
+
+
+<section>
+
+<h2>
+Methodology
+</h2>
+
+<p>
+For each DMA, two monthly traffic regressions were estimated.
+</p>
+
+<p>
+<strong>
+Reduced model:
+</strong>
+Log Traffic ~ Trend + Month Sin + Month Cos
+</p>
+
+<p>
+<strong>
+Full model:
+</strong>
+Log Traffic ~ Log Spend + Trend + Month Sin + Month Cos
+</p>
+
+<p>
+Spend partial R² measures the incremental explanatory contribution
+of marketing spend after accounting for trend and annual seasonality.
+HC3 robust covariance estimates are used for inference.
+</p>
+
+<p>
+Cook's distance and leave-one-out sensitivity analysis are used to
+identify DMA results that depend materially on individual observations.
+</p>
+
+<p class="small">
+This analysis measures association and explanatory power.
+It does not independently establish that marketing spend caused
+changes in traffic.
+</p>
+
+</section>
+
+
+</div>
+
+</body>
+
+</html>

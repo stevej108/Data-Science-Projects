@@ -1,0 +1,5062 @@
+
+
+<html>
+
+<head>
+
+<title>Marketing Incrementality EDA</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    margin:40px;
+    background:#F7F7F7;
+}
+
+h1{
+    color:#003865;
+}
+
+h2{
+    border-bottom:2px solid #003865;
+    padding-bottom:5px;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+td,th{
+    border:1px solid #ccc;
+    padding:8px;
+}
+
+.figure{
+    margin-bottom:50px;
+}
+
+img{
+    border:1px solid gray;
+}
+
+.dataframe {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.dataframe th {
+    background:#003865;
+    color:white;
+}
+
+details {
+    background:white;
+    padding:15px;
+    border:1px solid #ccc;
+    margin-bottom:15px;
+}
+
+summary {
+    cursor:pointer;
+    font-size:16px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Marketing Incrementality EDA</h1>
+
+<h2>Dataset Summary</h2>
+
+<table>
+
+<tr><th>Metric</th><th>Value</th></tr>
+
+<tr><td>Rows</td><td>612</td></tr>
+
+<tr><td>Columns</td><td>39</td></tr>
+
+<tr><td>DMAs</td><td>34</td></tr>
+
+<tr><td>Date Range</td><td>2025-02-01 -
+2026-07-01</td></tr>
+
+<tr><td>Total Spend</td><td>$50,142,000</td></tr>
+
+<tr><td>Total Traffic</td><td>343,785,628</td></tr>
+
+<tr><td>Spend vs Traffic Correlation</td><td>0.705</td></tr>
+
+</table>
+
+<h2>Spend Analysis</h2>
+
+
+        <div class="figure">
+            <h3>Monthly Spend</h3>
+            <img src="../figures/eda/spend/monthly_spend.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Spend By Dma</h3>
+            <img src="../figures/eda/spend/spend_by_dma.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Spend Distribution</h3>
+            <img src="../figures/eda/spend/spend_distribution.png" width="900">
+        </div>
+        
+
+<h2>Traffic Analysis</h2>
+
+
+        <div class="figure">
+            <h3>Monthly Traffic</h3>
+            <img src="../figures/eda/traffic/monthly_traffic.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Traffic By Dma</h3>
+            <img src="../figures/eda/traffic/traffic_by_dma.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Traffic Distribution</h3>
+            <img src="../figures/eda/traffic/traffic_distribution.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Traffic Per 1000Sqft Distribution</h3>
+            <img src="../figures/eda/traffic/traffic_per_1000sqft_distribution.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Traffic Per Store Distribution</h3>
+            <img src="../figures/eda/traffic/traffic_per_store_distribution.png" width="900">
+        </div>
+        
+
+<h2>Store Analysis</h2>
+
+
+        <div class="figure">
+            <h3>Average Store Size</h3>
+            <img src="../figures/eda/stores/average_store_size.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Dma Population</h3>
+            <img src="../figures/eda/stores/dma_population.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Store Count By Dma</h3>
+            <img src="../figures/eda/stores/store_count_by_dma.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Total Selling Sqft</h3>
+            <img src="../figures/eda/stores/total_selling_sqft.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Trade Area Population</h3>
+            <img src="../figures/eda/stores/trade_area_population.png" width="900">
+        </div>
+        
+
+<h2>Relationship Analysis</h2>
+
+
+        <div class="figure">
+            <h3>Correlation Matrix</h3>
+            <img src="../figures/eda/relationships/correlation_matrix.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Spend Vs 1000Sqft</h3>
+            <img src="../figures/eda/relationships/spend_vs_1000sqft.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Spend Vs Traffic</h3>
+            <img src="../figures/eda/relationships/spend_vs_traffic.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Spend Vs Traffic Per Store</h3>
+            <img src="../figures/eda/relationships/spend_vs_traffic_per_store.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Spend Vs Transactions</h3>
+            <img src="../figures/eda/relationships/spend_vs_transactions.png" width="900">
+        </div>
+        
+
+<h2>Seasonality Analysis</h2>
+
+
+        <div class="figure">
+            <h3>Average Monthly Spend</h3>
+            <img src="../figures/eda/seasonality/average_monthly_spend.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Average Monthly Traffic</h3>
+            <img src="../figures/eda/seasonality/average_monthly_traffic.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Stl Decomposition</h3>
+            <img src="../figures/eda/seasonality/stl_decomposition.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Traffic Acf</h3>
+            <img src="../figures/eda/seasonality/traffic_acf.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Traffic Pacf</h3>
+            <img src="../figures/eda/seasonality/traffic_pacf.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Traffic Yoy</h3>
+            <img src="../figures/eda/seasonality/traffic_yoy.png" width="900">
+        </div>
+        
+
+<h2>Diagnostic Analysis</h2>
+
+
+        <div class="figure">
+            <h3>Spend Boxplot</h3>
+            <img src="../figures/eda/diagnostics/Spend_boxplot.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Spend Per Store Boxplot</h3>
+            <img src="../figures/eda/diagnostics/Spend_per_Store_boxplot.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Traffic Boxplot</h3>
+            <img src="../figures/eda/diagnostics/Traffic_boxplot.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Traffic Per Store Boxplot</h3>
+            <img src="../figures/eda/diagnostics/Traffic_per_Store_boxplot.png" width="900">
+        </div>
+        
+        <div class="figure">
+            <h3>Transactions Boxplot</h3>
+            <img src="../figures/eda/diagnostics/Transactions_boxplot.png" width="900">
+        </div>
+        
+
+<h2>Generated Tables</h2>
+
+
+
+<details>
+
+<summary>
+<b>column_summary.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Column</th>
+      <th>Type</th>
+      <th>Missing</th>
+      <th>Unique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DMA</td>
+      <td>str</td>
+      <td>0</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>DMA_Original_x</td>
+      <td>string</td>
+      <td>0</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>Month</td>
+      <td>datetime64[us]</td>
+      <td>0</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Spend</td>
+      <td>int64</td>
+      <td>0</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>Traffic</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>612</td>
+    </tr>
+    <tr>
+      <td>Transactions</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>612</td>
+    </tr>
+    <tr>
+      <td>DMA_Original_y</td>
+      <td>str</td>
+      <td>0</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>_merge</td>
+      <td>category</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Store_Count</td>
+      <td>int64</td>
+      <td>0</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>Total_Selling_SqFt</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>Avg_Selling_SqFt</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>DMA_Population</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>TradeAreaPopulation</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>int32</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Month_Number</td>
+      <td>int32</td>
+      <td>0</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>Month_Name</td>
+      <td>str</td>
+      <td>0</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>Quarter</td>
+      <td>int32</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Holiday_Season</td>
+      <td>int64</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_1</td>
+      <td>float64</td>
+      <td>34</td>
+      <td>191</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_2</td>
+      <td>float64</td>
+      <td>68</td>
+      <td>184</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_3</td>
+      <td>float64</td>
+      <td>102</td>
+      <td>180</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_6</td>
+      <td>float64</td>
+      <td>204</td>
+      <td>161</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_3</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>328</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_6</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>439</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_12</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>481</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 39.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>correlation_matrix.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Spend</th>
+      <th>Traffic</th>
+      <th>Transactions</th>
+      <th>Store_Count</th>
+      <th>Total_Selling_SqFt</th>
+      <th>Avg_Selling_SqFt</th>
+      <th>DMA_Population</th>
+      <th>TradeAreaPopulation</th>
+      <th>Year</th>
+      <th>Month_Number</th>
+      <th>Quarter</th>
+      <th>Holiday_Season</th>
+      <th>Spend_Lag_1</th>
+      <th>Spend_Lag_2</th>
+      <th>Spend_Lag_3</th>
+      <th>Spend_Lag_6</th>
+      <th>Rolling_Spend_3</th>
+      <th>Rolling_Spend_6</th>
+      <th>Rolling_Spend_12</th>
+      <th>Cumulative_Spend</th>
+      <th>Spend_pct_change</th>
+      <th>Log_Spend</th>
+      <th>Spend_Index</th>
+      <th>High_Spend</th>
+      <th>Traffic_Lag_1</th>
+      <th>Traffic_Lag_12</th>
+      <th>Rolling_Traffic_3</th>
+      <th>Traffic_pct_change</th>
+      <th>Traffic_per_Store</th>
+      <th>Transactions_per_Store</th>
+      <th>Traffic_per_1000SqFt</th>
+      <th>Spend_per_Store</th>
+      <th>Spend_per_1000SqFt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spend</td>
+      <td>1.000000</td>
+      <td>0.704607</td>
+      <td>0.715073</td>
+      <td>6.628278e-01</td>
+      <td>6.672855e-01</td>
+      <td>7.861646e-02</td>
+      <td>6.352949e-01</td>
+      <td>5.607668e-01</td>
+      <td>-5.049915e-03</td>
+      <td>2.215961e-01</td>
+      <td>2.117820e-01</td>
+      <td>3.110879e-01</td>
+      <td>0.610900</td>
+      <td>0.338703</td>
+      <td>0.501316</td>
+      <td>0.339736</td>
+      <td>0.804626</td>
+      <td>0.793678</td>
+      <td>0.774722</td>
+      <td>0.708244</td>
+      <td>0.040230</td>
+      <td>0.489738</td>
+      <td>4.107146e-01</td>
+      <td>0.393221</td>
+      <td>0.679767</td>
+      <td>0.812492</td>
+      <td>0.674970</td>
+      <td>0.047212</td>
+      <td>0.256823</td>
+      <td>0.281159</td>
+      <td>0.197214</td>
+      <td>0.721361</td>
+      <td>0.706949</td>
+    </tr>
+    <tr>
+      <td>Traffic</td>
+      <td>0.704607</td>
+      <td>1.000000</td>
+      <td>0.996992</td>
+      <td>9.250902e-01</td>
+      <td>9.258938e-01</td>
+      <td>1.073983e-01</td>
+      <td>8.301614e-01</td>
+      <td>7.828790e-01</td>
+      <td>6.968331e-03</td>
+      <td>7.052796e-02</td>
+      <td>6.177166e-02</td>
+      <td>9.331947e-02</td>
+      <td>0.644596</td>
+      <td>0.570892</td>
+      <td>0.551694</td>
+      <td>0.535891</td>
+      <td>0.767094</td>
+      <td>0.792967</td>
+      <td>0.817249</td>
+      <td>0.689366</td>
+      <td>0.005309</td>
+      <td>0.389235</td>
+      <td>7.678387e-02</td>
+      <td>0.067256</td>
+      <td>0.949120</td>
+      <td>0.978919</td>
+      <td>0.980925</td>
+      <td>0.095599</td>
+      <td>0.438728</td>
+      <td>0.445564</td>
+      <td>0.396597</td>
+      <td>0.335930</td>
+      <td>0.330516</td>
+    </tr>
+    <tr>
+      <td>Transactions</td>
+      <td>0.715073</td>
+      <td>0.996992</td>
+      <td>1.000000</td>
+      <td>9.329921e-01</td>
+      <td>9.368226e-01</td>
+      <td>1.170461e-01</td>
+      <td>8.431159e-01</td>
+      <td>7.771136e-01</td>
+      <td>2.151517e-02</td>
+      <td>5.451229e-02</td>
+      <td>4.503664e-02</td>
+      <td>8.756951e-02</td>
+      <td>0.654415</td>
+      <td>0.585056</td>
+      <td>0.569614</td>
+      <td>0.550020</td>
+      <td>0.780264</td>
+      <td>0.810604</td>
+      <td>0.832930</td>
+      <td>0.707227</td>
+      <td>-0.002542</td>
+      <td>0.381788</td>
+      <td>7.144427e-02</td>
+      <td>0.063083</td>
+      <td>0.947498</td>
+      <td>0.979545</td>
+      <td>0.978943</td>
+      <td>0.089683</td>
+      <td>0.407034</td>
+      <td>0.429224</td>
+      <td>0.356606</td>
+      <td>0.334662</td>
+      <td>0.325931</td>
+    </tr>
+    <tr>
+      <td>Store_Count</td>
+      <td>0.662828</td>
+      <td>0.925090</td>
+      <td>0.932992</td>
+      <td>1.000000e+00</td>
+      <td>9.856180e-01</td>
+      <td>4.048701e-03</td>
+      <td>9.341779e-01</td>
+      <td>8.410174e-01</td>
+      <td>-1.479143e-13</td>
+      <td>1.573432e-16</td>
+      <td>-2.557869e-17</td>
+      <td>1.531881e-17</td>
+      <td>0.644960</td>
+      <td>0.627691</td>
+      <td>0.620668</td>
+      <td>0.565858</td>
+      <td>0.759448</td>
+      <td>0.782908</td>
+      <td>0.812811</td>
+      <td>0.678262</td>
+      <td>-0.034903</td>
+      <td>0.383738</td>
+      <td>-6.481077e-17</td>
+      <td>0.005595</td>
+      <td>0.923733</td>
+      <td>0.935170</td>
+      <td>0.939276</td>
+      <td>-0.007971</td>
+      <td>0.153125</td>
+      <td>0.167483</td>
+      <td>0.131770</td>
+      <td>0.264555</td>
+      <td>0.259910</td>
+    </tr>
+    <tr>
+      <td>Total_Selling_SqFt</td>
+      <td>0.667285</td>
+      <td>0.925894</td>
+      <td>0.936823</td>
+      <td>9.856180e-01</td>
+      <td>1.000000e+00</td>
+      <td>1.378333e-01</td>
+      <td>9.186144e-01</td>
+      <td>8.336748e-01</td>
+      <td>-1.541404e-13</td>
+      <td>1.485246e-16</td>
+      <td>2.553431e-18</td>
+      <td>1.437759e-17</td>
+      <td>0.650446</td>
+      <td>0.634135</td>
+      <td>0.627175</td>
+      <td>0.569249</td>
+      <td>0.765930</td>
+      <td>0.789813</td>
+      <td>0.821768</td>
+      <td>0.684943</td>
+      <td>-0.047001</td>
+      <td>0.375243</td>
+      <td>-7.643988e-17</td>
+      <td>0.004722</td>
+      <td>0.924525</td>
+      <td>0.938896</td>
+      <td>0.939934</td>
+      <td>-0.008037</td>
+      <td>0.163376</td>
+      <td>0.188309</td>
+      <td>0.078596</td>
+      <td>0.269531</td>
+      <td>0.246387</td>
+    </tr>
+    <tr>
+      <td>Avg_Selling_SqFt</td>
+      <td>0.078616</td>
+      <td>0.107398</td>
+      <td>0.117046</td>
+      <td>4.048701e-03</td>
+      <td>1.378333e-01</td>
+      <td>1.000000e+00</td>
+      <td>-3.116239e-02</td>
+      <td>9.456330e-06</td>
+      <td>-8.883777e-14</td>
+      <td>2.863615e-17</td>
+      <td>2.166523e-16</td>
+      <td>-9.979626e-18</td>
+      <td>0.077314</td>
+      <td>0.076256</td>
+      <td>0.074280</td>
+      <td>0.052191</td>
+      <td>0.091160</td>
+      <td>0.090440</td>
+      <td>0.092595</td>
+      <td>0.076304</td>
+      <td>-0.052485</td>
+      <td>0.028591</td>
+      <td>-3.469981e-17</td>
+      <td>-0.005423</td>
+      <td>0.106976</td>
+      <td>0.114505</td>
+      <td>0.108280</td>
+      <td>-0.009663</td>
+      <td>0.251526</td>
+      <td>0.332535</td>
+      <td>-0.129906</td>
+      <td>0.100058</td>
+      <td>-0.002232</td>
+    </tr>
+    <tr>
+      <td>DMA_Population</td>
+      <td>0.635295</td>
+      <td>0.830161</td>
+      <td>0.843116</td>
+      <td>9.341779e-01</td>
+      <td>9.186144e-01</td>
+      <td>-3.116239e-02</td>
+      <td>1.000000e+00</td>
+      <td>7.561685e-01</td>
+      <td>-1.087014e-13</td>
+      <td>1.449571e-16</td>
+      <td>9.280793e-17</td>
+      <td>1.802689e-17</td>
+      <td>0.615697</td>
+      <td>0.595807</td>
+      <td>0.588077</td>
+      <td>0.530995</td>
+      <td>0.725047</td>
+      <td>0.744499</td>
+      <td>0.774036</td>
+      <td>0.644728</td>
+      <td>-0.054883</td>
+      <td>0.359116</td>
+      <td>-4.780861e-17</td>
+      <td>0.006152</td>
+      <td>0.828366</td>
+      <td>0.843681</td>
+      <td>0.841988</td>
+      <td>-0.001288</td>
+      <td>0.057296</td>
+      <td>0.068689</td>
+      <td>0.040197</td>
+      <td>0.272830</td>
+      <td>0.264152</td>
+    </tr>
+    <tr>
+      <td>TradeAreaPopulation</td>
+      <td>0.560767</td>
+      <td>0.782879</td>
+      <td>0.777114</td>
+      <td>8.410174e-01</td>
+      <td>8.336748e-01</td>
+      <td>9.456330e-06</td>
+      <td>7.561685e-01</td>
+      <td>1.000000e+00</td>
+      <td>-1.632007e-13</td>
+      <td>1.040263e-16</td>
+      <td>-4.648361e-17</td>
+      <td>4.419490e-18</td>
+      <td>0.547059</td>
+      <td>0.534922</td>
+      <td>0.528553</td>
+      <td>0.488433</td>
+      <td>0.644362</td>
+      <td>0.666156</td>
+      <td>0.695658</td>
+      <td>0.581232</td>
+      <td>-0.055252</td>
+      <td>0.368259</td>
+      <td>5.794060e-18</td>
+      <td>0.008250</td>
+      <td>0.781587</td>
+      <td>0.794754</td>
+      <td>0.795662</td>
+      <td>-0.006619</td>
+      <td>0.169733</td>
+      <td>0.150983</td>
+      <td>0.124810</td>
+      <td>0.262713</td>
+      <td>0.251163</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>-0.005050</td>
+      <td>0.006968</td>
+      <td>0.021515</td>
+      <td>-1.479143e-13</td>
+      <td>-1.541404e-13</td>
+      <td>-8.883777e-14</td>
+      <td>-1.087014e-13</td>
+      <td>-1.632007e-13</td>
+      <td>1.000000e+00</td>
+      <td>-4.670442e-01</td>
+      <td>-4.306512e-01</td>
+      <td>-2.820380e-01</td>
+      <td>0.152222</td>
+      <td>0.208271</td>
+      <td>0.217343</td>
+      <td>0.236488</td>
+      <td>0.161077</td>
+      <td>0.246512</td>
+      <td>0.265755</td>
+      <td>0.400245</td>
+      <td>-0.173362</td>
+      <td>-0.427289</td>
+      <td>-3.196647e-01</td>
+      <td>-0.157601</td>
+      <td>0.043941</td>
+      <td>NaN</td>
+      <td>0.049128</td>
+      <td>-0.215948</td>
+      <td>0.008681</td>
+      <td>0.054704</td>
+      <td>0.011255</td>
+      <td>-0.181332</td>
+      <td>-0.187832</td>
+    </tr>
+    <tr>
+      <td>Month_Number</td>
+      <td>0.221596</td>
+      <td>0.070528</td>
+      <td>0.054512</td>
+      <td>1.573432e-16</td>
+      <td>1.485246e-16</td>
+      <td>2.863615e-17</td>
+      <td>1.449571e-16</td>
+      <td>1.040263e-16</td>
+      <td>-4.670442e-01</td>
+      <td>1.000000e+00</td>
+      <td>9.660057e-01</td>
+      <td>6.398034e-01</td>
+      <td>-0.087475</td>
+      <td>-0.187232</td>
+      <td>-0.163794</td>
+      <td>-0.096227</td>
+      <td>0.029549</td>
+      <td>-0.001227</td>
+      <td>0.020661</td>
+      <td>-0.011480</td>
+      <td>0.284739</td>
+      <td>0.337976</td>
+      <td>5.099327e-01</td>
+      <td>0.402785</td>
+      <td>0.010340</td>
+      <td>0.027465</td>
+      <td>0.027333</td>
+      <td>0.141188</td>
+      <td>0.217099</td>
+      <td>0.185297</td>
+      <td>0.193931</td>
+      <td>0.422598</td>
+      <td>0.429625</td>
+    </tr>
+    <tr>
+      <td>Quarter</td>
+      <td>0.211782</td>
+      <td>0.061772</td>
+      <td>0.045037</td>
+      <td>-2.557869e-17</td>
+      <td>2.553431e-18</td>
+      <td>2.166523e-16</td>
+      <td>9.280793e-17</td>
+      <td>-4.648361e-17</td>
+      <td>-4.306512e-01</td>
+      <td>9.660057e-01</td>
+      <td>1.000000e+00</td>
+      <td>5.833502e-01</td>
+      <td>-0.054607</td>
+      <td>-0.212809</td>
+      <td>-0.181377</td>
+      <td>-0.114775</td>
+      <td>0.033450</td>
+      <td>0.003908</td>
+      <td>0.027108</td>
+      <td>-0.002942</td>
+      <td>0.342606</td>
+      <td>0.345894</td>
+      <td>4.981785e-01</td>
+      <td>0.423872</td>
+      <td>0.006830</td>
+      <td>0.005655</td>
+      <td>0.027746</td>
+      <td>0.104575</td>
+      <td>0.191669</td>
+      <td>0.155374</td>
+      <td>0.171066</td>
+      <td>0.411026</td>
+      <td>0.417422</td>
+    </tr>
+    <tr>
+      <td>Holiday_Season</td>
+      <td>0.311088</td>
+      <td>0.093319</td>
+      <td>0.087570</td>
+      <td>1.531881e-17</td>
+      <td>1.437759e-17</td>
+      <td>-9.979626e-18</td>
+      <td>1.802689e-17</td>
+      <td>4.419490e-18</td>
+      <td>-2.820380e-01</td>
+      <td>6.398034e-01</td>
+      <td>5.833502e-01</td>
+      <td>1.000000e+00</td>
+      <td>0.053082</td>
+      <td>-0.089227</td>
+      <td>-0.059775</td>
+      <td>-0.129452</td>
+      <td>0.128204</td>
+      <td>0.073967</td>
+      <td>0.035091</td>
+      <td>0.027371</td>
+      <td>0.095062</td>
+      <td>0.282835</td>
+      <td>6.847785e-01</td>
+      <td>0.518772</td>
+      <td>0.019384</td>
+      <td>NaN</td>
+      <td>0.025850</td>
+      <td>0.265848</td>
+      <td>0.285720</td>
+      <td>0.292717</td>
+      <td>0.258641</td>
+      <td>0.560282</td>
+      <td>0.570658</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_1</td>
+      <td>0.610900</td>
+      <td>0.644596</td>
+      <td>0.654415</td>
+      <td>6.449601e-01</td>
+      <td>6.504458e-01</td>
+      <td>7.731436e-02</td>
+      <td>6.156973e-01</td>
+      <td>5.470593e-01</td>
+      <td>1.522217e-01</td>
+      <td>-8.747488e-02</td>
+      <td>-5.460657e-02</td>
+      <td>5.308216e-02</td>
+      <td>1.000000</td>
+      <td>0.582705</td>
+      <td>0.315822</td>
+      <td>0.397818</td>
+      <td>0.890648</td>
+      <td>0.802571</td>
+      <td>0.756929</td>
+      <td>0.710845</td>
+      <td>-0.156369</td>
+      <td>0.381383</td>
+      <td>1.418076e-01</td>
+      <td>0.119794</td>
+      <td>0.695218</td>
+      <td>0.774384</td>
+      <td>0.674624</td>
+      <td>-0.134582</td>
+      <td>0.171314</td>
+      <td>0.190885</td>
+      <td>0.120738</td>
+      <td>0.376419</td>
+      <td>0.364674</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_2</td>
+      <td>0.338703</td>
+      <td>0.570892</td>
+      <td>0.585056</td>
+      <td>6.276905e-01</td>
+      <td>6.341355e-01</td>
+      <td>7.625632e-02</td>
+      <td>5.958068e-01</td>
+      <td>5.349224e-01</td>
+      <td>2.082713e-01</td>
+      <td>-1.872322e-01</td>
+      <td>-2.128092e-01</td>
+      <td>-8.922737e-02</td>
+      <td>0.582705</td>
+      <td>1.000000</td>
+      <td>0.572646</td>
+      <td>0.593738</td>
+      <td>0.772086</td>
+      <td>0.714636</td>
+      <td>0.719833</td>
+      <td>0.690736</td>
+      <td>-0.068171</td>
+      <td>0.278949</td>
+      <td>-5.197184e-02</td>
+      <td>-0.055398</td>
+      <td>0.632464</td>
+      <td>0.663022</td>
+      <td>0.641023</td>
+      <td>-0.125706</td>
+      <td>0.081704</td>
+      <td>0.104709</td>
+      <td>0.044481</td>
+      <td>0.144260</td>
+      <td>0.135937</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_3</td>
+      <td>0.501316</td>
+      <td>0.551694</td>
+      <td>0.569614</td>
+      <td>6.206678e-01</td>
+      <td>6.271747e-01</td>
+      <td>7.427981e-02</td>
+      <td>5.880769e-01</td>
+      <td>5.285528e-01</td>
+      <td>2.173429e-01</td>
+      <td>-1.637938e-01</td>
+      <td>-1.813770e-01</td>
+      <td>-5.977462e-02</td>
+      <td>0.315822</td>
+      <td>0.572646</td>
+      <td>1.000000</td>
+      <td>0.405404</td>
+      <td>0.563353</td>
+      <td>0.719492</td>
+      <td>0.733066</td>
+      <td>0.726180</td>
+      <td>0.013054</td>
+      <td>0.275855</td>
+      <td>1.238383e-02</td>
+      <td>0.149525</td>
+      <td>0.562562</td>
+      <td>0.784552</td>
+      <td>0.591491</td>
+      <td>0.000277</td>
+      <td>0.066533</td>
+      <td>0.096833</td>
+      <td>0.032183</td>
+      <td>0.240704</td>
+      <td>0.226066</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_6</td>
+      <td>0.339736</td>
+      <td>0.535891</td>
+      <td>0.550020</td>
+      <td>5.658584e-01</td>
+      <td>5.692494e-01</td>
+      <td>5.219090e-02</td>
+      <td>5.309954e-01</td>
+      <td>4.884325e-01</td>
+      <td>2.364882e-01</td>
+      <td>-9.622732e-02</td>
+      <td>-1.147745e-01</td>
+      <td>-1.294519e-01</td>
+      <td>0.397818</td>
+      <td>0.593738</td>
+      <td>0.405404</td>
+      <td>1.000000</td>
+      <td>0.540624</td>
+      <td>0.558235</td>
+      <td>0.676115</td>
+      <td>0.711372</td>
+      <td>-0.048140</td>
+      <td>0.225886</td>
+      <td>-4.834533e-02</td>
+      <td>-0.081949</td>
+      <td>0.619401</td>
+      <td>0.588492</td>
+      <td>0.587970</td>
+      <td>-0.186836</td>
+      <td>0.097701</td>
+      <td>0.124110</td>
+      <td>0.064620</td>
+      <td>0.129341</td>
+      <td>0.119404</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_3</td>
+      <td>0.804626</td>
+      <td>0.767094</td>
+      <td>0.780264</td>
+      <td>7.594481e-01</td>
+      <td>7.659296e-01</td>
+      <td>9.116002e-02</td>
+      <td>7.250467e-01</td>
+      <td>6.443619e-01</td>
+      <td>1.610768e-01</td>
+      <td>2.954877e-02</td>
+      <td>3.345048e-02</td>
+      <td>1.282036e-01</td>
+      <td>0.890648</td>
+      <td>0.772086</td>
+      <td>0.563353</td>
+      <td>0.540624</td>
+      <td>1.000000</td>
+      <td>0.938919</td>
+      <td>0.914880</td>
+      <td>0.857519</td>
+      <td>-0.074695</td>
+      <td>0.479169</td>
+      <td>2.292577e-01</td>
+      <td>0.210392</td>
+      <td>0.813780</td>
+      <td>0.871214</td>
+      <td>0.794713</td>
+      <td>-0.093397</td>
+      <td>0.221590</td>
+      <td>0.247683</td>
+      <td>0.161511</td>
+      <td>0.524870</td>
+      <td>0.511141</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_6</td>
+      <td>0.793678</td>
+      <td>0.792967</td>
+      <td>0.810604</td>
+      <td>7.829083e-01</td>
+      <td>7.898135e-01</td>
+      <td>9.043972e-02</td>
+      <td>7.444994e-01</td>
+      <td>6.661561e-01</td>
+      <td>2.465116e-01</td>
+      <td>-1.227192e-03</td>
+      <td>3.908012e-03</td>
+      <td>7.396749e-02</td>
+      <td>0.802571</td>
+      <td>0.714636</td>
+      <td>0.719492</td>
+      <td>0.558235</td>
+      <td>0.938919</td>
+      <td>1.000000</td>
+      <td>0.973557</td>
+      <td>0.936667</td>
+      <td>-0.056553</td>
+      <td>0.439734</td>
+      <td>1.673691e-01</td>
+      <td>0.193736</td>
+      <td>0.812529</td>
+      <td>0.920405</td>
+      <td>0.805840</td>
+      <td>-0.035400</td>
+      <td>0.233432</td>
+      <td>0.269583</td>
+      <td>0.172274</td>
+      <td>0.474599</td>
+      <td>0.457442</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_12</td>
+      <td>0.774722</td>
+      <td>0.817249</td>
+      <td>0.832930</td>
+      <td>8.128112e-01</td>
+      <td>8.217682e-01</td>
+      <td>9.259457e-02</td>
+      <td>7.740363e-01</td>
+      <td>6.956576e-01</td>
+      <td>2.657548e-01</td>
+      <td>2.066121e-02</td>
+      <td>2.710837e-02</td>
+      <td>3.509114e-02</td>
+      <td>0.756929</td>
+      <td>0.719833</td>
+      <td>0.733066</td>
+      <td>0.676115</td>
+      <td>0.914880</td>
+      <td>0.973557</td>
+      <td>1.000000</td>
+      <td>0.960294</td>
+      <td>-0.053102</td>
+      <td>0.420670</td>
+      <td>1.236200e-01</td>
+      <td>0.160952</td>
+      <td>0.851557</td>
+      <td>0.934414</td>
+      <td>0.840847</td>
+      <td>-0.060260</td>
+      <td>0.231054</td>
+      <td>0.264337</td>
+      <td>0.166251</td>
+      <td>0.440811</td>
+      <td>0.422084</td>
+    </tr>
+    <tr>
+      <td>Cumulative_Spend</td>
+      <td>0.708244</td>
+      <td>0.689366</td>
+      <td>0.707227</td>
+      <td>6.782622e-01</td>
+      <td>6.849434e-01</td>
+      <td>7.630419e-02</td>
+      <td>6.447283e-01</td>
+      <td>5.812317e-01</td>
+      <td>4.002448e-01</td>
+      <td>-1.147990e-02</td>
+      <td>-2.942202e-03</td>
+      <td>2.737086e-02</td>
+      <td>0.710845</td>
+      <td>0.690736</td>
+      <td>0.726180</td>
+      <td>0.711372</td>
+      <td>0.857519</td>
+      <td>0.936667</td>
+      <td>0.960294</td>
+      <td>1.000000</td>
+      <td>-0.049545</td>
+      <td>0.309953</td>
+      <td>1.101051e-01</td>
+      <td>0.178404</td>
+      <td>0.724088</td>
+      <td>0.929685</td>
+      <td>0.716841</td>
+      <td>-0.074726</td>
+      <td>0.209725</td>
+      <td>0.246297</td>
+      <td>0.155374</td>
+      <td>0.398184</td>
+      <td>0.380603</td>
+    </tr>
+    <tr>
+      <td>Spend_pct_change</td>
+      <td>0.040230</td>
+      <td>0.005309</td>
+      <td>-0.002542</td>
+      <td>-3.490337e-02</td>
+      <td>-4.700138e-02</td>
+      <td>-5.248516e-02</td>
+      <td>-5.488324e-02</td>
+      <td>-5.525179e-02</td>
+      <td>-1.733616e-01</td>
+      <td>2.847391e-01</td>
+      <td>3.426060e-01</td>
+      <td>9.506229e-02</td>
+      <td>-0.156369</td>
+      <td>-0.068171</td>
+      <td>0.013054</td>
+      <td>-0.048140</td>
+      <td>-0.074695</td>
+      <td>-0.056553</td>
+      <td>-0.053102</td>
+      <td>-0.049545</td>
+      <td>1.000000</td>
+      <td>0.146932</td>
+      <td>1.652402e-01</td>
+      <td>0.173275</td>
+      <td>-0.038954</td>
+      <td>0.407637</td>
+      <td>-0.009765</td>
+      <td>0.172411</td>
+      <td>0.068277</td>
+      <td>0.051779</td>
+      <td>0.115413</td>
+      <td>0.139276</td>
+      <td>0.159682</td>
+    </tr>
+    <tr>
+      <td>Log_Spend</td>
+      <td>0.489738</td>
+      <td>0.389235</td>
+      <td>0.381788</td>
+      <td>3.837381e-01</td>
+      <td>3.752431e-01</td>
+      <td>2.859055e-02</td>
+      <td>3.591157e-01</td>
+      <td>3.682590e-01</td>
+      <td>-4.272894e-01</td>
+      <td>3.379758e-01</td>
+      <td>3.458936e-01</td>
+      <td>2.828353e-01</td>
+      <td>0.381383</td>
+      <td>0.278949</td>
+      <td>0.275855</td>
+      <td>0.225886</td>
+      <td>0.479169</td>
+      <td>0.439734</td>
+      <td>0.420670</td>
+      <td>0.309953</td>
+      <td>0.146932</td>
+      <td>1.000000</td>
+      <td>6.203983e-01</td>
+      <td>0.461092</td>
+      <td>0.383474</td>
+      <td>0.697440</td>
+      <td>0.378469</td>
+      <td>0.095295</td>
+      <td>0.217672</td>
+      <td>0.194016</td>
+      <td>0.184565</td>
+      <td>0.650400</td>
+      <td>0.651814</td>
+    </tr>
+    <tr>
+      <td>Spend_Index</td>
+      <td>0.410715</td>
+      <td>0.076784</td>
+      <td>0.071444</td>
+      <td>-6.481077e-17</td>
+      <td>-7.643988e-17</td>
+      <td>-3.469981e-17</td>
+      <td>-4.780861e-17</td>
+      <td>5.794060e-18</td>
+      <td>-3.196647e-01</td>
+      <td>5.099327e-01</td>
+      <td>4.981785e-01</td>
+      <td>6.847785e-01</td>
+      <td>0.141808</td>
+      <td>-0.051972</td>
+      <td>0.012384</td>
+      <td>-0.048345</td>
+      <td>0.229258</td>
+      <td>0.167369</td>
+      <td>0.123620</td>
+      <td>0.110105</td>
+      <td>0.165240</td>
+      <td>0.620398</td>
+      <td>1.000000e+00</td>
+      <td>0.771488</td>
+      <td>0.032352</td>
+      <td>0.614728</td>
+      <td>0.036619</td>
+      <td>0.144710</td>
+      <td>0.255283</td>
+      <td>0.246903</td>
+      <td>0.231007</td>
+      <td>0.795627</td>
+      <td>0.808957</td>
+    </tr>
+    <tr>
+      <td>High_Spend</td>
+      <td>0.393221</td>
+      <td>0.067256</td>
+      <td>0.063083</td>
+      <td>5.595216e-03</td>
+      <td>4.721907e-03</td>
+      <td>-5.422625e-03</td>
+      <td>6.151743e-03</td>
+      <td>8.249753e-03</td>
+      <td>-1.576006e-01</td>
+      <td>4.027853e-01</td>
+      <td>4.238715e-01</td>
+      <td>5.187723e-01</td>
+      <td>0.119794</td>
+      <td>-0.055398</td>
+      <td>0.149525</td>
+      <td>-0.081949</td>
+      <td>0.210392</td>
+      <td>0.193736</td>
+      <td>0.160952</td>
+      <td>0.178404</td>
+      <td>0.173275</td>
+      <td>0.461092</td>
+      <td>7.714878e-01</td>
+      <td>1.000000</td>
+      <td>0.021339</td>
+      <td>0.458368</td>
+      <td>0.036766</td>
+      <td>0.167240</td>
+      <td>0.215972</td>
+      <td>0.201907</td>
+      <td>0.198682</td>
+      <td>0.672660</td>
+      <td>0.680591</td>
+    </tr>
+    <tr>
+      <td>Traffic_Lag_1</td>
+      <td>0.679767</td>
+      <td>0.949120</td>
+      <td>0.947498</td>
+      <td>9.237328e-01</td>
+      <td>9.245247e-01</td>
+      <td>1.069761e-01</td>
+      <td>8.283659e-01</td>
+      <td>7.815870e-01</td>
+      <td>4.394149e-02</td>
+      <td>1.033990e-02</td>
+      <td>6.829511e-03</td>
+      <td>1.938433e-02</td>
+      <td>0.695218</td>
+      <td>0.632464</td>
+      <td>0.562562</td>
+      <td>0.619401</td>
+      <td>0.813780</td>
+      <td>0.812529</td>
+      <td>0.851557</td>
+      <td>0.724088</td>
+      <td>-0.038954</td>
+      <td>0.383474</td>
+      <td>3.235151e-02</td>
+      <td>0.021339</td>
+      <td>1.000000</td>
+      <td>0.938865</td>
+      <td>0.983947</td>
+      <td>-0.134529</td>
+      <td>0.348419</td>
+      <td>0.353641</td>
+      <td>0.315200</td>
+      <td>0.301333</td>
+      <td>0.295572</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 33.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>dataset_overview.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Metric</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rows</td>
+      <td>612</td>
+    </tr>
+    <tr>
+      <td>Columns</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>DMAs</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>Start Date</td>
+      <td>2025-02-01 00:00:00</td>
+    </tr>
+    <tr>
+      <td>End Date</td>
+      <td>2026-07-01 00:00:00</td>
+    </tr>
+    <tr>
+      <td>Missing Values</td>
+      <td>1035</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>distribution_shape.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Skewness</th>
+      <th>Kurtosis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spend</td>
+      <td>4.805971</td>
+      <td>37.034877</td>
+    </tr>
+    <tr>
+      <td>Traffic</td>
+      <td>2.800405</td>
+      <td>9.832638</td>
+    </tr>
+    <tr>
+      <td>Transactions</td>
+      <td>2.938079</td>
+      <td>10.825548</td>
+    </tr>
+    <tr>
+      <td>Store_Count</td>
+      <td>2.161108</td>
+      <td>5.450966</td>
+    </tr>
+    <tr>
+      <td>Total_Selling_SqFt</td>
+      <td>2.534542</td>
+      <td>7.739417</td>
+    </tr>
+    <tr>
+      <td>Avg_Selling_SqFt</td>
+      <td>0.062806</td>
+      <td>-0.825207</td>
+    </tr>
+    <tr>
+      <td>DMA_Population</td>
+      <td>2.281000</td>
+      <td>5.658597</td>
+    </tr>
+    <tr>
+      <td>TradeAreaPopulation</td>
+      <td>1.361899</td>
+      <td>1.045338</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>0.456963</td>
+      <td>-1.797068</td>
+    </tr>
+    <tr>
+      <td>Month_Number</td>
+      <td>0.372430</td>
+      <td>-0.849741</td>
+    </tr>
+    <tr>
+      <td>Quarter</td>
+      <td>0.307134</td>
+      <td>-1.087424</td>
+    </tr>
+    <tr>
+      <td>Holiday_Season</td>
+      <td>2.480959</td>
+      <td>4.168769</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_1</td>
+      <td>5.090117</td>
+      <td>41.121351</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_2</td>
+      <td>5.280339</td>
+      <td>43.672586</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_3</td>
+      <td>5.257212</td>
+      <td>42.663123</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_6</td>
+      <td>5.665767</td>
+      <td>51.384777</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_3</td>
+      <td>3.438878</td>
+      <td>16.222492</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_6</td>
+      <td>3.346382</td>
+      <td>15.422525</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_12</td>
+      <td>3.206952</td>
+      <td>13.806989</td>
+    </tr>
+    <tr>
+      <td>Cumulative_Spend</td>
+      <td>3.819633</td>
+      <td>19.948695</td>
+    </tr>
+    <tr>
+      <td>Spend_pct_change</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Log_Spend</td>
+      <td>-0.739913</td>
+      <td>-1.261317</td>
+    </tr>
+    <tr>
+      <td>Spend_Index</td>
+      <td>1.688385</td>
+      <td>3.325234</td>
+    </tr>
+    <tr>
+      <td>High_Spend</td>
+      <td>1.022287</td>
+      <td>-0.958070</td>
+    </tr>
+    <tr>
+      <td>Traffic_Lag_1</td>
+      <td>2.811777</td>
+      <td>9.911592</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 33.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>dma_summary.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>DMA</th>
+      <th>Months</th>
+      <th>AvgSpend</th>
+      <th>AvgTraffic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Atlanta, GA</td>
+      <td>18</td>
+      <td>122388.89</td>
+      <td>638548.33</td>
+    </tr>
+    <tr>
+      <td>Baltimore, MD</td>
+      <td>18</td>
+      <td>20777.78</td>
+      <td>318130.83</td>
+    </tr>
+    <tr>
+      <td>Boston, MA (Manchester, NH)</td>
+      <td>18</td>
+      <td>110111.11</td>
+      <td>523084.22</td>
+    </tr>
+    <tr>
+      <td>Buffalo, NY</td>
+      <td>18</td>
+      <td>9833.33</td>
+      <td>56202.67</td>
+    </tr>
+    <tr>
+      <td>Charlotte, NC</td>
+      <td>18</td>
+      <td>17722.22</td>
+      <td>292690.83</td>
+    </tr>
+    <tr>
+      <td>Chicago, IL</td>
+      <td>18</td>
+      <td>211388.89</td>
+      <td>1018357.22</td>
+    </tr>
+    <tr>
+      <td>Cincinnati, OH</td>
+      <td>18</td>
+      <td>24111.11</td>
+      <td>158989.06</td>
+    </tr>
+    <tr>
+      <td>Cleveland-Akron (Canton), OH</td>
+      <td>18</td>
+      <td>17055.56</td>
+      <td>190302.61</td>
+    </tr>
+    <tr>
+      <td>Columbus, OH</td>
+      <td>18</td>
+      <td>20777.78</td>
+      <td>124060.28</td>
+    </tr>
+    <tr>
+      <td>Dallas-Ft. Worth, TX</td>
+      <td>18</td>
+      <td>194000.00</td>
+      <td>871495.83</td>
+    </tr>
+    <tr>
+      <td>Detroit, MI</td>
+      <td>18</td>
+      <td>46722.22</td>
+      <td>337578.17</td>
+    </tr>
+    <tr>
+      <td>El Paso, TX (Las Cruces, NM)</td>
+      <td>18</td>
+      <td>17611.11</td>
+      <td>312863.33</td>
+    </tr>
+    <tr>
+      <td>Ft. Myers-Naples, FL</td>
+      <td>18</td>
+      <td>11111.11</td>
+      <td>220286.44</td>
+    </tr>
+    <tr>
+      <td>Harlingen-Weslaco-Brownsville-McAllen, TX</td>
+      <td>18</td>
+      <td>28833.33</td>
+      <td>412956.72</td>
+    </tr>
+    <tr>
+      <td>Hartford &amp; New Haven, CT</td>
+      <td>18</td>
+      <td>7333.33</td>
+      <td>259925.39</td>
+    </tr>
+    <tr>
+      <td>Houston, TX</td>
+      <td>18</td>
+      <td>167000.00</td>
+      <td>986533.39</td>
+    </tr>
+    <tr>
+      <td>Las Vegas, NV</td>
+      <td>18</td>
+      <td>23055.56</td>
+      <td>261823.28</td>
+    </tr>
+    <tr>
+      <td>Los Angeles, CA</td>
+      <td>18</td>
+      <td>287277.78</td>
+      <td>1426174.94</td>
+    </tr>
+    <tr>
+      <td>Miami-Ft. Lauderdale, FL</td>
+      <td>18</td>
+      <td>179944.44</td>
+      <td>1155267.00</td>
+    </tr>
+    <tr>
+      <td>Minneapolis-St. Paul, MN</td>
+      <td>18</td>
+      <td>54944.44</td>
+      <td>273695.94</td>
+    </tr>
+    <tr>
+      <td>New York, NY</td>
+      <td>18</td>
+      <td>516722.22</td>
+      <td>2950781.50</td>
+    </tr>
+    <tr>
+      <td>Oklahoma City, OK</td>
+      <td>18</td>
+      <td>12666.67</td>
+      <td>156046.83</td>
+    </tr>
+    <tr>
+      <td>Orlando-Daytona Beach-Melbourne, FL</td>
+      <td>18</td>
+      <td>49722.22</td>
+      <td>666728.28</td>
+    </tr>
+    <tr>
+      <td>Philadelphia, PA</td>
+      <td>18</td>
+      <td>172277.78</td>
+      <td>721968.06</td>
+    </tr>
+    <tr>
+      <td>Phoenix (Prescott), AZ</td>
+      <td>18</td>
+      <td>41833.33</td>
+      <td>419486.11</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 34.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>duplicates.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Duplicate Rows</th>
+      <th>Percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>high_spend_summary.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>High_Spend</th>
+      <th>AvgTraffic</th>
+      <th>AvgTransactions</th>
+      <th>AvgSpend</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>538835.00</td>
+      <td>251183.79</td>
+      <td>45211.24</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>622778.75</td>
+      <td>288094.59</td>
+      <td>179778.44</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>lag_correlations.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Traffic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spend</td>
+      <td>0.705</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_1</td>
+      <td>0.645</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_2</td>
+      <td>0.571</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_3</td>
+      <td>0.552</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_6</td>
+      <td>0.536</td>
+    </tr>
+    <tr>
+      <td>Traffic</td>
+      <td>1.000</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>missing_values.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Missing_Count</th>
+      <th>Percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Traffic_Lag_12</td>
+      <td>408</td>
+      <td>66.67</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_6</td>
+      <td>204</td>
+      <td>33.33</td>
+    </tr>
+    <tr>
+      <td>Spend_pct_change</td>
+      <td>151</td>
+      <td>24.67</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_3</td>
+      <td>102</td>
+      <td>16.67</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_2</td>
+      <td>68</td>
+      <td>11.11</td>
+    </tr>
+    <tr>
+      <td>Traffic_pct_change</td>
+      <td>34</td>
+      <td>5.56</td>
+    </tr>
+    <tr>
+      <td>Traffic_Lag_1</td>
+      <td>34</td>
+      <td>5.56</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_1</td>
+      <td>34</td>
+      <td>5.56</td>
+    </tr>
+    <tr>
+      <td>DMA_Original_y</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Traffic</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Transactions</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Month</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>DMA_Original_x</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>DMA</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Spend</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Month_Number</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>TradeAreaPopulation</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>DMA_Population</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>_merge</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Store_Count</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Total_Selling_SqFt</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Avg_Selling_SqFt</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_3</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Month_Name</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 39.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>month_summary.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Month</th>
+      <th>Active_DMAs</th>
+      <th>Total_Spend</th>
+      <th>Avg_DMA_Spend</th>
+      <th>Total_Traffic</th>
+      <th>Avg_DMA_Traffic</th>
+      <th>Total_Transactions</th>
+      <th>Avg_DMA_Transactions</th>
+      <th>Spend_pct_change</th>
+      <th>Traffic_pct_change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2025-02-01</td>
+      <td>34</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>14033153.0</td>
+      <td>412739.794118</td>
+      <td>6590216.0</td>
+      <td>193829.882353</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2025-03-01</td>
+      <td>34</td>
+      <td>1719000</td>
+      <td>50558.823529</td>
+      <td>20486179.0</td>
+      <td>602534.676471</td>
+      <td>9577986.0</td>
+      <td>281705.470588</td>
+      <td>inf</td>
+      <td>0.459841</td>
+    </tr>
+    <tr>
+      <td>2025-04-01</td>
+      <td>34</td>
+      <td>2714000</td>
+      <td>79823.529412</td>
+      <td>16067517.0</td>
+      <td>472574.029412</td>
+      <td>7619442.0</td>
+      <td>224101.235294</td>
+      <td>0.578825</td>
+      <td>-0.215690</td>
+    </tr>
+    <tr>
+      <td>2025-05-01</td>
+      <td>34</td>
+      <td>1147000</td>
+      <td>33735.294118</td>
+      <td>19830164.0</td>
+      <td>583240.117647</td>
+      <td>9372241.0</td>
+      <td>275654.147059</td>
+      <td>-0.577377</td>
+      <td>0.234177</td>
+    </tr>
+    <tr>
+      <td>2025-06-01</td>
+      <td>34</td>
+      <td>1647000</td>
+      <td>48441.176471</td>
+      <td>16769711.0</td>
+      <td>493226.794118</td>
+      <td>7795144.0</td>
+      <td>229268.941176</td>
+      <td>0.435920</td>
+      <td>-0.154333</td>
+    </tr>
+    <tr>
+      <td>2025-07-01</td>
+      <td>34</td>
+      <td>2677000</td>
+      <td>78735.294118</td>
+      <td>17482904.0</td>
+      <td>514203.058824</td>
+      <td>7911661.0</td>
+      <td>232695.911765</td>
+      <td>0.625379</td>
+      <td>0.042529</td>
+    </tr>
+    <tr>
+      <td>2025-08-01</td>
+      <td>34</td>
+      <td>3215000</td>
+      <td>94558.823529</td>
+      <td>23166072.0</td>
+      <td>681355.058824</td>
+      <td>10067570.0</td>
+      <td>296105.000000</td>
+      <td>0.200971</td>
+      <td>0.325070</td>
+    </tr>
+    <tr>
+      <td>2025-09-01</td>
+      <td>34</td>
+      <td>793000</td>
+      <td>23323.529412</td>
+      <td>16225483.0</td>
+      <td>477220.088235</td>
+      <td>7360843.0</td>
+      <td>216495.382353</td>
+      <td>-0.753344</td>
+      <td>-0.299601</td>
+    </tr>
+    <tr>
+      <td>2025-10-01</td>
+      <td>34</td>
+      <td>2268000</td>
+      <td>66705.882353</td>
+      <td>16697162.0</td>
+      <td>491093.000000</td>
+      <td>7586470.0</td>
+      <td>223131.470588</td>
+      <td>1.860025</td>
+      <td>0.029070</td>
+    </tr>
+    <tr>
+      <td>2025-11-01</td>
+      <td>34</td>
+      <td>4694000</td>
+      <td>138058.823529</td>
+      <td>23581653.0</td>
+      <td>693578.029412</td>
+      <td>10767415.0</td>
+      <td>316688.676471</td>
+      <td>1.069665</td>
+      <td>0.412315</td>
+    </tr>
+    <tr>
+      <td>2025-12-01</td>
+      <td>34</td>
+      <td>9998000</td>
+      <td>294058.823529</td>
+      <td>24595379.0</td>
+      <td>723393.500000</td>
+      <td>11387693.0</td>
+      <td>334932.147059</td>
+      <td>1.129953</td>
+      <td>0.042988</td>
+    </tr>
+    <tr>
+      <td>2026-01-01</td>
+      <td>34</td>
+      <td>3320000</td>
+      <td>97647.058824</td>
+      <td>19409166.0</td>
+      <td>570857.823529</td>
+      <td>8904127.0</td>
+      <td>261886.088235</td>
+      <td>-0.667934</td>
+      <td>-0.210861</td>
+    </tr>
+    <tr>
+      <td>2026-02-01</td>
+      <td>34</td>
+      <td>960000</td>
+      <td>28235.294118</td>
+      <td>15204005.0</td>
+      <td>447176.617647</td>
+      <td>7311487.0</td>
+      <td>215043.735294</td>
+      <td>-0.710843</td>
+      <td>-0.216659</td>
+    </tr>
+    <tr>
+      <td>2026-03-01</td>
+      <td>34</td>
+      <td>3648000</td>
+      <td>107294.117647</td>
+      <td>18601159.0</td>
+      <td>547092.911765</td>
+      <td>9035996.0</td>
+      <td>265764.588235</td>
+      <td>2.800000</td>
+      <td>0.223438</td>
+    </tr>
+    <tr>
+      <td>2026-04-01</td>
+      <td>34</td>
+      <td>3159000</td>
+      <td>92911.764706</td>
+      <td>19012165.0</td>
+      <td>559181.323529</td>
+      <td>9231738.0</td>
+      <td>271521.705882</td>
+      <td>-0.134046</td>
+      <td>0.022096</td>
+    </tr>
+    <tr>
+      <td>2026-05-01</td>
+      <td>34</td>
+      <td>1797000</td>
+      <td>52852.941176</td>
+      <td>24213396.0</td>
+      <td>712158.705882</td>
+      <td>11523197.0</td>
+      <td>338917.558824</td>
+      <td>-0.431149</td>
+      <td>0.273574</td>
+    </tr>
+    <tr>
+      <td>2026-06-01</td>
+      <td>34</td>
+      <td>2793000</td>
+      <td>82147.058824</td>
+      <td>19865374.0</td>
+      <td>584275.705882</td>
+      <td>9337005.0</td>
+      <td>274617.794118</td>
+      <td>0.554257</td>
+      <td>-0.179571</td>
+    </tr>
+    <tr>
+      <td>2026-07-01</td>
+      <td>34</td>
+      <td>3593000</td>
+      <td>105676.470588</td>
+      <td>18544986.0</td>
+      <td>545440.764706</td>
+      <td>8508351.0</td>
+      <td>250245.617647</td>
+      <td>0.286430</td>
+      <td>-0.066467</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>numeric_summary.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Spend</th>
+      <th>Traffic</th>
+      <th>Transactions</th>
+      <th>Store_Count</th>
+      <th>Total_Selling_SqFt</th>
+      <th>Avg_Selling_SqFt</th>
+      <th>DMA_Population</th>
+      <th>TradeAreaPopulation</th>
+      <th>Year</th>
+      <th>Month_Number</th>
+      <th>Quarter</th>
+      <th>Holiday_Season</th>
+      <th>Spend_Lag_1</th>
+      <th>Spend_Lag_2</th>
+      <th>Spend_Lag_3</th>
+      <th>Spend_Lag_6</th>
+      <th>Rolling_Spend_3</th>
+      <th>Rolling_Spend_6</th>
+      <th>Rolling_Spend_12</th>
+      <th>Cumulative_Spend</th>
+      <th>Spend_pct_change</th>
+      <th>Log_Spend</th>
+      <th>Spend_Index</th>
+      <th>High_Spend</th>
+      <th>Traffic_Lag_1</th>
+      <th>Traffic_Lag_12</th>
+      <th>Rolling_Traffic_3</th>
+      <th>Traffic_pct_change</th>
+      <th>Traffic_per_Store</th>
+      <th>Transactions_per_Store</th>
+      <th>Traffic_per_1000SqFt</th>
+      <th>Spend_per_Store</th>
+      <th>Spend_per_1000SqFt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>578.00</td>
+      <td>544.00</td>
+      <td>510.00</td>
+      <td>408.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>461.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>578.00</td>
+      <td>204.00</td>
+      <td>612.00</td>
+      <td>578.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>81931.37</td>
+      <td>561741.22</td>
+      <td>261255.85</td>
+      <td>23.62</td>
+      <td>668611.32</td>
+      <td>29166.92</td>
+      <td>5317490.62</td>
+      <td>17111233.26</td>
+      <td>2025.39</td>
+      <td>5.83</td>
+      <td>2.28</td>
+      <td>0.11</td>
+      <td>80534.60</td>
+      <td>80433.82</td>
+      <td>82272.55</td>
+      <td>83803.92</td>
+      <td>76964.32</td>
+      <td>73111.22</td>
+      <td>63628.02</td>
+      <td>677075.16</td>
+      <td>inf</td>
+      <td>7.67</td>
+      <td>1.00</td>
+      <td>0.27</td>
+      <td>562700.07</td>
+      <td>513086.41</td>
+      <td>555407.14</td>
+      <td>0.05</td>
+      <td>22823.50</td>
+      <td>10610.20</td>
+      <td>818.88</td>
+      <td>2755.53</td>
+      <td>97.54</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>152561.41</td>
+      <td>556416.26</td>
+      <td>260845.96</td>
+      <td>18.93</td>
+      <td>571432.40</td>
+      <td>3408.51</td>
+      <td>4402120.47</td>
+      <td>16448278.37</td>
+      <td>0.49</td>
+      <td>3.13</td>
+      <td>1.04</td>
+      <td>0.31</td>
+      <td>150419.27</td>
+      <td>150172.41</td>
+      <td>153247.35</td>
+      <td>147749.81</td>
+      <td>121958.06</td>
+      <td>106809.39</td>
+      <td>84114.43</td>
+      <td>1084575.87</td>
+      <td>NaN</td>
+      <td>5.11</td>
+      <td>1.15</td>
+      <td>0.45</td>
+      <td>558735.04</td>
+      <td>516587.65</td>
+      <td>541859.27</td>
+      <td>0.26</td>
+      <td>7844.67</td>
+      <td>3369.99</td>
+      <td>317.33</td>
+      <td>3370.26</td>
+      <td>118.89</td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>-6000.00</td>
+      <td>41259.00</td>
+      <td>21354.00</td>
+      <td>5.00</td>
+      <td>161480.00</td>
+      <td>22463.09</td>
+      <td>1105750.00</td>
+      <td>1404939.00</td>
+      <td>2025.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>-6000.00</td>
+      <td>-6000.00</td>
+      <td>-6000.00</td>
+      <td>-6000.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>-24.00</td>
+      <td>0.00</td>
+      <td>-0.05</td>
+      <td>0.00</td>
+      <td>41259.00</td>
+      <td>50110.00</td>
+      <td>45564.33</td>
+      <td>-0.50</td>
+      <td>8251.80</td>
+      <td>4270.80</td>
+      <td>255.51</td>
+      <td>-230.77</td>
+      <td>-6.88</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>0.00</td>
+      <td>245657.25</td>
+      <td>117130.50</td>
+      <td>12.00</td>
+      <td>306280.00</td>
+      <td>27026.50</td>
+      <td>2489549.00</td>
+      <td>4927880.00</td>
+      <td>2025.00</td>
+      <td>3.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1000.00</td>
+      <td>3000.00</td>
+      <td>13750.00</td>
+      <td>8625.00</td>
+      <td>15250.00</td>
+      <td>17000.00</td>
+      <td>115000.00</td>
+      <td>-0.57</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>245381.75</td>
+      <td>215010.50</td>
+      <td>243827.67</td>
+      <td>-0.17</td>
+      <td>17324.38</td>
+      <td>8148.13</td>
+      <td>632.36</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>28000.00</td>
+      <td>355802.00</td>
+      <td>163996.00</td>
+      <td>16.50</td>
+      <td>473900.50</td>
+      <td>28423.03</td>
+      <td>4212862.00</td>
+      <td>8558645.50</td>
+      <td>2025.00</td>
+      <td>5.50</td>
+      <td>2.00</td>
+      <td>0.00</td>
+      <td>29000.00</td>
+      <td>31000.00</td>
+      <td>32000.00</td>
+      <td>39000.00</td>
+      <td>34166.67</td>
+      <td>33983.33</td>
+      <td>33000.00</td>
+      <td>307000.00</td>
+      <td>0.28</td>
+      <td>10.24</td>
+      <td>0.72</td>
+      <td>0.00</td>
+      <td>355802.00</td>
+      <td>332605.00</td>
+      <td>356811.17</td>
+      <td>0.02</td>
+      <td>21686.12</td>
+      <td>10137.59</td>
+      <td>759.80</td>
+      <td>1800.00</td>
+      <td>65.57</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>96250.00</td>
+      <td>681396.50</td>
+      <td>324959.00</td>
+      <td>30.00</td>
+      <td>872685.00</td>
+      <td>32149.21</td>
+      <td>6834716.00</td>
+      <td>21378556.00</td>
+      <td>2026.00</td>
+      <td>8.00</td>
+      <td>3.00</td>
+      <td>0.00</td>
+      <td>94000.00</td>
+      <td>93250.00</td>
+      <td>92750.00</td>
+      <td>94000.00</td>
+      <td>91083.33</td>
+      <td>82333.33</td>
+      <td>71187.50</td>
+      <td>728000.00</td>
+      <td>1.30</td>
+      <td>11.47</td>
+      <td>1.55</td>
+      <td>1.00</td>
+      <td>682731.50</td>
+      <td>627605.00</td>
+      <td>670212.17</td>
+      <td>0.24</td>
+      <td>27067.60</td>
+      <td>12345.51</td>
+      <td>927.24</td>
+      <td>4091.99</td>
+      <td>145.91</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>1825000.00</td>
+      <td>3759759.00</td>
+      <td>1796648.00</td>
+      <td>99.00</td>
+      <td>3122485.00</td>
+      <td>34948.90</td>
+      <td>22165424.00</td>
+      <td>66109628.00</td>
+      <td>2026.00</td>
+      <td>12.00</td>
+      <td>4.00</td>
+      <td>1.00</td>
+      <td>1825000.00</td>
+      <td>1825000.00</td>
+      <td>1825000.00</td>
+      <td>1825000.00</td>
+      <td>1019666.67</td>
+      <td>886833.33</td>
+      <td>628833.33</td>
+      <td>9301000.00</td>
+      <td>inf</td>
+      <td>14.42</td>
+      <td>5.65</td>
+      <td>1.00</td>
+      <td>3759759.00</td>
+      <td>3247183.00</td>
+      <td>3266548.00</td>
+      <td>0.88</td>
+      <td>59633.17</td>
+      <td>24727.67</td>
+      <td>2758.97</td>
+      <td>19400.00</td>
+      <td>731.00</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>outlier_report.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variable</th>
+      <th>Outliers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spend</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td>Traffic</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td>Transactions</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td>Store_Count</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>Total_Selling_SqFt</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>Avg_Selling_SqFt</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>DMA_Population</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>TradeAreaPopulation</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Month_Number</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Quarter</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Holiday_Season</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_1</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_2</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_3</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_6</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_3</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_6</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_12</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>Cumulative_Spend</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>Spend_pct_change</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td>Log_Spend</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Spend_Index</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td>High_Spend</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Traffic_Lag_1</td>
+      <td>43</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 33.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>panel_balance.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>DMA</th>
+      <th>Months</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Atlanta, GA</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Baltimore, MD</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Boston, MA (Manchester, NH)</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Buffalo, NY</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Charlotte, NC</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Chicago, IL</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Cincinnati, OH</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Cleveland-Akron (Canton), OH</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Columbus, OH</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Dallas-Ft. Worth, TX</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Detroit, MI</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>El Paso, TX (Las Cruces, NM)</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Ft. Myers-Naples, FL</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Harlingen-Weslaco-Brownsville-McAllen, TX</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Hartford &amp; New Haven, CT</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Houston, TX</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Las Vegas, NV</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Los Angeles, CA</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Miami-Ft. Lauderdale, FL</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Minneapolis-St. Paul, MN</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>New York, NY</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Oklahoma City, OK</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Orlando-Daytona Beach-Melbourne, FL</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Philadelphia, PA</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Phoenix (Prescott), AZ</td>
+      <td>18</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 34.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>panel_summary_statistics.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Spend</th>
+      <th>Traffic</th>
+      <th>Transactions</th>
+      <th>Store_Count</th>
+      <th>Total_Selling_SqFt</th>
+      <th>Traffic_per_Store</th>
+      <th>Spend_per_Store</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>81931.37</td>
+      <td>561741.22</td>
+      <td>261255.85</td>
+      <td>23.62</td>
+      <td>668611.32</td>
+      <td>22823.50</td>
+      <td>2755.53</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>152561.41</td>
+      <td>556416.26</td>
+      <td>260845.96</td>
+      <td>18.93</td>
+      <td>571432.40</td>
+      <td>7844.67</td>
+      <td>3370.26</td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>-6000.00</td>
+      <td>41259.00</td>
+      <td>21354.00</td>
+      <td>5.00</td>
+      <td>161480.00</td>
+      <td>8251.80</td>
+      <td>-230.77</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>0.00</td>
+      <td>245657.25</td>
+      <td>117130.50</td>
+      <td>12.00</td>
+      <td>306280.00</td>
+      <td>17324.38</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>28000.00</td>
+      <td>355802.00</td>
+      <td>163996.00</td>
+      <td>16.50</td>
+      <td>473900.50</td>
+      <td>21686.12</td>
+      <td>1800.00</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>96250.00</td>
+      <td>681396.50</td>
+      <td>324959.00</td>
+      <td>30.00</td>
+      <td>872685.00</td>
+      <td>27067.60</td>
+      <td>4091.99</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>1825000.00</td>
+      <td>3759759.00</td>
+      <td>1796648.00</td>
+      <td>99.00</td>
+      <td>3122485.00</td>
+      <td>59633.17</td>
+      <td>19400.00</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>relationship_statistics.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Spend</th>
+      <th>Traffic</th>
+      <th>Transactions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>81931.37</td>
+      <td>561741.22</td>
+      <td>261255.85</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>152561.41</td>
+      <td>556416.26</td>
+      <td>260845.96</td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>-6000.00</td>
+      <td>41259.00</td>
+      <td>21354.00</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>0.00</td>
+      <td>245657.25</td>
+      <td>117130.50</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>28000.00</td>
+      <td>355802.00</td>
+      <td>163996.00</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>96250.00</td>
+      <td>681396.50</td>
+      <td>324959.00</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>1825000.00</td>
+      <td>3759759.00</td>
+      <td>1796648.00</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>reporting_metrics.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>panel_rows</th>
+      <th>panel_dmas</th>
+      <th>panel_months</th>
+      <th>panel_start</th>
+      <th>panel_end</th>
+      <th>aggregate_incremental</th>
+      <th>aggregate_lower</th>
+      <th>aggregate_upper</th>
+      <th>aggregate_prob_positive</th>
+      <th>aggregate_lift</th>
+      <th>aggregate_dmas</th>
+      <th>positive_dma_count</th>
+      <th>negative_dma_count</th>
+      <th>bsts_pass_count</th>
+      <th>bsts_count</th>
+      <th>bsts_divergence_count</th>
+      <th>counterfactual_pass_count</th>
+      <th>counterfactual_count</th>
+      <th>counterfactual_mean_r2</th>
+      <th>placebo_tests</th>
+      <th>placebo_positive_rate</th>
+      <th>placebo_zero_crossing_rate</th>
+      <th>placebo_strong_positive_rate</th>
+      <th>placebo_strong_negative_rate</th>
+      <th>incremental_spend</th>
+      <th>spend_aggregate_impact</th>
+      <th>spend_impact_per_1k</th>
+      <th>spend_pearson</th>
+      <th>spend_pearson_p</th>
+      <th>spend_spearman</th>
+      <th>credible_direction_count</th>
+      <th>heterogeneity_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>612</td>
+      <td>34</td>
+      <td>18</td>
+      <td>2025-02-01</td>
+      <td>2026-07-01</td>
+      <td>362785.262373</td>
+      <td>-3.036960e+06</td>
+      <td>3.777991e+06</td>
+      <td>0.595625</td>
+      <td>0.005808</td>
+      <td>9.0</td>
+      <td>6</td>
+      <td>5</td>
+      <td>9</td>
+      <td>11</td>
+      <td>2</td>
+      <td>11</td>
+      <td>11</td>
+      <td>0.969227</td>
+      <td>42</td>
+      <td>0.571429</td>
+      <td>0.809524</td>
+      <td>0.214286</td>
+      <td>0.047619</td>
+      <td>4.060636e+06</td>
+      <td>362785.262373</td>
+      <td>89.341973</td>
+      <td>0.572264</td>
+      <td>0.107353</td>
+      <td>0.216667</td>
+      <td>1</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>spend_heatmap.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>DMA</th>
+      <th>2025-02-01</th>
+      <th>2025-03-01</th>
+      <th>2025-04-01</th>
+      <th>2025-05-01</th>
+      <th>2025-06-01</th>
+      <th>2025-07-01</th>
+      <th>2025-08-01</th>
+      <th>2025-09-01</th>
+      <th>2025-10-01</th>
+      <th>2025-11-01</th>
+      <th>2025-12-01</th>
+      <th>2026-01-01</th>
+      <th>2026-02-01</th>
+      <th>2026-03-01</th>
+      <th>2026-04-01</th>
+      <th>2026-05-01</th>
+      <th>2026-06-01</th>
+      <th>2026-07-01</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Atlanta, GA</td>
+      <td>0</td>
+      <td>80000</td>
+      <td>90000</td>
+      <td>41000</td>
+      <td>48000</td>
+      <td>124000</td>
+      <td>128000</td>
+      <td>8000</td>
+      <td>36000</td>
+      <td>150000</td>
+      <td>340000</td>
+      <td>135000</td>
+      <td>87000</td>
+      <td>235000</td>
+      <td>149000</td>
+      <td>141000</td>
+      <td>145000</td>
+      <td>266000</td>
+    </tr>
+    <tr>
+      <td>Baltimore, MD</td>
+      <td>0</td>
+      <td>14000</td>
+      <td>30000</td>
+      <td>15000</td>
+      <td>22000</td>
+      <td>48000</td>
+      <td>46000</td>
+      <td>2000</td>
+      <td>35000</td>
+      <td>48000</td>
+      <td>85000</td>
+      <td>29000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Boston, MA (Manchester, NH)</td>
+      <td>0</td>
+      <td>75000</td>
+      <td>101000</td>
+      <td>47000</td>
+      <td>60000</td>
+      <td>90000</td>
+      <td>127000</td>
+      <td>5000</td>
+      <td>14000</td>
+      <td>163000</td>
+      <td>367000</td>
+      <td>129000</td>
+      <td>55000</td>
+      <td>180000</td>
+      <td>141000</td>
+      <td>120000</td>
+      <td>124000</td>
+      <td>184000</td>
+    </tr>
+    <tr>
+      <td>Buffalo, NY</td>
+      <td>0</td>
+      <td>13000</td>
+      <td>16000</td>
+      <td>6000</td>
+      <td>7000</td>
+      <td>17000</td>
+      <td>15000</td>
+      <td>1000</td>
+      <td>22000</td>
+      <td>24000</td>
+      <td>48000</td>
+      <td>8000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Charlotte, NC</td>
+      <td>0</td>
+      <td>17000</td>
+      <td>31000</td>
+      <td>18000</td>
+      <td>23000</td>
+      <td>25000</td>
+      <td>31000</td>
+      <td>2000</td>
+      <td>4000</td>
+      <td>51000</td>
+      <td>86000</td>
+      <td>31000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Chicago, IL</td>
+      <td>0</td>
+      <td>77000</td>
+      <td>139000</td>
+      <td>57000</td>
+      <td>85000</td>
+      <td>106000</td>
+      <td>161000</td>
+      <td>253000</td>
+      <td>476000</td>
+      <td>240000</td>
+      <td>569000</td>
+      <td>182000</td>
+      <td>93000</td>
+      <td>292000</td>
+      <td>198000</td>
+      <td>213000</td>
+      <td>279000</td>
+      <td>385000</td>
+    </tr>
+    <tr>
+      <td>Cincinnati, OH</td>
+      <td>0</td>
+      <td>24000</td>
+      <td>38000</td>
+      <td>9000</td>
+      <td>16000</td>
+      <td>45000</td>
+      <td>45000</td>
+      <td>2000</td>
+      <td>60000</td>
+      <td>54000</td>
+      <td>115000</td>
+      <td>26000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Cleveland-Akron (Canton), OH</td>
+      <td>0</td>
+      <td>21000</td>
+      <td>30000</td>
+      <td>10000</td>
+      <td>13000</td>
+      <td>35000</td>
+      <td>33000</td>
+      <td>3000</td>
+      <td>3000</td>
+      <td>45000</td>
+      <td>92000</td>
+      <td>22000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Columbus, OH</td>
+      <td>0</td>
+      <td>17000</td>
+      <td>35000</td>
+      <td>8000</td>
+      <td>18000</td>
+      <td>33000</td>
+      <td>40000</td>
+      <td>2000</td>
+      <td>54000</td>
+      <td>46000</td>
+      <td>97000</td>
+      <td>24000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Dallas-Ft. Worth, TX</td>
+      <td>0</td>
+      <td>75000</td>
+      <td>105000</td>
+      <td>52000</td>
+      <td>63000</td>
+      <td>124000</td>
+      <td>122000</td>
+      <td>327000</td>
+      <td>627000</td>
+      <td>174000</td>
+      <td>401000</td>
+      <td>136000</td>
+      <td>74000</td>
+      <td>280000</td>
+      <td>224000</td>
+      <td>157000</td>
+      <td>243000</td>
+      <td>308000</td>
+    </tr>
+    <tr>
+      <td>Detroit, MI</td>
+      <td>0</td>
+      <td>41000</td>
+      <td>68000</td>
+      <td>23000</td>
+      <td>37000</td>
+      <td>50000</td>
+      <td>89000</td>
+      <td>4000</td>
+      <td>65000</td>
+      <td>114000</td>
+      <td>264000</td>
+      <td>86000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>El Paso, TX (Las Cruces, NM)</td>
+      <td>0</td>
+      <td>20000</td>
+      <td>29000</td>
+      <td>18000</td>
+      <td>19000</td>
+      <td>31000</td>
+      <td>32000</td>
+      <td>0</td>
+      <td>9000</td>
+      <td>47000</td>
+      <td>86000</td>
+      <td>26000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Ft. Myers-Naples, FL</td>
+      <td>0</td>
+      <td>12000</td>
+      <td>19000</td>
+      <td>13000</td>
+      <td>14000</td>
+      <td>18000</td>
+      <td>20000</td>
+      <td>1000</td>
+      <td>0</td>
+      <td>31000</td>
+      <td>52000</td>
+      <td>20000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Harlingen-Weslaco-Brownsville-McAllen, TX</td>
+      <td>0</td>
+      <td>28000</td>
+      <td>45000</td>
+      <td>26000</td>
+      <td>31000</td>
+      <td>43000</td>
+      <td>47000</td>
+      <td>1000</td>
+      <td>11000</td>
+      <td>74000</td>
+      <td>163000</td>
+      <td>50000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Hartford &amp; New Haven, CT</td>
+      <td>0</td>
+      <td>6000</td>
+      <td>13000</td>
+      <td>0</td>
+      <td>4000</td>
+      <td>14000</td>
+      <td>12000</td>
+      <td>1000</td>
+      <td>13000</td>
+      <td>16000</td>
+      <td>40000</td>
+      <td>13000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Houston, TX</td>
+      <td>0</td>
+      <td>66000</td>
+      <td>148000</td>
+      <td>63000</td>
+      <td>94000</td>
+      <td>118000</td>
+      <td>164000</td>
+      <td>67000</td>
+      <td>78000</td>
+      <td>241000</td>
+      <td>575000</td>
+      <td>187000</td>
+      <td>71000</td>
+      <td>307000</td>
+      <td>203000</td>
+      <td>141000</td>
+      <td>224000</td>
+      <td>259000</td>
+    </tr>
+    <tr>
+      <td>Las Vegas, NV</td>
+      <td>0</td>
+      <td>26000</td>
+      <td>37000</td>
+      <td>18000</td>
+      <td>21000</td>
+      <td>53000</td>
+      <td>43000</td>
+      <td>1000</td>
+      <td>10000</td>
+      <td>59000</td>
+      <td>114000</td>
+      <td>33000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Los Angeles, CA</td>
+      <td>0</td>
+      <td>138000</td>
+      <td>215000</td>
+      <td>85000</td>
+      <td>130000</td>
+      <td>172000</td>
+      <td>255000</td>
+      <td>14000</td>
+      <td>52000</td>
+      <td>353000</td>
+      <td>844000</td>
+      <td>290000</td>
+      <td>135000</td>
+      <td>558000</td>
+      <td>368000</td>
+      <td>241000</td>
+      <td>645000</td>
+      <td>676000</td>
+    </tr>
+    <tr>
+      <td>Miami-Ft. Lauderdale, FL</td>
+      <td>0</td>
+      <td>104000</td>
+      <td>180000</td>
+      <td>79000</td>
+      <td>115000</td>
+      <td>135000</td>
+      <td>197000</td>
+      <td>5000</td>
+      <td>94000</td>
+      <td>381000</td>
+      <td>635000</td>
+      <td>226000</td>
+      <td>72000</td>
+      <td>292000</td>
+      <td>174000</td>
+      <td>124000</td>
+      <td>202000</td>
+      <td>224000</td>
+    </tr>
+    <tr>
+      <td>Minneapolis-St. Paul, MN</td>
+      <td>0</td>
+      <td>135000</td>
+      <td>72000</td>
+      <td>19000</td>
+      <td>26000</td>
+      <td>120000</td>
+      <td>82000</td>
+      <td>7000</td>
+      <td>150000</td>
+      <td>109000</td>
+      <td>230000</td>
+      <td>39000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>New York, NY</td>
+      <td>0</td>
+      <td>300000</td>
+      <td>473000</td>
+      <td>247000</td>
+      <td>307000</td>
+      <td>428000</td>
+      <td>526000</td>
+      <td>45000</td>
+      <td>58000</td>
+      <td>766000</td>
+      <td>1825000</td>
+      <td>468000</td>
+      <td>194000</td>
+      <td>817000</td>
+      <td>1251000</td>
+      <td>352000</td>
+      <td>551000</td>
+      <td>693000</td>
+    </tr>
+    <tr>
+      <td>Oklahoma City, OK</td>
+      <td>0</td>
+      <td>14000</td>
+      <td>18000</td>
+      <td>8000</td>
+      <td>9000</td>
+      <td>28000</td>
+      <td>22000</td>
+      <td>1000</td>
+      <td>22000</td>
+      <td>30000</td>
+      <td>57000</td>
+      <td>19000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Orlando-Daytona Beach-Melbourne, FL</td>
+      <td>0</td>
+      <td>40000</td>
+      <td>69000</td>
+      <td>36000</td>
+      <td>44000</td>
+      <td>86000</td>
+      <td>91000</td>
+      <td>4000</td>
+      <td>24000</td>
+      <td>117000</td>
+      <td>280000</td>
+      <td>104000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Philadelphia, PA</td>
+      <td>0</td>
+      <td>78000</td>
+      <td>139000</td>
+      <td>50000</td>
+      <td>82000</td>
+      <td>118000</td>
+      <td>154000</td>
+      <td>7000</td>
+      <td>74000</td>
+      <td>414000</td>
+      <td>698000</td>
+      <td>248000</td>
+      <td>62000</td>
+      <td>269000</td>
+      <td>176000</td>
+      <td>124000</td>
+      <td>174000</td>
+      <td>234000</td>
+    </tr>
+    <tr>
+      <td>Phoenix (Prescott), AZ</td>
+      <td>0</td>
+      <td>23000</td>
+      <td>66000</td>
+      <td>25000</td>
+      <td>48000</td>
+      <td>92000</td>
+      <td>94000</td>
+      <td>3000</td>
+      <td>28000</td>
+      <td>107000</td>
+      <td>194000</td>
+      <td>73000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 34.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>spend_statistics.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Spend</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>612.00</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>81931.37</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>152561.41</td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>-6000.00</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>28000.00</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>96250.00</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>1825000.00</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>store_statistics.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Store_Count</th>
+      <th>Total_Selling_SqFt</th>
+      <th>Avg_Selling_SqFt</th>
+      <th>DMA_Population</th>
+      <th>TradeAreaPopulation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>23.62</td>
+      <td>668611.32</td>
+      <td>29166.92</td>
+      <td>5317490.62</td>
+      <td>17111233.26</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>18.93</td>
+      <td>571432.40</td>
+      <td>3408.51</td>
+      <td>4402120.47</td>
+      <td>16448278.37</td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>5.00</td>
+      <td>161480.00</td>
+      <td>22463.09</td>
+      <td>1105750.00</td>
+      <td>1404939.00</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>12.00</td>
+      <td>306280.00</td>
+      <td>27026.50</td>
+      <td>2489549.00</td>
+      <td>4927880.00</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>16.50</td>
+      <td>473900.50</td>
+      <td>28423.03</td>
+      <td>4212862.00</td>
+      <td>8558645.50</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>30.00</td>
+      <td>872685.00</td>
+      <td>32149.21</td>
+      <td>6834716.00</td>
+      <td>21378556.00</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>99.00</td>
+      <td>3122485.00</td>
+      <td>34948.90</td>
+      <td>22165424.00</td>
+      <td>66109628.00</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>time_coverage.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Month</th>
+      <th>DMAs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2025-02-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-03-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-04-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-05-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-06-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-07-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-08-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-09-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-10-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-11-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2025-12-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2026-01-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2026-02-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2026-03-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2026-04-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2026-05-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2026-06-01</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2026-07-01</td>
+      <td>34</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>traffic_correlations.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Traffic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Traffic</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <td>Transactions</td>
+      <td>0.997</td>
+    </tr>
+    <tr>
+      <td>Rolling_Traffic_3</td>
+      <td>0.981</td>
+    </tr>
+    <tr>
+      <td>Traffic_Lag_12</td>
+      <td>0.979</td>
+    </tr>
+    <tr>
+      <td>Traffic_Lag_1</td>
+      <td>0.949</td>
+    </tr>
+    <tr>
+      <td>Total_Selling_SqFt</td>
+      <td>0.926</td>
+    </tr>
+    <tr>
+      <td>Store_Count</td>
+      <td>0.925</td>
+    </tr>
+    <tr>
+      <td>DMA_Population</td>
+      <td>0.830</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_12</td>
+      <td>0.817</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_6</td>
+      <td>0.793</td>
+    </tr>
+    <tr>
+      <td>TradeAreaPopulation</td>
+      <td>0.783</td>
+    </tr>
+    <tr>
+      <td>Rolling_Spend_3</td>
+      <td>0.767</td>
+    </tr>
+    <tr>
+      <td>Spend</td>
+      <td>0.705</td>
+    </tr>
+    <tr>
+      <td>Cumulative_Spend</td>
+      <td>0.689</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_1</td>
+      <td>0.645</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_2</td>
+      <td>0.571</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_3</td>
+      <td>0.552</td>
+    </tr>
+    <tr>
+      <td>Spend_Lag_6</td>
+      <td>0.536</td>
+    </tr>
+    <tr>
+      <td>Transactions_per_Store</td>
+      <td>0.446</td>
+    </tr>
+    <tr>
+      <td>Traffic_per_Store</td>
+      <td>0.439</td>
+    </tr>
+    <tr>
+      <td>Traffic_per_1000SqFt</td>
+      <td>0.397</td>
+    </tr>
+    <tr>
+      <td>Log_Spend</td>
+      <td>0.389</td>
+    </tr>
+    <tr>
+      <td>Spend_per_Store</td>
+      <td>0.336</td>
+    </tr>
+    <tr>
+      <td>Spend_per_1000SqFt</td>
+      <td>0.331</td>
+    </tr>
+    <tr>
+      <td>Avg_Selling_SqFt</td>
+      <td>0.107</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 33.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>traffic_coverage_gaps.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>DMA</th>
+      <th>Month</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Albany, GA</td>
+      <td>2026-03-01</td>
+    </tr>
+    <tr>
+      <td>Albany, GA</td>
+      <td>2026-05-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-02-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-03-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-04-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-05-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-06-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-07-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-08-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-09-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-10-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2024-11-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-01-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-02-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-03-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-04-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-05-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-06-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-07-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-08-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-09-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-10-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2025-11-01</td>
+    </tr>
+    <tr>
+      <td>Alexandria, LA</td>
+      <td>2026-04-01</td>
+    </tr>
+    <tr>
+      <td>Bangor, ME</td>
+      <td>2024-02-01</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 423.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>traffic_heatmap.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>DMA</th>
+      <th>2025-02-01</th>
+      <th>2025-03-01</th>
+      <th>2025-04-01</th>
+      <th>2025-05-01</th>
+      <th>2025-06-01</th>
+      <th>2025-07-01</th>
+      <th>2025-08-01</th>
+      <th>2025-09-01</th>
+      <th>2025-10-01</th>
+      <th>2025-11-01</th>
+      <th>2025-12-01</th>
+      <th>2026-01-01</th>
+      <th>2026-02-01</th>
+      <th>2026-03-01</th>
+      <th>2026-04-01</th>
+      <th>2026-05-01</th>
+      <th>2026-06-01</th>
+      <th>2026-07-01</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Atlanta, GA</td>
+      <td>472473.0</td>
+      <td>720150.0</td>
+      <td>501015.0</td>
+      <td>671946.0</td>
+      <td>604762.0</td>
+      <td>683399.0</td>
+      <td>761772.0</td>
+      <td>574892.0</td>
+      <td>601843.0</td>
+      <td>782394.0</td>
+      <td>803261.0</td>
+      <td>567888.0</td>
+      <td>490720.0</td>
+      <td>610098.0</td>
+      <td>628150.0</td>
+      <td>816938.0</td>
+      <td>610240.0</td>
+      <td>591929.0</td>
+    </tr>
+    <tr>
+      <td>Baltimore, MD</td>
+      <td>204980.0</td>
+      <td>347799.0</td>
+      <td>274050.0</td>
+      <td>337446.0</td>
+      <td>309119.0</td>
+      <td>284809.0</td>
+      <td>415153.0</td>
+      <td>250071.0</td>
+      <td>304894.0</td>
+      <td>413336.0</td>
+      <td>431004.0</td>
+      <td>297907.0</td>
+      <td>241274.0</td>
+      <td>287622.0</td>
+      <td>296075.0</td>
+      <td>371138.0</td>
+      <td>349616.0</td>
+      <td>310062.0</td>
+    </tr>
+    <tr>
+      <td>Boston, MA (Manchester, NH)</td>
+      <td>374008.0</td>
+      <td>567423.0</td>
+      <td>464335.0</td>
+      <td>538603.0</td>
+      <td>469729.0</td>
+      <td>454601.0</td>
+      <td>595756.0</td>
+      <td>441233.0</td>
+      <td>462888.0</td>
+      <td>686404.0</td>
+      <td>680538.0</td>
+      <td>518224.0</td>
+      <td>402126.0</td>
+      <td>520514.0</td>
+      <td>558630.0</td>
+      <td>646319.0</td>
+      <td>520420.0</td>
+      <td>513765.0</td>
+    </tr>
+    <tr>
+      <td>Buffalo, NY</td>
+      <td>50110.0</td>
+      <td>70854.0</td>
+      <td>63242.0</td>
+      <td>76946.0</td>
+      <td>70245.0</td>
+      <td>56174.0</td>
+      <td>77257.0</td>
+      <td>44809.0</td>
+      <td>48269.0</td>
+      <td>47888.0</td>
+      <td>53722.0</td>
+      <td>41259.0</td>
+      <td>43040.0</td>
+      <td>52394.0</td>
+      <td>47942.0</td>
+      <td>63108.0</td>
+      <td>54386.0</td>
+      <td>50003.0</td>
+    </tr>
+    <tr>
+      <td>Charlotte, NC</td>
+      <td>198513.0</td>
+      <td>289386.0</td>
+      <td>243780.0</td>
+      <td>268273.0</td>
+      <td>217942.0</td>
+      <td>232219.0</td>
+      <td>280734.0</td>
+      <td>189473.0</td>
+      <td>235742.0</td>
+      <td>359006.0</td>
+      <td>473791.0</td>
+      <td>269006.0</td>
+      <td>276570.0</td>
+      <td>314656.0</td>
+      <td>348657.0</td>
+      <td>434854.0</td>
+      <td>331972.0</td>
+      <td>303861.0</td>
+    </tr>
+    <tr>
+      <td>Chicago, IL</td>
+      <td>680729.0</td>
+      <td>992476.0</td>
+      <td>775608.0</td>
+      <td>1038248.0</td>
+      <td>895826.0</td>
+      <td>923622.0</td>
+      <td>1346778.0</td>
+      <td>836821.0</td>
+      <td>817837.0</td>
+      <td>1283629.0</td>
+      <td>1489002.0</td>
+      <td>1060892.0</td>
+      <td>847514.0</td>
+      <td>967696.0</td>
+      <td>994967.0</td>
+      <td>1294013.0</td>
+      <td>1097977.0</td>
+      <td>986795.0</td>
+    </tr>
+    <tr>
+      <td>Cincinnati, OH</td>
+      <td>105031.0</td>
+      <td>166249.0</td>
+      <td>132585.0</td>
+      <td>158907.0</td>
+      <td>131324.0</td>
+      <td>158743.0</td>
+      <td>236042.0</td>
+      <td>150199.0</td>
+      <td>151893.0</td>
+      <td>213673.0</td>
+      <td>208661.0</td>
+      <td>135215.0</td>
+      <td>125206.0</td>
+      <td>152506.0</td>
+      <td>151319.0</td>
+      <td>185990.0</td>
+      <td>152468.0</td>
+      <td>145792.0</td>
+    </tr>
+    <tr>
+      <td>Cleveland-Akron (Canton), OH</td>
+      <td>117024.0</td>
+      <td>186335.0</td>
+      <td>146650.0</td>
+      <td>201047.0</td>
+      <td>169943.0</td>
+      <td>174421.0</td>
+      <td>257561.0</td>
+      <td>165142.0</td>
+      <td>179556.0</td>
+      <td>262091.0</td>
+      <td>247363.0</td>
+      <td>160020.0</td>
+      <td>168240.0</td>
+      <td>189297.0</td>
+      <td>183897.0</td>
+      <td>244762.0</td>
+      <td>197852.0</td>
+      <td>174246.0</td>
+    </tr>
+    <tr>
+      <td>Columbus, OH</td>
+      <td>77936.0</td>
+      <td>146482.0</td>
+      <td>108677.0</td>
+      <td>133309.0</td>
+      <td>134650.0</td>
+      <td>139296.0</td>
+      <td>214165.0</td>
+      <td>106372.0</td>
+      <td>113109.0</td>
+      <td>163568.0</td>
+      <td>122040.0</td>
+      <td>94858.0</td>
+      <td>75248.0</td>
+      <td>111468.0</td>
+      <td>125441.0</td>
+      <td>141114.0</td>
+      <td>112966.0</td>
+      <td>112386.0</td>
+    </tr>
+    <tr>
+      <td>Dallas-Ft. Worth, TX</td>
+      <td>625075.0</td>
+      <td>980877.0</td>
+      <td>702298.0</td>
+      <td>921441.0</td>
+      <td>779426.0</td>
+      <td>860990.0</td>
+      <td>1122844.0</td>
+      <td>721394.0</td>
+      <td>766037.0</td>
+      <td>1091602.0</td>
+      <td>1156784.0</td>
+      <td>775498.0</td>
+      <td>677849.0</td>
+      <td>842809.0</td>
+      <td>800138.0</td>
+      <td>1016690.0</td>
+      <td>913760.0</td>
+      <td>931413.0</td>
+    </tr>
+    <tr>
+      <td>Detroit, MI</td>
+      <td>262387.0</td>
+      <td>384928.0</td>
+      <td>300978.0</td>
+      <td>351117.0</td>
+      <td>331581.0</td>
+      <td>335908.0</td>
+      <td>439530.0</td>
+      <td>281841.0</td>
+      <td>295621.0</td>
+      <td>417564.0</td>
+      <td>373625.0</td>
+      <td>275640.0</td>
+      <td>258768.0</td>
+      <td>317299.0</td>
+      <td>315176.0</td>
+      <td>414996.0</td>
+      <td>380027.0</td>
+      <td>339421.0</td>
+    </tr>
+    <tr>
+      <td>El Paso, TX (Las Cruces, NM)</td>
+      <td>240398.0</td>
+      <td>333629.0</td>
+      <td>275700.0</td>
+      <td>331030.0</td>
+      <td>263657.0</td>
+      <td>283173.0</td>
+      <td>362987.0</td>
+      <td>281516.0</td>
+      <td>296988.0</td>
+      <td>458259.0</td>
+      <td>444046.0</td>
+      <td>309182.0</td>
+      <td>253829.0</td>
+      <td>303090.0</td>
+      <td>294298.0</td>
+      <td>369247.0</td>
+      <td>272993.0</td>
+      <td>257518.0</td>
+    </tr>
+    <tr>
+      <td>Ft. Myers-Naples, FL</td>
+      <td>162586.0</td>
+      <td>227019.0</td>
+      <td>180992.0</td>
+      <td>200314.0</td>
+      <td>160446.0</td>
+      <td>180380.0</td>
+      <td>192735.0</td>
+      <td>167996.0</td>
+      <td>172132.0</td>
+      <td>285024.0</td>
+      <td>325104.0</td>
+      <td>272745.0</td>
+      <td>199578.0</td>
+      <td>234215.0</td>
+      <td>245244.0</td>
+      <td>294052.0</td>
+      <td>235570.0</td>
+      <td>229024.0</td>
+    </tr>
+    <tr>
+      <td>Harlingen-Weslaco-Brownsville-McAllen, TX</td>
+      <td>311106.0</td>
+      <td>438017.0</td>
+      <td>355042.0</td>
+      <td>452025.0</td>
+      <td>320362.0</td>
+      <td>349005.0</td>
+      <td>487890.0</td>
+      <td>332545.0</td>
+      <td>307867.0</td>
+      <td>507382.0</td>
+      <td>546923.0</td>
+      <td>445443.0</td>
+      <td>348019.0</td>
+      <td>431108.0</td>
+      <td>431454.0</td>
+      <td>573572.0</td>
+      <td>409790.0</td>
+      <td>385671.0</td>
+    </tr>
+    <tr>
+      <td>Hartford &amp; New Haven, CT</td>
+      <td>193142.0</td>
+      <td>297425.0</td>
+      <td>230033.0</td>
+      <td>292438.0</td>
+      <td>214514.0</td>
+      <td>205537.0</td>
+      <td>288394.0</td>
+      <td>195442.0</td>
+      <td>208156.0</td>
+      <td>333484.0</td>
+      <td>358279.0</td>
+      <td>247578.0</td>
+      <td>197140.0</td>
+      <td>287632.0</td>
+      <td>277908.0</td>
+      <td>330714.0</td>
+      <td>272562.0</td>
+      <td>248279.0</td>
+    </tr>
+    <tr>
+      <td>Houston, TX</td>
+      <td>801111.0</td>
+      <td>1186513.0</td>
+      <td>861842.0</td>
+      <td>994680.0</td>
+      <td>899569.0</td>
+      <td>889406.0</td>
+      <td>1246838.0</td>
+      <td>846484.0</td>
+      <td>765224.0</td>
+      <td>1233841.0</td>
+      <td>1362734.0</td>
+      <td>1005386.0</td>
+      <td>758353.0</td>
+      <td>967608.0</td>
+      <td>903931.0</td>
+      <td>1134452.0</td>
+      <td>977590.0</td>
+      <td>922039.0</td>
+    </tr>
+    <tr>
+      <td>Las Vegas, NV</td>
+      <td>223298.0</td>
+      <td>345834.0</td>
+      <td>270928.0</td>
+      <td>329738.0</td>
+      <td>240731.0</td>
+      <td>291910.0</td>
+      <td>287306.0</td>
+      <td>215574.0</td>
+      <td>222555.0</td>
+      <td>281614.0</td>
+      <td>261103.0</td>
+      <td>232199.0</td>
+      <td>220994.0</td>
+      <td>259325.0</td>
+      <td>258407.0</td>
+      <td>312401.0</td>
+      <td>231217.0</td>
+      <td>227685.0</td>
+    </tr>
+    <tr>
+      <td>Los Angeles, CA</td>
+      <td>1100942.0</td>
+      <td>1575700.0</td>
+      <td>1302004.0</td>
+      <td>1495507.0</td>
+      <td>1147030.0</td>
+      <td>1178756.0</td>
+      <td>1562669.0</td>
+      <td>1078670.0</td>
+      <td>1216801.0</td>
+      <td>1652457.0</td>
+      <td>1797541.0</td>
+      <td>1532738.0</td>
+      <td>1145789.0</td>
+      <td>1428634.0</td>
+      <td>1510002.0</td>
+      <td>1896971.0</td>
+      <td>1588287.0</td>
+      <td>1460651.0</td>
+    </tr>
+    <tr>
+      <td>Miami-Ft. Lauderdale, FL</td>
+      <td>921274.0</td>
+      <td>1211447.0</td>
+      <td>932102.0</td>
+      <td>1179708.0</td>
+      <td>1046841.0</td>
+      <td>984205.0</td>
+      <td>1387567.0</td>
+      <td>948016.0</td>
+      <td>958960.0</td>
+      <td>1430165.0</td>
+      <td>1454858.0</td>
+      <td>1361596.0</td>
+      <td>1007895.0</td>
+      <td>1056586.0</td>
+      <td>1025864.0</td>
+      <td>1564788.0</td>
+      <td>1200643.0</td>
+      <td>1122291.0</td>
+    </tr>
+    <tr>
+      <td>Minneapolis-St. Paul, MN</td>
+      <td>183868.0</td>
+      <td>274695.0</td>
+      <td>210290.0</td>
+      <td>256063.0</td>
+      <td>239353.0</td>
+      <td>254440.0</td>
+      <td>365190.0</td>
+      <td>262397.0</td>
+      <td>259021.0</td>
+      <td>351143.0</td>
+      <td>269402.0</td>
+      <td>185562.0</td>
+      <td>219066.0</td>
+      <td>303396.0</td>
+      <td>301033.0</td>
+      <td>378225.0</td>
+      <td>316537.0</td>
+      <td>296846.0</td>
+    </tr>
+    <tr>
+      <td>New York, NY</td>
+      <td>2103418.0</td>
+      <td>3247183.0</td>
+      <td>2547946.0</td>
+      <td>3165076.0</td>
+      <td>2880350.0</td>
+      <td>2936444.0</td>
+      <td>3759759.0</td>
+      <td>2778201.0</td>
+      <td>2687790.0</td>
+      <td>3436538.0</td>
+      <td>3323095.0</td>
+      <td>2927380.0</td>
+      <td>2055620.0</td>
+      <td>2710011.0</td>
+      <td>3003772.0</td>
+      <td>3641071.0</td>
+      <td>3154801.0</td>
+      <td>2755612.0</td>
+    </tr>
+    <tr>
+      <td>Oklahoma City, OK</td>
+      <td>97935.0</td>
+      <td>139140.0</td>
+      <td>98932.0</td>
+      <td>119230.0</td>
+      <td>120856.0</td>
+      <td>132278.0</td>
+      <td>208038.0</td>
+      <td>114553.0</td>
+      <td>150819.0</td>
+      <td>259022.0</td>
+      <td>284990.0</td>
+      <td>174950.0</td>
+      <td>149023.0</td>
+      <td>163390.0</td>
+      <td>135851.0</td>
+      <td>166429.0</td>
+      <td>154617.0</td>
+      <td>138790.0</td>
+    </tr>
+    <tr>
+      <td>Orlando-Daytona Beach-Melbourne, FL</td>
+      <td>560646.0</td>
+      <td>676377.0</td>
+      <td>539136.0</td>
+      <td>667323.0</td>
+      <td>502880.0</td>
+      <td>601789.0</td>
+      <td>829522.0</td>
+      <td>551679.0</td>
+      <td>572557.0</td>
+      <td>903278.0</td>
+      <td>969444.0</td>
+      <td>850612.0</td>
+      <td>592349.0</td>
+      <td>606532.0</td>
+      <td>599480.0</td>
+      <td>801147.0</td>
+      <td>583462.0</td>
+      <td>592896.0</td>
+    </tr>
+    <tr>
+      <td>Philadelphia, PA</td>
+      <td>527695.0</td>
+      <td>733416.0</td>
+      <td>620943.0</td>
+      <td>707093.0</td>
+      <td>639860.0</td>
+      <td>635195.0</td>
+      <td>945981.0</td>
+      <td>649407.0</td>
+      <td>695882.0</td>
+      <td>917788.0</td>
+      <td>977097.0</td>
+      <td>691951.0</td>
+      <td>518415.0</td>
+      <td>666756.0</td>
+      <td>744659.0</td>
+      <td>899504.0</td>
+      <td>767769.0</td>
+      <td>656014.0</td>
+    </tr>
+    <tr>
+      <td>Phoenix (Prescott), AZ</td>
+      <td>298847.0</td>
+      <td>434655.0</td>
+      <td>336678.0</td>
+      <td>445624.0</td>
+      <td>311012.0</td>
+      <td>389663.0</td>
+      <td>373546.0</td>
+      <td>347801.0</td>
+      <td>281363.0</td>
+      <td>458354.0</td>
+      <td>655833.0</td>
+      <td>441011.0</td>
+      <td>373450.0</td>
+      <td>474619.0</td>
+      <td>449652.0</td>
+      <td>586377.0</td>
+      <td>429044.0</td>
+      <td>463221.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Showing first 25 rows of 34.
+</p>
+
+
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>traffic_seasonal_index.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Month_Number</th>
+      <th>Traffic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0.996490</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.750536</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1.003396</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.900517</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>1.130625</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0.940445</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>0.924858</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>1.189375</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>0.833036</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>0.857253</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>1.210711</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>1.262757</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>traffic_statistics.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Unnamed: 0</th>
+      <th>Traffic</th>
+      <th>Traffic_per_Store</th>
+      <th>Traffic_per_1000SqFt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>561741.22</td>
+      <td>22823.50</td>
+      <td>818.88</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>556416.26</td>
+      <td>7844.67</td>
+      <td>317.33</td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>41259.00</td>
+      <td>8251.80</td>
+      <td>255.51</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>245657.25</td>
+      <td>17324.38</td>
+      <td>632.36</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>355802.00</td>
+      <td>21686.12</td>
+      <td>759.80</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>681396.50</td>
+      <td>27067.60</td>
+      <td>927.24</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>3759759.00</td>
+      <td>59633.17</td>
+      <td>2758.97</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+<details>
+
+<summary>
+<b>vif.csv</b>
+</summary>
+
+<br>
+
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variable</th>
+      <th>VIF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spend</td>
+      <td>2.231023</td>
+    </tr>
+    <tr>
+      <td>Store_Count</td>
+      <td>109.360875</td>
+    </tr>
+    <tr>
+      <td>Total_Selling_SqFt</td>
+      <td>81.581684</td>
+    </tr>
+    <tr>
+      <td>DMA_Population</td>
+      <td>19.775265</td>
+    </tr>
+    <tr>
+      <td>TradeAreaPopulation</td>
+      <td>7.306399</td>
+    </tr>
+  </tbody>
+</table>
+
+</details>
+
+<br>
+
+
+
+</body>
+
+</html>
+

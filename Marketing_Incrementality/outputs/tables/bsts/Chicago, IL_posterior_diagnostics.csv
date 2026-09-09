@@ -1,0 +1,2 @@
+DMA,Chains,Draws_Per_Chain,Total_Draws,Max_Rhat,Min_ESS_Bulk,Min_ESS_Tail,Divergences,Divergence_Rate,Parameters_Evaluated,Problematic_Parameters,Worst_Rhat_Parameter,Worst_Rhat,Worst_Bulk_ESS_Parameter,Worst_Bulk_ESS,Worst_Tail_ESS_Parameter,Worst_Tail_ESS,Rhat_OK,ESS_Bulk_OK,ESS_Tail_OK,Divergences_OK,Parameter_Diagnostics_OK
+"Chicago, IL",4,2000,8000,1.0005,4189.7714,4364.266,0,0.0,8,0,beta[2],1.0005,sigma_obs,4189.7714,sigma_obs,4364.266,True,True,True,True,True

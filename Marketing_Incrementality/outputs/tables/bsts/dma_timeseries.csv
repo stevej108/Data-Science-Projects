@@ -1,0 +1,375 @@
+DMA,Month,Traffic,Spend,Post,Time_Index,Month_of_Year
+"Atlanta, GA",2025-02-01,472473.0,0,0,0,2
+"Atlanta, GA",2025-03-01,720150.0,80000,0,1,3
+"Atlanta, GA",2025-04-01,501015.0,90000,0,2,4
+"Atlanta, GA",2025-05-01,671946.0,41000,0,3,5
+"Atlanta, GA",2025-06-01,604762.0,48000,0,4,6
+"Atlanta, GA",2025-07-01,683399.0,124000,0,5,7
+"Atlanta, GA",2025-08-01,761772.0,128000,0,6,8
+"Atlanta, GA",2025-09-01,574892.0,8000,0,7,9
+"Atlanta, GA",2025-10-01,601843.0,36000,1,8,10
+"Atlanta, GA",2025-11-01,782394.0,150000,1,9,11
+"Atlanta, GA",2025-12-01,803261.0,340000,1,10,12
+"Baltimore, MD",2025-02-01,204980.0,0,0,0,2
+"Baltimore, MD",2025-03-01,347799.0,14000,0,1,3
+"Baltimore, MD",2025-04-01,274050.0,30000,0,2,4
+"Baltimore, MD",2025-05-01,337446.0,15000,0,3,5
+"Baltimore, MD",2025-06-01,309119.0,22000,0,4,6
+"Baltimore, MD",2025-07-01,284809.0,48000,0,5,7
+"Baltimore, MD",2025-08-01,415153.0,46000,0,6,8
+"Baltimore, MD",2025-09-01,250071.0,2000,0,7,9
+"Baltimore, MD",2025-10-01,304894.0,35000,1,8,10
+"Baltimore, MD",2025-11-01,413336.0,48000,1,9,11
+"Baltimore, MD",2025-12-01,431004.0,85000,1,10,12
+"Boston, MA (Manchester, NH)",2025-02-01,374008.0,0,0,0,2
+"Boston, MA (Manchester, NH)",2025-03-01,567423.0,75000,0,1,3
+"Boston, MA (Manchester, NH)",2025-04-01,464335.0,101000,0,2,4
+"Boston, MA (Manchester, NH)",2025-05-01,538603.0,47000,0,3,5
+"Boston, MA (Manchester, NH)",2025-06-01,469729.0,60000,0,4,6
+"Boston, MA (Manchester, NH)",2025-07-01,454601.0,90000,0,5,7
+"Boston, MA (Manchester, NH)",2025-08-01,595756.0,127000,0,6,8
+"Boston, MA (Manchester, NH)",2025-09-01,441233.0,5000,0,7,9
+"Boston, MA (Manchester, NH)",2025-10-01,462888.0,14000,1,8,10
+"Boston, MA (Manchester, NH)",2025-11-01,686404.0,163000,1,9,11
+"Boston, MA (Manchester, NH)",2025-12-01,680538.0,367000,1,10,12
+"Buffalo, NY",2025-02-01,50110.0,0,0,0,2
+"Buffalo, NY",2025-03-01,70854.0,13000,0,1,3
+"Buffalo, NY",2025-04-01,63242.0,16000,0,2,4
+"Buffalo, NY",2025-05-01,76946.0,6000,0,3,5
+"Buffalo, NY",2025-06-01,70245.0,7000,0,4,6
+"Buffalo, NY",2025-07-01,56174.0,17000,0,5,7
+"Buffalo, NY",2025-08-01,77257.0,15000,0,6,8
+"Buffalo, NY",2025-09-01,44809.0,1000,0,7,9
+"Buffalo, NY",2025-10-01,48269.0,22000,1,8,10
+"Buffalo, NY",2025-11-01,47888.0,24000,1,9,11
+"Buffalo, NY",2025-12-01,53722.0,48000,1,10,12
+"Charlotte, NC",2025-02-01,198513.0,0,0,0,2
+"Charlotte, NC",2025-03-01,289386.0,17000,0,1,3
+"Charlotte, NC",2025-04-01,243780.0,31000,0,2,4
+"Charlotte, NC",2025-05-01,268273.0,18000,0,3,5
+"Charlotte, NC",2025-06-01,217942.0,23000,0,4,6
+"Charlotte, NC",2025-07-01,232219.0,25000,0,5,7
+"Charlotte, NC",2025-08-01,280734.0,31000,0,6,8
+"Charlotte, NC",2025-09-01,189473.0,2000,0,7,9
+"Charlotte, NC",2025-10-01,235742.0,4000,1,8,10
+"Charlotte, NC",2025-11-01,359006.0,51000,1,9,11
+"Charlotte, NC",2025-12-01,473791.0,86000,1,10,12
+"Chicago, IL",2025-02-01,680729.0,0,0,0,2
+"Chicago, IL",2025-03-01,992476.0,77000,0,1,3
+"Chicago, IL",2025-04-01,775608.0,139000,0,2,4
+"Chicago, IL",2025-05-01,1038248.0,57000,0,3,5
+"Chicago, IL",2025-06-01,895826.0,85000,0,4,6
+"Chicago, IL",2025-07-01,923622.0,106000,0,5,7
+"Chicago, IL",2025-08-01,1346778.0,161000,0,6,8
+"Chicago, IL",2025-09-01,836821.0,253000,0,7,9
+"Chicago, IL",2025-10-01,817837.0,476000,1,8,10
+"Chicago, IL",2025-11-01,1283629.0,240000,1,9,11
+"Chicago, IL",2025-12-01,1489002.0,569000,1,10,12
+"Cincinnati, OH",2025-02-01,105031.0,0,0,0,2
+"Cincinnati, OH",2025-03-01,166249.0,24000,0,1,3
+"Cincinnati, OH",2025-04-01,132585.0,38000,0,2,4
+"Cincinnati, OH",2025-05-01,158907.0,9000,0,3,5
+"Cincinnati, OH",2025-06-01,131324.0,16000,0,4,6
+"Cincinnati, OH",2025-07-01,158743.0,45000,0,5,7
+"Cincinnati, OH",2025-08-01,236042.0,45000,0,6,8
+"Cincinnati, OH",2025-09-01,150199.0,2000,0,7,9
+"Cincinnati, OH",2025-10-01,151893.0,60000,1,8,10
+"Cincinnati, OH",2025-11-01,213673.0,54000,1,9,11
+"Cincinnati, OH",2025-12-01,208661.0,115000,1,10,12
+"Cleveland-Akron (Canton), OH",2025-02-01,117024.0,0,0,0,2
+"Cleveland-Akron (Canton), OH",2025-03-01,186335.0,21000,0,1,3
+"Cleveland-Akron (Canton), OH",2025-04-01,146650.0,30000,0,2,4
+"Cleveland-Akron (Canton), OH",2025-05-01,201047.0,10000,0,3,5
+"Cleveland-Akron (Canton), OH",2025-06-01,169943.0,13000,0,4,6
+"Cleveland-Akron (Canton), OH",2025-07-01,174421.0,35000,0,5,7
+"Cleveland-Akron (Canton), OH",2025-08-01,257561.0,33000,0,6,8
+"Cleveland-Akron (Canton), OH",2025-09-01,165142.0,3000,0,7,9
+"Cleveland-Akron (Canton), OH",2025-10-01,179556.0,3000,1,8,10
+"Cleveland-Akron (Canton), OH",2025-11-01,262091.0,45000,1,9,11
+"Cleveland-Akron (Canton), OH",2025-12-01,247363.0,92000,1,10,12
+"Columbus, OH",2025-02-01,77936.0,0,0,0,2
+"Columbus, OH",2025-03-01,146482.0,17000,0,1,3
+"Columbus, OH",2025-04-01,108677.0,35000,0,2,4
+"Columbus, OH",2025-05-01,133309.0,8000,0,3,5
+"Columbus, OH",2025-06-01,134650.0,18000,0,4,6
+"Columbus, OH",2025-07-01,139296.0,33000,0,5,7
+"Columbus, OH",2025-08-01,214165.0,40000,0,6,8
+"Columbus, OH",2025-09-01,106372.0,2000,0,7,9
+"Columbus, OH",2025-10-01,113109.0,54000,1,8,10
+"Columbus, OH",2025-11-01,163568.0,46000,1,9,11
+"Columbus, OH",2025-12-01,122040.0,97000,1,10,12
+"Dallas-Ft. Worth, TX",2025-02-01,625075.0,0,0,0,2
+"Dallas-Ft. Worth, TX",2025-03-01,980877.0,75000,0,1,3
+"Dallas-Ft. Worth, TX",2025-04-01,702298.0,105000,0,2,4
+"Dallas-Ft. Worth, TX",2025-05-01,921441.0,52000,0,3,5
+"Dallas-Ft. Worth, TX",2025-06-01,779426.0,63000,0,4,6
+"Dallas-Ft. Worth, TX",2025-07-01,860990.0,124000,0,5,7
+"Dallas-Ft. Worth, TX",2025-08-01,1122844.0,122000,0,6,8
+"Dallas-Ft. Worth, TX",2025-09-01,721394.0,327000,0,7,9
+"Dallas-Ft. Worth, TX",2025-10-01,766037.0,627000,1,8,10
+"Dallas-Ft. Worth, TX",2025-11-01,1091602.0,174000,1,9,11
+"Dallas-Ft. Worth, TX",2025-12-01,1156784.0,401000,1,10,12
+"Detroit, MI",2025-02-01,262387.0,0,0,0,2
+"Detroit, MI",2025-03-01,384928.0,41000,0,1,3
+"Detroit, MI",2025-04-01,300978.0,68000,0,2,4
+"Detroit, MI",2025-05-01,351117.0,23000,0,3,5
+"Detroit, MI",2025-06-01,331581.0,37000,0,4,6
+"Detroit, MI",2025-07-01,335908.0,50000,0,5,7
+"Detroit, MI",2025-08-01,439530.0,89000,0,6,8
+"Detroit, MI",2025-09-01,281841.0,4000,0,7,9
+"Detroit, MI",2025-10-01,295621.0,65000,1,8,10
+"Detroit, MI",2025-11-01,417564.0,114000,1,9,11
+"Detroit, MI",2025-12-01,373625.0,264000,1,10,12
+"El Paso, TX (Las Cruces, NM)",2025-02-01,240398.0,0,0,0,2
+"El Paso, TX (Las Cruces, NM)",2025-03-01,333629.0,20000,0,1,3
+"El Paso, TX (Las Cruces, NM)",2025-04-01,275700.0,29000,0,2,4
+"El Paso, TX (Las Cruces, NM)",2025-05-01,331030.0,18000,0,3,5
+"El Paso, TX (Las Cruces, NM)",2025-06-01,263657.0,19000,0,4,6
+"El Paso, TX (Las Cruces, NM)",2025-07-01,283173.0,31000,0,5,7
+"El Paso, TX (Las Cruces, NM)",2025-08-01,362987.0,32000,0,6,8
+"El Paso, TX (Las Cruces, NM)",2025-09-01,281516.0,0,0,7,9
+"El Paso, TX (Las Cruces, NM)",2025-10-01,296988.0,9000,1,8,10
+"El Paso, TX (Las Cruces, NM)",2025-11-01,458259.0,47000,1,9,11
+"El Paso, TX (Las Cruces, NM)",2025-12-01,444046.0,86000,1,10,12
+"Ft. Myers-Naples, FL",2025-02-01,162586.0,0,0,0,2
+"Ft. Myers-Naples, FL",2025-03-01,227019.0,12000,0,1,3
+"Ft. Myers-Naples, FL",2025-04-01,180992.0,19000,0,2,4
+"Ft. Myers-Naples, FL",2025-05-01,200314.0,13000,0,3,5
+"Ft. Myers-Naples, FL",2025-06-01,160446.0,14000,0,4,6
+"Ft. Myers-Naples, FL",2025-07-01,180380.0,18000,0,5,7
+"Ft. Myers-Naples, FL",2025-08-01,192735.0,20000,0,6,8
+"Ft. Myers-Naples, FL",2025-09-01,167996.0,1000,0,7,9
+"Ft. Myers-Naples, FL",2025-10-01,172132.0,0,1,8,10
+"Ft. Myers-Naples, FL",2025-11-01,285024.0,31000,1,9,11
+"Ft. Myers-Naples, FL",2025-12-01,325104.0,52000,1,10,12
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-02-01,311106.0,0,0,0,2
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-03-01,438017.0,28000,0,1,3
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-04-01,355042.0,45000,0,2,4
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-05-01,452025.0,26000,0,3,5
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-06-01,320362.0,31000,0,4,6
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-07-01,349005.0,43000,0,5,7
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-08-01,487890.0,47000,0,6,8
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-09-01,332545.0,1000,0,7,9
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-10-01,307867.0,11000,1,8,10
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-11-01,507382.0,74000,1,9,11
+"Harlingen-Weslaco-Brownsville-McAllen, TX",2025-12-01,546923.0,163000,1,10,12
+"Hartford & New Haven, CT",2025-02-01,193142.0,0,0,0,2
+"Hartford & New Haven, CT",2025-03-01,297425.0,6000,0,1,3
+"Hartford & New Haven, CT",2025-04-01,230033.0,13000,0,2,4
+"Hartford & New Haven, CT",2025-05-01,292438.0,0,0,3,5
+"Hartford & New Haven, CT",2025-06-01,214514.0,4000,0,4,6
+"Hartford & New Haven, CT",2025-07-01,205537.0,14000,0,5,7
+"Hartford & New Haven, CT",2025-08-01,288394.0,12000,0,6,8
+"Hartford & New Haven, CT",2025-09-01,195442.0,1000,0,7,9
+"Hartford & New Haven, CT",2025-10-01,208156.0,13000,1,8,10
+"Hartford & New Haven, CT",2025-11-01,333484.0,16000,1,9,11
+"Hartford & New Haven, CT",2025-12-01,358279.0,40000,1,10,12
+"Houston, TX",2025-02-01,801111.0,0,0,0,2
+"Houston, TX",2025-03-01,1186513.0,66000,0,1,3
+"Houston, TX",2025-04-01,861842.0,148000,0,2,4
+"Houston, TX",2025-05-01,994680.0,63000,0,3,5
+"Houston, TX",2025-06-01,899569.0,94000,0,4,6
+"Houston, TX",2025-07-01,889406.0,118000,0,5,7
+"Houston, TX",2025-08-01,1246838.0,164000,0,6,8
+"Houston, TX",2025-09-01,846484.0,67000,0,7,9
+"Houston, TX",2025-10-01,765224.0,78000,1,8,10
+"Houston, TX",2025-11-01,1233841.0,241000,1,9,11
+"Houston, TX",2025-12-01,1362734.0,575000,1,10,12
+"Las Vegas, NV",2025-02-01,223298.0,0,0,0,2
+"Las Vegas, NV",2025-03-01,345834.0,26000,0,1,3
+"Las Vegas, NV",2025-04-01,270928.0,37000,0,2,4
+"Las Vegas, NV",2025-05-01,329738.0,18000,0,3,5
+"Las Vegas, NV",2025-06-01,240731.0,21000,0,4,6
+"Las Vegas, NV",2025-07-01,291910.0,53000,0,5,7
+"Las Vegas, NV",2025-08-01,287306.0,43000,0,6,8
+"Las Vegas, NV",2025-09-01,215574.0,1000,0,7,9
+"Las Vegas, NV",2025-10-01,222555.0,10000,1,8,10
+"Las Vegas, NV",2025-11-01,281614.0,59000,1,9,11
+"Las Vegas, NV",2025-12-01,261103.0,114000,1,10,12
+"Los Angeles, CA",2025-02-01,1100942.0,0,0,0,2
+"Los Angeles, CA",2025-03-01,1575700.0,138000,0,1,3
+"Los Angeles, CA",2025-04-01,1302004.0,215000,0,2,4
+"Los Angeles, CA",2025-05-01,1495507.0,85000,0,3,5
+"Los Angeles, CA",2025-06-01,1147030.0,130000,0,4,6
+"Los Angeles, CA",2025-07-01,1178756.0,172000,0,5,7
+"Los Angeles, CA",2025-08-01,1562669.0,255000,0,6,8
+"Los Angeles, CA",2025-09-01,1078670.0,14000,0,7,9
+"Los Angeles, CA",2025-10-01,1216801.0,52000,1,8,10
+"Los Angeles, CA",2025-11-01,1652457.0,353000,1,9,11
+"Los Angeles, CA",2025-12-01,1797541.0,844000,1,10,12
+"Miami-Ft. Lauderdale, FL",2025-02-01,921274.0,0,0,0,2
+"Miami-Ft. Lauderdale, FL",2025-03-01,1211447.0,104000,0,1,3
+"Miami-Ft. Lauderdale, FL",2025-04-01,932102.0,180000,0,2,4
+"Miami-Ft. Lauderdale, FL",2025-05-01,1179708.0,79000,0,3,5
+"Miami-Ft. Lauderdale, FL",2025-06-01,1046841.0,115000,0,4,6
+"Miami-Ft. Lauderdale, FL",2025-07-01,984205.0,135000,0,5,7
+"Miami-Ft. Lauderdale, FL",2025-08-01,1387567.0,197000,0,6,8
+"Miami-Ft. Lauderdale, FL",2025-09-01,948016.0,5000,0,7,9
+"Miami-Ft. Lauderdale, FL",2025-10-01,958960.0,94000,1,8,10
+"Miami-Ft. Lauderdale, FL",2025-11-01,1430165.0,381000,1,9,11
+"Miami-Ft. Lauderdale, FL",2025-12-01,1454858.0,635000,1,10,12
+"Minneapolis-St. Paul, MN",2025-02-01,183868.0,0,0,0,2
+"Minneapolis-St. Paul, MN",2025-03-01,274695.0,135000,0,1,3
+"Minneapolis-St. Paul, MN",2025-04-01,210290.0,72000,0,2,4
+"Minneapolis-St. Paul, MN",2025-05-01,256063.0,19000,0,3,5
+"Minneapolis-St. Paul, MN",2025-06-01,239353.0,26000,0,4,6
+"Minneapolis-St. Paul, MN",2025-07-01,254440.0,120000,0,5,7
+"Minneapolis-St. Paul, MN",2025-08-01,365190.0,82000,0,6,8
+"Minneapolis-St. Paul, MN",2025-09-01,262397.0,7000,0,7,9
+"Minneapolis-St. Paul, MN",2025-10-01,259021.0,150000,1,8,10
+"Minneapolis-St. Paul, MN",2025-11-01,351143.0,109000,1,9,11
+"Minneapolis-St. Paul, MN",2025-12-01,269402.0,230000,1,10,12
+"New York, NY",2025-02-01,2103418.0,0,0,0,2
+"New York, NY",2025-03-01,3247183.0,300000,0,1,3
+"New York, NY",2025-04-01,2547946.0,473000,0,2,4
+"New York, NY",2025-05-01,3165076.0,247000,0,3,5
+"New York, NY",2025-06-01,2880350.0,307000,0,4,6
+"New York, NY",2025-07-01,2936444.0,428000,0,5,7
+"New York, NY",2025-08-01,3759759.0,526000,0,6,8
+"New York, NY",2025-09-01,2778201.0,45000,0,7,9
+"New York, NY",2025-10-01,2687790.0,58000,1,8,10
+"New York, NY",2025-11-01,3436538.0,766000,1,9,11
+"New York, NY",2025-12-01,3323095.0,1825000,1,10,12
+"Oklahoma City, OK",2025-02-01,97935.0,0,0,0,2
+"Oklahoma City, OK",2025-03-01,139140.0,14000,0,1,3
+"Oklahoma City, OK",2025-04-01,98932.0,18000,0,2,4
+"Oklahoma City, OK",2025-05-01,119230.0,8000,0,3,5
+"Oklahoma City, OK",2025-06-01,120856.0,9000,0,4,6
+"Oklahoma City, OK",2025-07-01,132278.0,28000,0,5,7
+"Oklahoma City, OK",2025-08-01,208038.0,22000,0,6,8
+"Oklahoma City, OK",2025-09-01,114553.0,1000,0,7,9
+"Oklahoma City, OK",2025-10-01,150819.0,22000,1,8,10
+"Oklahoma City, OK",2025-11-01,259022.0,30000,1,9,11
+"Oklahoma City, OK",2025-12-01,284990.0,57000,1,10,12
+"Orlando-Daytona Beach-Melbourne, FL",2025-02-01,560646.0,0,0,0,2
+"Orlando-Daytona Beach-Melbourne, FL",2025-03-01,676377.0,40000,0,1,3
+"Orlando-Daytona Beach-Melbourne, FL",2025-04-01,539136.0,69000,0,2,4
+"Orlando-Daytona Beach-Melbourne, FL",2025-05-01,667323.0,36000,0,3,5
+"Orlando-Daytona Beach-Melbourne, FL",2025-06-01,502880.0,44000,0,4,6
+"Orlando-Daytona Beach-Melbourne, FL",2025-07-01,601789.0,86000,0,5,7
+"Orlando-Daytona Beach-Melbourne, FL",2025-08-01,829522.0,91000,0,6,8
+"Orlando-Daytona Beach-Melbourne, FL",2025-09-01,551679.0,4000,0,7,9
+"Orlando-Daytona Beach-Melbourne, FL",2025-10-01,572557.0,24000,1,8,10
+"Orlando-Daytona Beach-Melbourne, FL",2025-11-01,903278.0,117000,1,9,11
+"Orlando-Daytona Beach-Melbourne, FL",2025-12-01,969444.0,280000,1,10,12
+"Philadelphia, PA",2025-02-01,527695.0,0,0,0,2
+"Philadelphia, PA",2025-03-01,733416.0,78000,0,1,3
+"Philadelphia, PA",2025-04-01,620943.0,139000,0,2,4
+"Philadelphia, PA",2025-05-01,707093.0,50000,0,3,5
+"Philadelphia, PA",2025-06-01,639860.0,82000,0,4,6
+"Philadelphia, PA",2025-07-01,635195.0,118000,0,5,7
+"Philadelphia, PA",2025-08-01,945981.0,154000,0,6,8
+"Philadelphia, PA",2025-09-01,649407.0,7000,0,7,9
+"Philadelphia, PA",2025-10-01,695882.0,74000,1,8,10
+"Philadelphia, PA",2025-11-01,917788.0,414000,1,9,11
+"Philadelphia, PA",2025-12-01,977097.0,698000,1,10,12
+"Phoenix (Prescott), AZ",2025-02-01,298847.0,0,0,0,2
+"Phoenix (Prescott), AZ",2025-03-01,434655.0,23000,0,1,3
+"Phoenix (Prescott), AZ",2025-04-01,336678.0,66000,0,2,4
+"Phoenix (Prescott), AZ",2025-05-01,445624.0,25000,0,3,5
+"Phoenix (Prescott), AZ",2025-06-01,311012.0,48000,0,4,6
+"Phoenix (Prescott), AZ",2025-07-01,389663.0,92000,0,5,7
+"Phoenix (Prescott), AZ",2025-08-01,373546.0,94000,0,6,8
+"Phoenix (Prescott), AZ",2025-09-01,347801.0,3000,0,7,9
+"Phoenix (Prescott), AZ",2025-10-01,281363.0,28000,1,8,10
+"Phoenix (Prescott), AZ",2025-11-01,458354.0,107000,1,9,11
+"Phoenix (Prescott), AZ",2025-12-01,655833.0,194000,1,10,12
+"Providence, RI-New Bedford, MA",2025-02-01,160702.0,0,0,0,2
+"Providence, RI-New Bedford, MA",2025-03-01,203061.0,8000,0,1,3
+"Providence, RI-New Bedford, MA",2025-04-01,178435.0,11000,0,2,4
+"Providence, RI-New Bedford, MA",2025-05-01,245795.0,0,0,3,5
+"Providence, RI-New Bedford, MA",2025-06-01,189346.0,0,0,4,6
+"Providence, RI-New Bedford, MA",2025-07-01,187486.0,19000,0,5,7
+"Providence, RI-New Bedford, MA",2025-08-01,298586.0,13000,0,6,8
+"Providence, RI-New Bedford, MA",2025-09-01,188062.0,0,0,7,9
+"Providence, RI-New Bedford, MA",2025-10-01,195408.0,20000,1,8,10
+"Providence, RI-New Bedford, MA",2025-11-01,271236.0,10000,1,9,11
+"Providence, RI-New Bedford, MA",2025-12-01,295885.0,27000,1,10,12
+Puerto Rico,2025-02-01,961872.0,0,0,0,2
+Puerto Rico,2025-03-01,1262355.0,0,0,1,3
+Puerto Rico,2025-04-01,1010521.0,128000,0,2,4
+Puerto Rico,2025-05-01,1390533.0,0,0,3,5
+Puerto Rico,2025-06-01,1103164.0,101000,0,4,6
+Puerto Rico,2025-07-01,1170517.0,9000,0,5,7
+Puerto Rico,2025-08-01,1428611.0,139000,0,6,8
+Puerto Rico,2025-09-01,1160378.0,2000,0,7,9
+Puerto Rico,2025-10-01,1273719.0,117000,1,8,10
+Puerto Rico,2025-11-01,1615025.0,228000,1,9,11
+Puerto Rico,2025-12-01,1784096.0,474000,1,10,12
+"Sacramento-Stockton-Modesto, CA",2025-02-01,290692.0,0,0,0,2
+"Sacramento-Stockton-Modesto, CA",2025-03-01,422143.0,25000,0,1,3
+"Sacramento-Stockton-Modesto, CA",2025-04-01,319813.0,39000,0,2,4
+"Sacramento-Stockton-Modesto, CA",2025-05-01,390865.0,21000,0,3,5
+"Sacramento-Stockton-Modesto, CA",2025-06-01,310034.0,28000,0,4,6
+"Sacramento-Stockton-Modesto, CA",2025-07-01,349332.0,59000,0,5,7
+"Sacramento-Stockton-Modesto, CA",2025-08-01,473540.0,52000,0,6,8
+"Sacramento-Stockton-Modesto, CA",2025-09-01,318803.0,2000,0,7,9
+"Sacramento-Stockton-Modesto, CA",2025-10-01,334610.0,32000,1,8,10
+"Sacramento-Stockton-Modesto, CA",2025-11-01,452239.0,77000,1,9,11
+"Sacramento-Stockton-Modesto, CA",2025-12-01,469044.0,150000,1,10,12
+"San Antonio, TX",2025-02-01,318753.0,0,0,0,2
+"San Antonio, TX",2025-03-01,460890.0,34000,0,1,3
+"San Antonio, TX",2025-04-01,345257.0,58000,0,2,4
+"San Antonio, TX",2025-05-01,423550.0,23000,0,3,5
+"San Antonio, TX",2025-06-01,393846.0,34000,0,4,6
+"San Antonio, TX",2025-07-01,443976.0,49000,0,5,7
+"San Antonio, TX",2025-08-01,563347.0,59000,0,6,8
+"San Antonio, TX",2025-09-01,369943.0,2000,0,7,9
+"San Antonio, TX",2025-10-01,375101.0,42000,1,8,10
+"San Antonio, TX",2025-11-01,524979.0,93000,1,9,11
+"San Antonio, TX",2025-12-01,512793.0,180000,1,10,12
+"San Diego, CA",2025-02-01,208638.0,0,0,0,2
+"San Diego, CA",2025-03-01,281861.0,17000,0,1,3
+"San Diego, CA",2025-04-01,248923.0,32000,0,2,4
+"San Diego, CA",2025-05-01,285111.0,18000,0,3,5
+"San Diego, CA",2025-06-01,247673.0,24000,0,4,6
+"San Diego, CA",2025-07-01,261307.0,78000,0,5,7
+"San Diego, CA",2025-08-01,303642.0,60000,0,6,8
+"San Diego, CA",2025-09-01,226049.0,2000,0,7,9
+"San Diego, CA",2025-10-01,250502.0,6000,1,8,10
+"San Diego, CA",2025-11-01,335891.0,53000,1,9,11
+"San Diego, CA",2025-12-01,299168.0,91000,1,10,12
+"Seattle-Tacoma, WA",2025-02-01,197676.0,0,0,0,2
+"Seattle-Tacoma, WA",2025-03-01,363373.0,16000,0,1,3
+"Seattle-Tacoma, WA",2025-04-01,309908.0,28000,0,2,4
+"Seattle-Tacoma, WA",2025-05-01,366754.0,17000,0,3,5
+"Seattle-Tacoma, WA",2025-06-01,298073.0,21000,0,4,6
+"Seattle-Tacoma, WA",2025-07-01,300952.0,23000,0,5,7
+"Seattle-Tacoma, WA",2025-08-01,431889.0,28000,0,6,8
+"Seattle-Tacoma, WA",2025-09-01,315958.0,3000,0,7,9
+"Seattle-Tacoma, WA",2025-10-01,331561.0,3000,1,8,10
+"Seattle-Tacoma, WA",2025-11-01,399346.0,46000,1,9,11
+"Seattle-Tacoma, WA",2025-12-01,372590.0,78000,1,10,12
+"Tampa-St. Petersburg (Sarasota), FL",2025-02-01,480001.0,0,0,0,2
+"Tampa-St. Petersburg (Sarasota), FL",2025-03-01,674434.0,70000,0,1,3
+"Tampa-St. Petersburg (Sarasota), FL",2025-04-01,499211.0,80000,0,2,4
+"Tampa-St. Petersburg (Sarasota), FL",2025-05-01,605905.0,34000,0,3,5
+"Tampa-St. Petersburg (Sarasota), FL",2025-06-01,435528.0,40000,0,4,6
+"Tampa-St. Petersburg (Sarasota), FL",2025-07-01,457173.0,96000,0,5,7
+"Tampa-St. Petersburg (Sarasota), FL",2025-08-01,628394.0,114000,0,6,8
+"Tampa-St. Petersburg (Sarasota), FL",2025-09-01,398840.0,4000,0,7,9
+"Tampa-St. Petersburg (Sarasota), FL",2025-10-01,409267.0,5000,1,8,10
+"Tampa-St. Petersburg (Sarasota), FL",2025-11-01,686085.0,138000,1,9,11
+"Tampa-St. Petersburg (Sarasota), FL",2025-12-01,712019.0,309000,1,10,12
+"Washington, DC (Hagerstown, MD)",2025-02-01,325828.0,0,0,0,2
+"Washington, DC (Hagerstown, MD)",2025-03-01,567155.0,79000,0,1,3
+"Washington, DC (Hagerstown, MD)",2025-04-01,458196.0,92000,0,2,4
+"Washington, DC (Hagerstown, MD)",2025-05-01,522035.0,44000,0,3,5
+"Washington, DC (Hagerstown, MD)",2025-06-01,482457.0,42000,0,4,6
+"Washington, DC (Hagerstown, MD)",2025-07-01,480622.0,147000,0,5,7
+"Washington, DC (Hagerstown, MD)",2025-08-01,706980.0,131000,0,6,8
+"Washington, DC (Hagerstown, MD)",2025-09-01,497454.0,10000,0,7,9
+"Washington, DC (Hagerstown, MD)",2025-10-01,544461.0,-6000,1,8,10
+"Washington, DC (Hagerstown, MD)",2025-11-01,730400.0,138000,1,9,11
+"Washington, DC (Hagerstown, MD)",2025-12-01,747956.0,315000,1,10,12
+"West Palm Beach-Ft. Pierce, FL",2025-02-01,194459.0,0,0,0,2
+"West Palm Beach-Ft. Pierce, FL",2025-03-01,276898.0,26000,0,1,3
+"West Palm Beach-Ft. Pierce, FL",2025-04-01,221467.0,40000,0,2,4
+"West Palm Beach-Ft. Pierce, FL",2025-05-01,266484.0,17000,0,3,5
+"West Palm Beach-Ft. Pierce, FL",2025-06-01,207582.0,21000,0,4,6
+"West Palm Beach-Ft. Pierce, FL",2025-07-01,215176.0,44000,0,5,7
+"West Palm Beach-Ft. Pierce, FL",2025-08-01,285069.0,43000,0,6,8
+"West Palm Beach-Ft. Pierce, FL",2025-09-01,217468.0,2000,0,7,9
+"West Palm Beach-Ft. Pierce, FL",2025-10-01,208729.0,30000,1,8,10
+"West Palm Beach-Ft. Pierce, FL",2025-11-01,336948.0,57000,1,9,11
+"West Palm Beach-Ft. Pierce, FL",2025-12-01,331588.0,117000,1,10,12
