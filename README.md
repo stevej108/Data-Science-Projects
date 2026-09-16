@@ -229,6 +229,16 @@ The analysis examined both advertising performance and the customer characterist
 
 ---
 
+## Channel Mix Media Analytics
+
+Applied statistical analyses to identify channel-level associative relationship between media channels and traffic.
+
+The statistical analysis provided a detailed view of channel-level impacts on key business drivers to develop targeted marketing strategies.
+
+**Techniques:** Marketing Analytics, Descriptive Statistics, Inferential Statistics
+
+---
+
 ## Marketing Customer Segmentation
 
 Applied clustering and predictive modeling to identify distinct customer groups and determine which customer characteristics were associated with greater conversion potential.
