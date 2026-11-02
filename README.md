@@ -28,13 +28,50 @@ This repository demonstrates experience across a broad range of data science dis
 ---
 
 
-# Featured Projects
+## Featured Projects
 
-| Project | Focus |
-|---|---|
-| [Marketing Incrementality & Causal Impact](Marketing_Incrementality/) | Causal inference, BSTS, DiD, panel regression, marketing measurement |
-| [Traffic Forecasting](Forecasting/) | XGBoost, time-series forecasting, feature engineering, model validation |
-| [Productivity Optimization](Productivity%20Optimization/) | Operational analytics, productivity measurement, optimization |
+### Medicare Claims Intelligence Agent
+
+A modular agentic analytics framework implemented over synthetic Medicare
+claims data.
+
+**Technologies:** Qwen3:8B, Ollama, LangGraph, DuckDB, FAISS, RAG,
+Pydantic, pytest, Streamlit
+
+Key design principle:
+
+> **LLMs reason. Deterministic tools calculate. RAG grounds methodology.**
+
+The system separates natural-language reasoning from numerical computation,
+supports analytical and knowledge-retrieval workflows, and combines both in
+hybrid LangGraph workflows.
+
+[View standalone project](https://github.com/stevej108/Medicare-Claims-Intelligence-Agent)
+
+
+### CMS Medicare Utilization Analytics
+
+End-to-end healthcare analytics using CMS Blue Button/FHIR and DE-SynPUF
+synthetic Medicare claims data.
+
+The project covers claims engineering, beneficiary-year construction,
+utilization and cost analysis, chronic-condition burden, longitudinal
+high-cost analysis, and interpretable member segmentation.
+
+**Technologies:** Python, pandas, DuckDB/Parquet concepts, CMS Blue Button,
+FHIR R4, DE-SynPUF, healthcare claims analytics
+
+[View standalone project](https://github.com/stevej108/Medicare-Claims-Intelligence-Agent](https://github.com/stevej108/CMS-Medicare-Utilization-Analytics)
+
+
+### Enterprise Knowledge Assistant
+
+An applied AI project for enterprise knowledge retrieval and synthesis.
+
+## Technology Stack
+Python 3.12+, LangGraph, LangChain, Ollama, Streamlit, python-docx, PyMuPDF, python-pptx, openpyxl, pandas
+
+[View standalone project](https://github.com/stevej108/Enterprise_Knowledge_Assistant)
 
 
 
