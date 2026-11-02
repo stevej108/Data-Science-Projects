@@ -61,21 +61,21 @@ high-cost analysis, and interpretable member segmentation.
 **Technologies:** Python, pandas, DuckDB/Parquet concepts, CMS Blue Button,
 FHIR R4, DE-SynPUF, healthcare claims analytics
 
-[View standalone project](https://github.com/stevej108/Medicare-Claims-Intelligence-Agent](https://github.com/stevej108/CMS-Medicare-Utilization-Analytics)
+[View standalone project](https://github.com/stevej108/CMS-Medicare-Utilization-Analytics)
 
 
 ### Enterprise Knowledge Assistant
 
 An applied AI project for enterprise knowledge retrieval and synthesis.
 
-## Technology Stack
+**Technology Stack**
 Python 3.12+, LangGraph, LangChain, Ollama, Streamlit, python-docx, PyMuPDF, python-pptx, openpyxl, pandas
 
 [View standalone project](https://github.com/stevej108/Enterprise_Knowledge_Assistant)
 
+---
 
-
-## [Marketing Incrementality & Causal Impact](Marketing_Incrementality/)
+### [Marketing Incrementality & Causal Impact](Marketing_Incrementality/)
 
 A comprehensive marketing-measurement framework designed to determine whether incremental marketing investment generates incremental store traffic across U.S. Designated Market Areas (DMAs).
 
@@ -103,7 +103,7 @@ The project moves from descriptive relationships toward increasingly controlled 
 
 ---
 
-## [Traffic Forecasting](Forecasting/)
+### [Traffic Forecasting](Forecasting/)
 
 An end-to-end machine-learning forecasting framework designed to predict future store traffic at both DMA and national levels.
 
@@ -130,7 +130,7 @@ The project emphasizes not only predictive performance but also geographic consi
 
 ---
 
-## [Productivity Optimization](Productivity%20Optimization/)
+### [Productivity Optimization](Productivity%20Optimization/)
 
 An applied analytics project focused on evaluating productivity and identifying opportunities for operational improvement through data-driven analysis.
 
