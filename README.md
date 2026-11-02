@@ -140,6 +140,41 @@ The project demonstrates the use of structured analytical workflows to move from
 
 ---
 
+# Healthcare Analytics & AI
+These projects form a two-part Medicare analytics portfolio.
+
+## 1. CMS Medicare Utilization Analytics
+
+Builds the trusted analytical foundation:
+
+**FHIR → Claims Engineering → Beneficiary-Year Analytics →
+Cost & Utilization Analysis → Longitudinal Segmentation**
+
+
+## 2. Medicare Claims Intelligence Agent
+
+Builds the agentic AI consumption layer on top of that analytical
+foundation:
+
+**DuckDB → Validated Analytical Tools → Local Qwen → RAG →
+LangGraph → Streamlit**
+
+
+Together, the projects demonstrate the progression from raw healthcare data
+and analytical modeling to a grounded, tool-using AI application.
+
+---
+
+## Cirrhosis / Liver Disease Classification
+
+Applied deep-learning techniques to patient data to classify stages of liver disease.
+
+The project demonstrates the application of supervised learning to multiclass healthcare prediction and the challenges associated with classification in clinically oriented datasets.
+
+**Techniques:** Deep Learning, Multiclass Classification, Healthcare Analytics
+
+---
+
 # Optimization & Operations Research
 
 ## Facility Location Optimization for Emergency Services
@@ -310,17 +345,6 @@ The project explored how sequence models and word embeddings can be used to gene
 
 ---
 
-# Healthcare Predictive Modeling
-
-## Cirrhosis / Liver Disease Classification
-
-Applied deep-learning techniques to patient data to classify stages of liver disease.
-
-The project demonstrates the application of supervised learning to multiclass healthcare prediction and the challenges associated with classification in clinically oriented datasets.
-
-**Techniques:** Deep Learning, Multiclass Classification, Healthcare Analytics
-
----
 
 # Data Engineering
 
