@@ -23,6 +23,7 @@ from config import (
     SPEND_FILE,
     STORE_FILE,
     TRAFFIC_FILE,
+    MERCH_FILE
 )
 
 logging.basicConfig(
@@ -653,6 +654,10 @@ def clean_traffic(stores):
         traffic[" Exits "]
     )
 
+    traffic["Exits_LY"] = clean_numeric(
+        traffic[" Exits LY "]
+    )
+
     traffic["# Sale Txns"] = clean_numeric(
         traffic["# Sale Txns"]
     )
@@ -664,6 +669,11 @@ def clean_traffic(stores):
     logger.info(
         f"Missing Exits         : "
         f"{traffic['Exits'].isna().sum():,}"
+    )
+
+    logger.info(
+        f"Missing Exits LY      : "
+        f"{traffic['Exits_LY'].isna().sum():,}"
     )
 
     logger.info(
@@ -683,6 +693,7 @@ def clean_traffic(stores):
         )
         .agg(
             Traffic=("Exits", "sum"),
+            Traffic_LY=("Exits_LY", "sum"),
             Transactions=("# Sale Txns", "sum")
         )
     )
@@ -734,6 +745,37 @@ def clean_traffic(stores):
         .size()
         .rename("Store_Month_Rows")
         .to_string()
+    )
+
+    # =====================================================
+    # 6A. COMP TRAFFIC ELIGIBILITY
+    # =====================================================
+
+    MIN_LY_EXITS = 500
+
+    monthly["Comp_Eligible"] = (
+        monthly["Traffic"].notna()
+        & monthly["Traffic_LY"].notna()
+        & (monthly["Traffic_LY"] >= MIN_LY_EXITS)
+    )
+
+    logger.info("")
+    logger.info("COMP TRAFFIC ELIGIBILITY")
+    logger.info("-" * 70)
+
+    logger.info(
+        f"Eligible store-months   : "
+        f"{monthly['Comp_Eligible'].sum():,}"
+    )
+
+    logger.info(
+        f"Excluded store-months   : "
+        f"{(~monthly['Comp_Eligible']).sum():,}"
+    )
+
+    logger.info(
+        f"Eligibility rate        : "
+        f"{monthly['Comp_Eligible'].mean():.2%}"
     )
 
     # =====================================================
@@ -840,6 +882,10 @@ def clean_traffic(stores):
     # 8. DMA-MONTH AGGREGATION
     # =====================================================
 
+    # -----------------------------------------------------
+    # Total traffic
+    # -----------------------------------------------------
+
     dma_month = (
         monthly
         .groupby(
@@ -848,9 +894,121 @@ def clean_traffic(stores):
         )
         .agg(
             Traffic=("Traffic", "sum"),
-            Transactions=("Transactions", "sum")
+            Transactions=("Transactions", "sum"),
+            Store_Count_Traffic=("Store", "nunique")
         )
     )
+
+
+    # -----------------------------------------------------
+    # Comparable traffic
+    # -----------------------------------------------------
+
+    comp_monthly = (
+        monthly[
+            monthly["Comp_Eligible"]
+        ]
+        .groupby(
+            ["DMA", "Month"],
+            as_index=False
+        )
+        .agg(
+            Comp_Exits=("Traffic", "sum"),
+            Comp_Exits_LY=("Traffic_LY", "sum"),
+            Comp_Stores=("Store", "nunique")
+        )
+    )
+
+
+    # -----------------------------------------------------
+    # Calculate DMA-month YoY comp traffic
+    # -----------------------------------------------------
+
+    comp_monthly["Comp_Traffic"] = (
+        comp_monthly["Comp_Exits"]
+        / comp_monthly["Comp_Exits_LY"]
+        - 1
+    )
+
+
+    # -----------------------------------------------------
+    # Merge comp metrics onto DMA-month traffic
+    # -----------------------------------------------------
+
+    dma_month = dma_month.merge(
+        comp_monthly,
+        on=["DMA", "Month"],
+        how="left",
+        validate="one_to_one"
+    )
+
+
+    # -----------------------------------------------------
+    # Calculate comp-store coverage
+    # -----------------------------------------------------
+
+    dma_month["Comp_Store_Coverage"] = (
+        dma_month["Comp_Stores"]
+        / dma_month["Store_Count_Traffic"]
+    )
+
+
+    # =====================================================
+    # 8A. DMA-MONTH COMP TRAFFIC QA
+    # =====================================================
+
+    logger.info("")
+    logger.info("=" * 70)
+    logger.info("DMA-MONTH COMP TRAFFIC QA")
+    logger.info("=" * 70)
+
+    logger.info(
+        f"DMA-month rows          : "
+        f"{len(dma_month):,}"
+    )
+
+    logger.info(
+        f"Rows with comp traffic  : "
+        f"{dma_month['Comp_Traffic'].notna().sum():,}"
+    )
+
+    logger.info(
+        f"Comp traffic coverage   : "
+        f"{dma_month['Comp_Traffic'].notna().mean():.2%}"
+    )
+
+    logger.info(
+        f"Mean Comp Traffic       : "
+        f"{dma_month['Comp_Traffic'].mean():.2%}"
+    )
+
+    logger.info(
+        f"Median Comp Traffic     : "
+        f"{dma_month['Comp_Traffic'].median():.2%}"
+    )
+
+    logger.info(
+        f"Min Comp Traffic        : "
+        f"{dma_month['Comp_Traffic'].min():.2%}"
+    )
+
+    logger.info(
+        f"Max Comp Traffic        : "
+        f"{dma_month['Comp_Traffic'].max():.2%}"
+    )
+
+    logger.info("")
+    logger.info("Comp Store Coverage:")
+
+    logger.info(
+        dma_month[
+            "Comp_Store_Coverage"
+        ]
+        .describe()
+        .to_string()
+    )
+
+    logger.info("=" * 70)
 
     jan_dma = dma_month[
         dma_month["Month"] == pd.Timestamp("2026-01-01")
@@ -964,13 +1122,229 @@ def clean_traffic(stores):
 
     return dma_month
 
+#=========================================================
+# Clean Merchandise
+#=========================================================
 
+def clean_merchandise():
+    """
+    Clean quarterly store-level merchandise sales data.
+
+    Grain
+    -----
+    Store x Merchandise Group x Quarter
+
+    Returns
+    -------
+    pd.DataFrame
+        Clean merchandise dataset with standardized
+        numeric measures and quarterly time fields.
+    """
+
+    logger.info("Cleaning merchandise data...")
+
+    merch = pd.read_csv(MERCH_FILE)
+
+    logger.info(
+        f"Raw merchandise shape: {merch.shape}"
+    )
+
+    #-----------------------------------------------------
+    # Standardize column names
+    #-----------------------------------------------------
+
+    merch = merch.rename(
+        columns={
+            "Location": "Store_Location",
+            "Group": "Merch_Group",
+            "Merch Quarter": "Merch_Quarter",
+            "Merch Year": "Merch_Year",
+            "Time Period": "Time_Period",
+            "Sales $ Comp": "Sales_Dollars",
+            "Sales U Comp": "Sales_Units",
+        }
+    )
+
+    #-----------------------------------------------------
+    # Store
+    #-----------------------------------------------------
+
+    merch["Store"] = pd.to_numeric(
+        merch["Store"],
+        errors="coerce"
+    )
+
+    #-----------------------------------------------------
+    # Sales Dollars
+    #-----------------------------------------------------
+
+    merch["Sales_Dollars"] = (
+        merch["Sales_Dollars"]
+        .astype(str)
+        .str.replace("$", "", regex=False)
+        .str.replace(",", "", regex=False)
+        .str.strip()
+        .pipe(pd.to_numeric, errors="coerce")
+    )
+
+    #-----------------------------------------------------
+    # Sales Units
+    #-----------------------------------------------------
+
+    merch["Sales_Units"] = (
+        merch["Sales_Units"]
+        .astype(str)
+        .str.replace(",", "", regex=False)
+        .str.strip()
+        .pipe(pd.to_numeric, errors="coerce")
+    )
+
+    #-----------------------------------------------------
+    # Year
+    #-----------------------------------------------------
+
+    merch["Merch_Year"] = pd.to_numeric(
+        merch["Merch_Year"],
+        errors="coerce"
+    ).astype("Int64")
+
+    #-----------------------------------------------------
+    # Quarter Number
+    #-----------------------------------------------------
+
+    merch["Quarter_Number"] = (
+        merch["Merch_Quarter"]
+        .astype(str)
+        .str.extract(r"(\d)", expand=False)
+        .pipe(pd.to_numeric, errors="coerce")
+        .astype("Int64")
+    )
+
+    #-----------------------------------------------------
+    # Quarter Period
+    #-----------------------------------------------------
+
+    valid_period = (
+        merch["Merch_Year"].notna()
+        & merch["Quarter_Number"].notna()
+    )
+
+    merch["Quarter_Period"] = pd.NaT
+
+    quarter_string = (
+        merch.loc[valid_period, "Merch_Year"]
+        .astype(int)
+        .astype(str)
+        + "Q"
+        + merch.loc[valid_period, "Quarter_Number"]
+        .astype(int)
+        .astype(str)
+    )
+
+    merch.loc[
+        valid_period,
+        "Quarter_Period"
+    ] = (
+        pd.PeriodIndex(
+            quarter_string,
+            freq="Q"
+        )
+        .to_timestamp()
+    )
+
+    merch["Quarter_Period"] = pd.to_datetime(
+        merch["Quarter_Period"]
+    )
+
+    #-----------------------------------------------------
+    # Sort
+    #-----------------------------------------------------
+
+    merch = merch.sort_values(
+        [
+            "Store",
+            "Merch_Group",
+            "Quarter_Period"
+        ]
+    ).reset_index(drop=True)
+
+    logger.info(
+        f"Clean merchandise shape: {merch.shape}"
+    )
+
+    return merch
+
+#=========================================================
+# Merchandise Summary
+#=========================================================
+
+def merchandise_summary(merch):
+    """
+    Log basic merchandise data quality statistics.
+    """
+
+    logger.info("=" * 70)
+    logger.info("MERCHANDISE DATA SUMMARY")
+    logger.info("=" * 70)
+
+    logger.info(
+        f"Rows             : {len(merch):,}"
+    )
+
+    logger.info(
+        f"Stores           : {merch['Store'].nunique():,}"
+    )
+
+    logger.info(
+        f"Merch Groups     : {merch['Merch_Group'].nunique():,}"
+    )
+
+    logger.info(
+        f"Quarters         : {merch['Quarter_Period'].nunique():,}"
+    )
+
+    logger.info(
+        f"Date Range       : "
+        f"{merch['Quarter_Period'].min()} "
+        f"to "
+        f"{merch['Quarter_Period'].max()}"
+    )
+
+    logger.info(
+        f"Missing Stores   : {merch['Store'].isna().sum():,}"
+    )
+
+    logger.info(
+        f"Missing Groups   : {merch['Merch_Group'].isna().sum():,}"
+    )
+
+    logger.info(
+        f"Missing Dollars  : {merch['Sales_Dollars'].isna().sum():,}"
+    )
+
+    logger.info(
+        f"Missing Units    : {merch['Sales_Units'].isna().sum():,}"
+    )
+
+    duplicates = merch.duplicated(
+        subset=[
+            "Store",
+            "Merch_Group",
+            "Quarter_Period"
+        ]
+    ).sum()
+
+    logger.info(
+        f"Duplicate Store-Group-Quarter: {duplicates:,}"
+    )
+
+    logger.info("=" * 70)
 
 # =====================================================
 # Data Quality Report
 # =====================================================
 
-def generate_data_quality_report(spend, traffic, stores):
+def generate_data_quality_report(spend, traffic, stores, merch):
 
     logger.info("")
     logger.info("=" * 60)
@@ -1061,6 +1435,8 @@ def generate_data_quality_report(spend, traffic, stores):
     logger.info(f"Closed Stores:        {closed_stores:>8}")
     logger.info(f"Distinct DMAs:        {stores['DMA'].nunique():>8}")
 
+    merchandise_summary(merch)
+
     logger.info("")
     logger.info("=" * 60)
     logger.info("End Data Quality Report")
@@ -1079,6 +1455,10 @@ def main():
 
     traffic = clean_traffic(stores)
 
+    merch = clean_merchandise()
+
+    merchandise_summary(merch)
+
     logger.info("Saving cleaned datasets...")
 
     spend.to_parquet(
@@ -1096,10 +1476,16 @@ def main():
         index=False
     )
 
+    merch.to_parquet(
+        INTERIM_DATA_DIR / "merchandise_clean.parquet",
+        index=False
+    )
+
     generate_data_quality_report(
         spend,
         traffic,
-        stores
+        stores,
+        merch
     )
 
     logger.info("Data cleaning complete.")

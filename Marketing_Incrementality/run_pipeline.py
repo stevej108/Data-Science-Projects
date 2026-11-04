@@ -134,9 +134,23 @@ PIPELINE = [
     },
 
     {
+        "id": "06a",
+        "name": "Merchandise Cross Correlation",
+        "script": "06a_merchandise_cross_correlation.py",
+        "stage": "Exploratory Analysis",
+    },
+
+    {
         "id": "07",
         "name": "Panel Regression",
         "script": "07_panel_regression.py",
+        "stage": "Modeling",
+    },
+
+    {
+        "id": "07a",
+        "name": "Merchandise Panel Regression",
+        "script": "07a_merchandise_panel_regression.py",
         "stage": "Modeling",
     },
 
@@ -197,10 +211,17 @@ PIPELINE = [
     },
 
     {
-            "id": "16",
-            "name": "DMA Opportunity Analysis",
-            "script": "16_dma_opportunity_analysis.py",
-            "stage": "DMA Analytics",
+        "id": "16",
+        "name": "DMA Opportunity Analysis",
+        "script": "16_dma_opportunity_analysis.py",
+        "stage": "DMA Analytics",
+    },
+
+    {
+        "id": "17",
+        "name": "DMA Merchandise Mix Analysis",
+        "script": "17_dma_merchandise_mix_diagnostics.py",
+        "stage": "DMA Analytics",
     },
 
 ]

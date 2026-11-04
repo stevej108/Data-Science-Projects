@@ -19,6 +19,7 @@ from config import (
     SPEND_FILE,
     TRAFFIC_FILE,
     STORE_FILE,
+    MERCH_FILE,
     LOG_LEVEL,
 )
 
@@ -91,16 +92,18 @@ def main():
     spend_df = load_csv(SPEND_FILE)
     traffic_df = load_csv(TRAFFIC_FILE)
     stores_df = load_csv(STORE_FILE)
+    merch_df = load_csv(MERCH_FILE)
 
     summarize_dataframe("Marketing Spend", spend_df)
     summarize_dataframe("Traffic", traffic_df)
     summarize_dataframe("Stores", stores_df)
+    summarize_dataframe("Merchandise", merch_df)
 
     logger.info("Finished loading all datasets.")
 
-    return spend_df, traffic_df, stores_df
+    return spend_df, traffic_df, stores_df, merch_df
 
 
 if __name__ == "__main__":
 
-    spend_df, traffic_df, stores_df = main()
+    spend_df, traffic_df, stores_df, merch_df = main()

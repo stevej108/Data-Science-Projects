@@ -17,16 +17,18 @@ env/
 # Logs
 *.log
 
-# Generated output
-output/
+# Data
+data/
 
-# Test cache
+# Generated / non-portfolio outputs
+outputs/comp_traffic/
+outputs/models/
+outputs/logs/
+outputs/tables/
+
+# Test / lint / type-check caches
 .pytest_cache/
-
-# Ruff
 .ruff_cache/
-
-# MyPy
 .mypy_cache/
 
 # Coverage

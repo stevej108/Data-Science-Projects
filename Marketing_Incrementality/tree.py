@@ -23,7 +23,9 @@ def print_directory_tree(dir_path, prefix=""):
             new_prefix = prefix + ("    " if is_last else "│   ")
             print_directory_tree(path, new_prefix)
 
-# Run it on your current working directory
-current_directory = os.getcwd()
-print(f"📁 {os.path.basename(current_directory)}")
-print_directory_tree(current_directory)
+# Run it on your current project directory
+project_directory = os.path.dirname(os.path.abspath(__file__))
+
+current_directory = os.getcwd() # use this to get the current working directory
+print(f"📁 {os.path.basename(project_directory)}")
+print_directory_tree(project_directory)

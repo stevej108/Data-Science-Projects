@@ -38,6 +38,8 @@ SPEND_FILE = DATA_DIR / "spend.csv"
 
 TRAFFIC_FILE = DATA_DIR / "traffic.csv"
 
+MERCH_FILE = DATA_DIR / "merchandise.csv"
+
 STORE_FILE = DATA_DIR / "stores.csv"
 
 WEATHER_FILE = DATA_DIR / "weather_master.csv"
