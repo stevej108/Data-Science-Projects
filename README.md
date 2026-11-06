@@ -32,8 +32,8 @@ This repository demonstrates experience across a broad range of data science dis
 
 ### Medicare Claims Intelligence Agent
 
-A modular agentic analytics framework implemented over synthetic Medicare
-claims data.
+The **Medicare Claims Intelligence Agent** is an end-to-end AI engineering project for exploring synthetic Medicare claims analytics through natural-language questions.
+
 
 **Technologies:** Qwen3:8B, Ollama, LangGraph, DuckDB, FAISS, RAG,
 Pydantic, pytest, Streamlit
