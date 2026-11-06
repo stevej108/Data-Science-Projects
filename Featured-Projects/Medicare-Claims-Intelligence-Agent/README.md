@@ -1,25 +1,29 @@
 # Medicare Claims Intelligence Agent
 
-An agentic healthcare analytics application that provides natural-language access to validated synthetic Medicare claims analytics.
+The **Medicare Claims Intelligence Agent** is an end-to-end AI engineering project for exploring synthetic Medicare claims analytics through natural-language questions.
 
-The system combines:
+The system combines deterministic healthcare analytics with agentic AI while deliberately separating **numerical computation from language-model reasoning**.
 
-- DuckDB deterministic analytical tools
-- Qwen3:8B running locally through Ollama
-- retrieval-augmented generation (RAG)
-- FAISS and Sentence Transformers
-- LangGraph orchestration
-- Pydantic validation
-- Streamlit
-- automated deterministic and LLM-routing tests
+> **LLMs reason. Deterministic tools calculate. RAG grounds methodology. LangGraph orchestrates evidence.**
 
-The core architectural principle is:
+Rather than allowing an LLM to generate arbitrary SQL or calculate healthcare metrics directly, the agent routes analytical questions to a controlled set of validated DuckDB-backed tools operating on a canonical Medicare beneficiary-year semantic layer.
 
-> **LLMs reason, deterministic tools calculate, RAG grounds methodology, and LangGraph orchestrates evidence.**
+The project has evolved beyond the analytical agent itself into a deployable AI service demonstrating:
 
-Rather than allowing an LLM to generate arbitrary analytical logic, numerical questions are routed to tested analytical tools operating on a validated Medicare semantic layer. Methodology, definitions, cohort logic, and limitations are handled independently through RAG.
+- FastAPI API development
+- Pydantic request and response contracts
+- Docker containerization
+- provider-independent LLM configuration
+- local and hosted LLM inference
+- resource-aware model loading
+- mocked API testing
+- deterministic, data-integration, and LLM-integration test layers
+- automated GitHub Actions CI
+- CI-gated continuous deployment
+- cloud deployment on Render
+- environment-based configuration and secrets management
 
-The architecture supports analytical, knowledge, and hybrid questions while exposing the execution path and supporting sources for traceability.
+The deployed API uses **Groq-hosted Qwen inference**, while local development can continue using **Qwen through Ollama**.
 
 ## Full Project
 
