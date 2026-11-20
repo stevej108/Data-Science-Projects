@@ -339,6 +339,8 @@ def main():
 
     print("=" * 60)
 
+    return candidate_run_id
+
 
 if __name__ == "__main__":
     main()
