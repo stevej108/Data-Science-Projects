@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "databricks-forecasting"
+version = "0.1.0"
+description = "Synthetic traffic forecasting MLOps pipeline using Databricks and MLflow"
+requires-python = ">=3.10"
+
+dependencies = [
+    "mlflow",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "xgboost",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
