@@ -7,6 +7,10 @@ from mlflow.models import (
     infer_signature,
 )
 
+# This entry point is designed to execute on
+# Databricks compute. Core modeling logic is
+# tested locally under src/databricks_forecasting.
+
 from pyspark.sql import (
     SparkSession,
 )
