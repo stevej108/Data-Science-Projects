@@ -1,0 +1,27 @@
+{
+  "dataframe_records": [
+    {
+      "Traffic_Lag_1": 678529.1289119828,
+      "Rolling_Traffic_3": 674127.2728555512,
+      "Transactions_Lag_1": 302446.2258787057,
+      "Transactions_Lag_3": 329928.8842792515,
+      "Transactions_Lag_6": 215259.75699861842,
+      "Store_Count": 33,
+      "DMA_Code": 0,
+      "Total_Selling_SqFt": 879551.5071296546,
+      "Avg_Selling_SqFt": 28968.756838146193,
+      "DMA_Population": 7832623.127547176,
+      "TradeAreaPopulation": 37736793.54621927,
+      "Stores_per_Million": 4.292375727254169,
+      "CX_Composite": 3.2800165734456717,
+      "Comp_Sales_Index": 0.7797286280943155,
+      "Avg_Competitors": 0.5897944746890419,
+      "Competitor_Density": 0.01888027658369101,
+      "Pct_A_Facility": 0.5231749739570405,
+      "Year": 1994,
+      "Month_Number": 8,
+      "Quarter": 3,
+      "Holiday_Season": 0
+    }
+  ]
+}
