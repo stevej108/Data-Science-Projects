@@ -7,6 +7,42 @@ from mlflow.models import (
     infer_signature,
 )
 
+import sys
+from pathlib import Path
+
+
+try:
+    _THIS_FILE = (
+        Path(__file__)
+        .resolve()
+    )
+except NameError:
+    # __file__ is undefined when this file
+    # is run interactively (e.g. from the
+    # workspace editor), so fall back to
+    # this file's known workspace path.
+    _THIS_FILE = Path(
+        "/Workspace/Users/stevej108@gmail.com/"
+        "Data-Science-Projects/"
+        "Databricks-Forecasting/jobs/"
+        "train_candidate.py"
+    ).resolve()
+
+PROJECT_ROOT = (
+    _THIS_FILE
+    .parents[1]
+)
+
+SRC_PATH = (
+    PROJECT_ROOT
+    / "src"
+)
+
+sys.path.insert(
+    0,
+    str(SRC_PATH),
+)
+
 # This entry point is designed to execute on
 # Databricks compute. Core modeling logic is
 # tested locally under src/databricks_forecasting.
