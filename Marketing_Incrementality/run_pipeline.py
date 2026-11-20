@@ -205,8 +205,8 @@ PIPELINE = [
 
     {
         "id": "15",
-        "name": "DMA Spend Explanatory Power",
-        "script": "15_dma_spend_explanatory_power.py",
+        "name": "DMA Spend Regression",
+        "script": "15_dma_spend_regression.py",
         "stage": "Spend Diagnostics",
     },
 

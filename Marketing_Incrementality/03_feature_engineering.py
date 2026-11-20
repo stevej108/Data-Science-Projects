@@ -84,6 +84,7 @@ def aggregate_store_features(stores):
 
     stores = stores.copy()
 
+
     stores = stores[stores["Status"].str.upper() == "OPEN"]
 
     dma_features = (

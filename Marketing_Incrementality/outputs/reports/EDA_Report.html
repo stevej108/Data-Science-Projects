@@ -80,7 +80,7 @@ summary {
 
 <tr><td>Rows</td><td>612</td></tr>
 
-<tr><td>Columns</td><td>39</td></tr>
+<tr><td>Columns</td><td>47</td></tr>
 
 <tr><td>DMAs</td><td>34</td></tr>
 
@@ -323,6 +323,42 @@ summary {
       <td>612</td>
     </tr>
     <tr>
+      <td>Store_Count_Traffic</td>
+      <td>int64</td>
+      <td>0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>612</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits_LY</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>611</td>
+    </tr>
+    <tr>
+      <td>Comp_Stores</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <td>Comp_Traffic</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>612</td>
+    </tr>
+    <tr>
+      <td>Comp_Store_Coverage</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>42</td>
+    </tr>
+    <tr>
       <td>DMA_Original_y</td>
       <td>str</td>
       <td>0</td>
@@ -400,47 +436,11 @@ summary {
       <td>34</td>
       <td>191</td>
     </tr>
-    <tr>
-      <td>Spend_Lag_2</td>
-      <td>float64</td>
-      <td>68</td>
-      <td>184</td>
-    </tr>
-    <tr>
-      <td>Spend_Lag_3</td>
-      <td>float64</td>
-      <td>102</td>
-      <td>180</td>
-    </tr>
-    <tr>
-      <td>Spend_Lag_6</td>
-      <td>float64</td>
-      <td>204</td>
-      <td>161</td>
-    </tr>
-    <tr>
-      <td>Rolling_Spend_3</td>
-      <td>float64</td>
-      <td>0</td>
-      <td>328</td>
-    </tr>
-    <tr>
-      <td>Rolling_Spend_6</td>
-      <td>float64</td>
-      <td>0</td>
-      <td>439</td>
-    </tr>
-    <tr>
-      <td>Rolling_Spend_12</td>
-      <td>float64</td>
-      <td>0</td>
-      <td>481</td>
-    </tr>
   </tbody>
 </table>
 
 <p>
-Showing first 25 rows of 39.
+Showing first 25 rows of 47.
 </p>
 
 
@@ -466,6 +466,12 @@ Showing first 25 rows of 39.
       <th>Spend</th>
       <th>Traffic</th>
       <th>Transactions</th>
+      <th>Store_Count_Traffic</th>
+      <th>Comp_Exits</th>
+      <th>Comp_Exits_LY</th>
+      <th>Comp_Stores</th>
+      <th>Comp_Traffic</th>
+      <th>Comp_Store_Coverage</th>
       <th>Store_Count</th>
       <th>Total_Selling_SqFt</th>
       <th>Avg_Selling_SqFt</th>
@@ -491,6 +497,8 @@ Showing first 25 rows of 39.
       <th>Traffic_Lag_12</th>
       <th>Rolling_Traffic_3</th>
       <th>Traffic_pct_change</th>
+      <th>Comp_Traffic_Lag_1</th>
+      <th>Rolling_Comp_Traffic_3</th>
       <th>Traffic_per_Store</th>
       <th>Transactions_per_Store</th>
       <th>Traffic_per_1000SqFt</th>
@@ -504,6 +512,12 @@ Showing first 25 rows of 39.
       <td>1.000000</td>
       <td>0.704607</td>
       <td>0.715073</td>
+      <td>0.705159</td>
+      <td>0.703681</td>
+      <td>0.702124</td>
+      <td>0.689605</td>
+      <td>-0.010098</td>
+      <td>-0.162517</td>
       <td>6.628278e-01</td>
       <td>6.672855e-01</td>
       <td>7.861646e-02</td>
@@ -529,6 +543,8 @@ Showing first 25 rows of 39.
       <td>0.812492</td>
       <td>0.674970</td>
       <td>0.047212</td>
+      <td>-0.030223</td>
+      <td>-0.019787</td>
       <td>0.256823</td>
       <td>0.281159</td>
       <td>0.197214</td>
@@ -540,6 +556,12 @@ Showing first 25 rows of 39.
       <td>0.704607</td>
       <td>1.000000</td>
       <td>0.996992</td>
+      <td>0.920030</td>
+      <td>0.999996</td>
+      <td>0.998052</td>
+      <td>0.919235</td>
+      <td>0.023381</td>
+      <td>-0.020724</td>
       <td>9.250902e-01</td>
       <td>9.258938e-01</td>
       <td>1.073983e-01</td>
@@ -565,6 +587,8 @@ Showing first 25 rows of 39.
       <td>0.978919</td>
       <td>0.980925</td>
       <td>0.095599</td>
+      <td>0.016985</td>
+      <td>0.041029</td>
       <td>0.438728</td>
       <td>0.445564</td>
       <td>0.396597</td>
@@ -576,6 +600,12 @@ Showing first 25 rows of 39.
       <td>0.715073</td>
       <td>0.996992</td>
       <td>1.000000</td>
+      <td>0.933040</td>
+      <td>0.996987</td>
+      <td>0.995107</td>
+      <td>0.932170</td>
+      <td>0.019550</td>
+      <td>-0.020187</td>
       <td>9.329921e-01</td>
       <td>9.368226e-01</td>
       <td>1.170461e-01</td>
@@ -601,6 +631,8 @@ Showing first 25 rows of 39.
       <td>0.979545</td>
       <td>0.978943</td>
       <td>0.089683</td>
+      <td>0.011340</td>
+      <td>0.033975</td>
       <td>0.407034</td>
       <td>0.429224</td>
       <td>0.356606</td>
@@ -608,10 +640,280 @@ Showing first 25 rows of 39.
       <td>0.325931</td>
     </tr>
     <tr>
+      <td>Store_Count_Traffic</td>
+      <td>0.705159</td>
+      <td>0.920030</td>
+      <td>0.933040</td>
+      <td>1.000000</td>
+      <td>0.920020</td>
+      <td>0.922087</td>
+      <td>0.998534</td>
+      <td>-0.008039</td>
+      <td>-0.031470</td>
+      <td>9.810476e-01</td>
+      <td>9.766033e-01</td>
+      <td>2.107625e-02</td>
+      <td>9.316321e-01</td>
+      <td>8.354669e-01</td>
+      <td>8.505107e-02</td>
+      <td>-1.098556e-02</td>
+      <td>-8.293732e-03</td>
+      <td>1.232332e-02</td>
+      <td>0.684141</td>
+      <td>0.654280</td>
+      <td>0.647889</td>
+      <td>0.604050</td>
+      <td>0.809270</td>
+      <td>0.839986</td>
+      <td>0.869362</td>
+      <td>0.755301</td>
+      <td>-0.047531</td>
+      <td>0.369448</td>
+      <td>2.263501e-02</td>
+      <td>0.035462</td>
+      <td>0.923339</td>
+      <td>0.926242</td>
+      <td>0.935497</td>
+      <td>-0.027951</td>
+      <td>-0.010947</td>
+      <td>-0.010199</td>
+      <td>0.168836</td>
+      <td>0.194135</td>
+      <td>0.127971</td>
+      <td>0.302557</td>
+      <td>0.291257</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits</td>
+      <td>0.703681</td>
+      <td>0.999996</td>
+      <td>0.996987</td>
+      <td>0.920020</td>
+      <td>1.000000</td>
+      <td>0.998061</td>
+      <td>0.919354</td>
+      <td>0.023290</td>
+      <td>-0.018710</td>
+      <td>9.251726e-01</td>
+      <td>9.259858e-01</td>
+      <td>1.073878e-01</td>
+      <td>8.302160e-01</td>
+      <td>7.829424e-01</td>
+      <td>7.417070e-03</td>
+      <td>6.987731e-02</td>
+      <td>6.117306e-02</td>
+      <td>9.225561e-02</td>
+      <td>0.644453</td>
+      <td>0.571302</td>
+      <td>0.552106</td>
+      <td>0.536161</td>
+      <td>0.766773</td>
+      <td>0.792849</td>
+      <td>0.817239</td>
+      <td>0.689407</td>
+      <td>0.005357</td>
+      <td>0.388871</td>
+      <td>7.573630e-02</td>
+      <td>0.066631</td>
+      <td>0.949048</td>
+      <td>0.978943</td>
+      <td>0.980989</td>
+      <td>0.095842</td>
+      <td>0.017070</td>
+      <td>0.041068</td>
+      <td>0.438544</td>
+      <td>0.445374</td>
+      <td>0.396397</td>
+      <td>0.334895</td>
+      <td>0.329438</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits_LY</td>
+      <td>0.702124</td>
+      <td>0.998052</td>
+      <td>0.995107</td>
+      <td>0.922087</td>
+      <td>0.998061</td>
+      <td>1.000000</td>
+      <td>0.921541</td>
+      <td>-0.022623</td>
+      <td>-0.017113</td>
+      <td>9.284084e-01</td>
+      <td>9.317444e-01</td>
+      <td>1.134404e-01</td>
+      <td>8.335202e-01</td>
+      <td>7.867329e-01</td>
+      <td>7.764976e-04</td>
+      <td>7.614900e-02</td>
+      <td>6.705687e-02</td>
+      <td>9.929271e-02</td>
+      <td>0.644861</td>
+      <td>0.566382</td>
+      <td>0.544089</td>
+      <td>0.530856</td>
+      <td>0.762530</td>
+      <td>0.786884</td>
+      <td>0.812250</td>
+      <td>0.683121</td>
+      <td>0.002302</td>
+      <td>0.387851</td>
+      <td>7.722855e-02</td>
+      <td>0.066942</td>
+      <td>0.947612</td>
+      <td>0.978221</td>
+      <td>0.979277</td>
+      <td>0.096618</td>
+      <td>-0.009201</td>
+      <td>0.002251</td>
+      <td>0.427766</td>
+      <td>0.434844</td>
+      <td>0.378508</td>
+      <td>0.335245</td>
+      <td>0.328141</td>
+    </tr>
+    <tr>
+      <td>Comp_Stores</td>
+      <td>0.689605</td>
+      <td>0.919235</td>
+      <td>0.932170</td>
+      <td>0.998534</td>
+      <td>0.919354</td>
+      <td>0.921541</td>
+      <td>1.000000</td>
+      <td>-0.010865</td>
+      <td>0.015346</td>
+      <td>9.809452e-01</td>
+      <td>9.766890e-01</td>
+      <td>2.059033e-02</td>
+      <td>9.304822e-01</td>
+      <td>8.364615e-01</td>
+      <td>9.615813e-02</td>
+      <td>-2.224073e-02</td>
+      <td>-1.974232e-02</td>
+      <td>-8.216689e-03</td>
+      <td>0.683246</td>
+      <td>0.665464</td>
+      <td>0.653593</td>
+      <td>0.608057</td>
+      <td>0.805800</td>
+      <td>0.839078</td>
+      <td>0.869847</td>
+      <td>0.758088</td>
+      <td>-0.048113</td>
+      <td>0.360402</td>
+      <td>4.223791e-03</td>
+      <td>0.024506</td>
+      <td>0.921831</td>
+      <td>0.927310</td>
+      <td>0.936367</td>
+      <td>-0.024116</td>
+      <td>-0.008133</td>
+      <td>-0.007808</td>
+      <td>0.166809</td>
+      <td>0.192009</td>
+      <td>0.125933</td>
+      <td>0.285587</td>
+      <td>0.273923</td>
+    </tr>
+    <tr>
+      <td>Comp_Traffic</td>
+      <td>-0.010098</td>
+      <td>0.023381</td>
+      <td>0.019550</td>
+      <td>-0.008039</td>
+      <td>0.023290</td>
+      <td>-0.022623</td>
+      <td>-0.010865</td>
+      <td>1.000000</td>
+      <td>-0.044953</td>
+      <td>-3.026328e-02</td>
+      <td>-5.942753e-02</td>
+      <td>-1.235796e-01</td>
+      <td>-2.052956e-02</td>
+      <td>-1.900998e-02</td>
+      <td>1.869852e-01</td>
+      <td>-1.165742e-01</td>
+      <td>-1.085624e-01</td>
+      <td>-1.174408e-01</td>
+      <td>-0.047477</td>
+      <td>0.024838</td>
+      <td>0.056021</td>
+      <td>0.026394</td>
+      <td>0.014840</td>
+      <td>0.033536</td>
+      <td>0.034657</td>
+      <td>0.038073</td>
+      <td>-0.046577</td>
+      <td>-0.041412</td>
+      <td>-6.182032e-02</td>
+      <td>-0.002282</td>
+      <td>-0.000689</td>
+      <td>-0.128456</td>
+      <td>0.024232</td>
+      <td>-0.006970</td>
+      <td>0.535209</td>
+      <td>0.801952</td>
+      <td>0.149572</td>
+      <td>0.134764</td>
+      <td>0.239578</td>
+      <td>-0.052287</td>
+      <td>-0.027142</td>
+    </tr>
+    <tr>
+      <td>Comp_Store_Coverage</td>
+      <td>-0.162517</td>
+      <td>-0.020724</td>
+      <td>-0.020187</td>
+      <td>-0.031470</td>
+      <td>-0.018710</td>
+      <td>-0.017113</td>
+      <td>0.015346</td>
+      <td>-0.044953</td>
+      <td>1.000000</td>
+      <td>-1.262952e-02</td>
+      <td>-1.211707e-02</td>
+      <td>-7.508710e-03</td>
+      <td>-1.954924e-02</td>
+      <td>2.322184e-03</td>
+      <td>1.943443e-01</td>
+      <td>-1.901065e-01</td>
+      <td>-1.957101e-01</td>
+      <td>-3.587896e-01</td>
+      <td>-0.014645</td>
+      <td>0.103149</td>
+      <td>0.053700</td>
+      <td>0.041419</td>
+      <td>-0.043407</td>
+      <td>-0.015692</td>
+      <td>0.000270</td>
+      <td>0.029528</td>
+      <td>0.001142</td>
+      <td>-0.193005</td>
+      <td>-3.866894e-01</td>
+      <td>-0.243159</td>
+      <td>-0.027648</td>
+      <td>-0.016137</td>
+      <td>-0.000280</td>
+      <td>0.080339</td>
+      <td>0.055357</td>
+      <td>0.055047</td>
+      <td>-0.037545</td>
+      <td>-0.036142</td>
+      <td>-0.037759</td>
+      <td>-0.263966</td>
+      <td>-0.276600</td>
+    </tr>
+    <tr>
       <td>Store_Count</td>
       <td>0.662828</td>
       <td>0.925090</td>
       <td>0.932992</td>
+      <td>0.981048</td>
+      <td>0.925173</td>
+      <td>0.928408</td>
+      <td>0.980945</td>
+      <td>-0.030263</td>
+      <td>-0.012630</td>
       <td>1.000000e+00</td>
       <td>9.856180e-01</td>
       <td>4.048701e-03</td>
@@ -637,6 +939,8 @@ Showing first 25 rows of 39.
       <td>0.935170</td>
       <td>0.939276</td>
       <td>-0.007971</td>
+      <td>-0.027195</td>
+      <td>-0.030772</td>
       <td>0.153125</td>
       <td>0.167483</td>
       <td>0.131770</td>
@@ -648,6 +952,12 @@ Showing first 25 rows of 39.
       <td>0.667285</td>
       <td>0.925894</td>
       <td>0.936823</td>
+      <td>0.976603</td>
+      <td>0.925986</td>
+      <td>0.931744</td>
+      <td>0.976689</td>
+      <td>-0.059428</td>
+      <td>-0.012117</td>
       <td>9.856180e-01</td>
       <td>1.000000e+00</td>
       <td>1.378333e-01</td>
@@ -673,6 +983,8 @@ Showing first 25 rows of 39.
       <td>0.938896</td>
       <td>0.939934</td>
       <td>-0.008037</td>
+      <td>-0.057139</td>
+      <td>-0.067238</td>
       <td>0.163376</td>
       <td>0.188309</td>
       <td>0.078596</td>
@@ -684,6 +996,12 @@ Showing first 25 rows of 39.
       <td>0.078616</td>
       <td>0.107398</td>
       <td>0.117046</td>
+      <td>0.021076</td>
+      <td>0.107388</td>
+      <td>0.113440</td>
+      <td>0.020590</td>
+      <td>-0.123580</td>
+      <td>-0.007509</td>
       <td>4.048701e-03</td>
       <td>1.378333e-01</td>
       <td>1.000000e+00</td>
@@ -709,6 +1027,8 @@ Showing first 25 rows of 39.
       <td>0.114505</td>
       <td>0.108280</td>
       <td>-0.009663</td>
+      <td>-0.122789</td>
+      <td>-0.134746</td>
       <td>0.251526</td>
       <td>0.332535</td>
       <td>-0.129906</td>
@@ -720,6 +1040,12 @@ Showing first 25 rows of 39.
       <td>0.635295</td>
       <td>0.830161</td>
       <td>0.843116</td>
+      <td>0.931632</td>
+      <td>0.830216</td>
+      <td>0.833520</td>
+      <td>0.930482</td>
+      <td>-0.020530</td>
+      <td>-0.019549</td>
       <td>9.341779e-01</td>
       <td>9.186144e-01</td>
       <td>-3.116239e-02</td>
@@ -745,6 +1071,8 @@ Showing first 25 rows of 39.
       <td>0.843681</td>
       <td>0.841988</td>
       <td>-0.001288</td>
+      <td>-0.023287</td>
+      <td>-0.034805</td>
       <td>0.057296</td>
       <td>0.068689</td>
       <td>0.040197</td>
@@ -756,6 +1084,12 @@ Showing first 25 rows of 39.
       <td>0.560767</td>
       <td>0.782879</td>
       <td>0.777114</td>
+      <td>0.835467</td>
+      <td>0.782942</td>
+      <td>0.786733</td>
+      <td>0.836461</td>
+      <td>-0.019010</td>
+      <td>0.002322</td>
       <td>8.410174e-01</td>
       <td>8.336748e-01</td>
       <td>9.456330e-06</td>
@@ -781,6 +1115,8 @@ Showing first 25 rows of 39.
       <td>0.794754</td>
       <td>0.795662</td>
       <td>-0.006619</td>
+      <td>-0.013875</td>
+      <td>-0.014792</td>
       <td>0.169733</td>
       <td>0.150983</td>
       <td>0.124810</td>
@@ -792,6 +1128,12 @@ Showing first 25 rows of 39.
       <td>-0.005050</td>
       <td>0.006968</td>
       <td>0.021515</td>
+      <td>0.085051</td>
+      <td>0.007417</td>
+      <td>0.000776</td>
+      <td>0.096158</td>
+      <td>0.186985</td>
+      <td>0.194344</td>
       <td>-1.479143e-13</td>
       <td>-1.541404e-13</td>
       <td>-8.883777e-14</td>
@@ -817,6 +1159,8 @@ Showing first 25 rows of 39.
       <td>NaN</td>
       <td>0.049128</td>
       <td>-0.215948</td>
+      <td>0.166246</td>
+      <td>0.217486</td>
       <td>0.008681</td>
       <td>0.054704</td>
       <td>0.011255</td>
@@ -828,6 +1172,12 @@ Showing first 25 rows of 39.
       <td>0.221596</td>
       <td>0.070528</td>
       <td>0.054512</td>
+      <td>-0.010986</td>
+      <td>0.069877</td>
+      <td>0.076149</td>
+      <td>-0.022241</td>
+      <td>-0.116574</td>
+      <td>-0.190106</td>
       <td>1.573432e-16</td>
       <td>1.485246e-16</td>
       <td>2.863615e-17</td>
@@ -853,6 +1203,8 @@ Showing first 25 rows of 39.
       <td>0.027465</td>
       <td>0.027333</td>
       <td>0.141188</td>
+      <td>-0.022486</td>
+      <td>0.023532</td>
       <td>0.217099</td>
       <td>0.185297</td>
       <td>0.193931</td>
@@ -864,6 +1216,12 @@ Showing first 25 rows of 39.
       <td>0.211782</td>
       <td>0.061772</td>
       <td>0.045037</td>
+      <td>-0.008294</td>
+      <td>0.061173</td>
+      <td>0.067057</td>
+      <td>-0.019742</td>
+      <td>-0.108562</td>
+      <td>-0.195710</td>
       <td>-2.557869e-17</td>
       <td>2.553431e-18</td>
       <td>2.166523e-16</td>
@@ -889,6 +1247,8 @@ Showing first 25 rows of 39.
       <td>0.005655</td>
       <td>0.027746</td>
       <td>0.104575</td>
+      <td>-0.029970</td>
+      <td>0.026019</td>
       <td>0.191669</td>
       <td>0.155374</td>
       <td>0.171066</td>
@@ -900,6 +1260,12 @@ Showing first 25 rows of 39.
       <td>0.311088</td>
       <td>0.093319</td>
       <td>0.087570</td>
+      <td>0.012323</td>
+      <td>0.092256</td>
+      <td>0.099293</td>
+      <td>-0.008217</td>
+      <td>-0.117441</td>
+      <td>-0.358790</td>
       <td>1.531881e-17</td>
       <td>1.437759e-17</td>
       <td>-9.979626e-18</td>
@@ -925,6 +1291,8 @@ Showing first 25 rows of 39.
       <td>NaN</td>
       <td>0.025850</td>
       <td>0.265848</td>
+      <td>-0.122793</td>
+      <td>-0.129410</td>
       <td>0.285720</td>
       <td>0.292717</td>
       <td>0.258641</td>
@@ -936,6 +1304,12 @@ Showing first 25 rows of 39.
       <td>0.610900</td>
       <td>0.644596</td>
       <td>0.654415</td>
+      <td>0.684141</td>
+      <td>0.644453</td>
+      <td>0.644861</td>
+      <td>0.683246</td>
+      <td>-0.047477</td>
+      <td>-0.014645</td>
       <td>6.449601e-01</td>
       <td>6.504458e-01</td>
       <td>7.731436e-02</td>
@@ -961,6 +1335,8 @@ Showing first 25 rows of 39.
       <td>0.774384</td>
       <td>0.674624</td>
       <td>-0.134582</td>
+      <td>-0.008653</td>
+      <td>-0.033936</td>
       <td>0.171314</td>
       <td>0.190885</td>
       <td>0.120738</td>
@@ -972,6 +1348,12 @@ Showing first 25 rows of 39.
       <td>0.338703</td>
       <td>0.570892</td>
       <td>0.585056</td>
+      <td>0.654280</td>
+      <td>0.571302</td>
+      <td>0.566382</td>
+      <td>0.665464</td>
+      <td>0.024838</td>
+      <td>0.103149</td>
       <td>6.276905e-01</td>
       <td>6.341355e-01</td>
       <td>7.625632e-02</td>
@@ -997,6 +1379,8 @@ Showing first 25 rows of 39.
       <td>0.663022</td>
       <td>0.641023</td>
       <td>-0.125706</td>
+      <td>-0.052105</td>
+      <td>-0.020614</td>
       <td>0.081704</td>
       <td>0.104709</td>
       <td>0.044481</td>
@@ -1008,6 +1392,12 @@ Showing first 25 rows of 39.
       <td>0.501316</td>
       <td>0.551694</td>
       <td>0.569614</td>
+      <td>0.647889</td>
+      <td>0.552106</td>
+      <td>0.544089</td>
+      <td>0.653593</td>
+      <td>0.056021</td>
+      <td>0.053700</td>
       <td>6.206678e-01</td>
       <td>6.271747e-01</td>
       <td>7.427981e-02</td>
@@ -1033,6 +1423,8 @@ Showing first 25 rows of 39.
       <td>0.784552</td>
       <td>0.591491</td>
       <td>0.000277</td>
+      <td>0.021259</td>
+      <td>0.009457</td>
       <td>0.066533</td>
       <td>0.096833</td>
       <td>0.032183</td>
@@ -1044,6 +1436,12 @@ Showing first 25 rows of 39.
       <td>0.339736</td>
       <td>0.535891</td>
       <td>0.550020</td>
+      <td>0.604050</td>
+      <td>0.536161</td>
+      <td>0.530856</td>
+      <td>0.608057</td>
+      <td>0.026394</td>
+      <td>0.041419</td>
       <td>5.658584e-01</td>
       <td>5.692494e-01</td>
       <td>5.219090e-02</td>
@@ -1069,6 +1467,8 @@ Showing first 25 rows of 39.
       <td>0.588492</td>
       <td>0.587970</td>
       <td>-0.186836</td>
+      <td>-0.054604</td>
+      <td>0.004504</td>
       <td>0.097701</td>
       <td>0.124110</td>
       <td>0.064620</td>
@@ -1080,6 +1480,12 @@ Showing first 25 rows of 39.
       <td>0.804626</td>
       <td>0.767094</td>
       <td>0.780264</td>
+      <td>0.809270</td>
+      <td>0.766773</td>
+      <td>0.762530</td>
+      <td>0.805800</td>
+      <td>0.014840</td>
+      <td>-0.043407</td>
       <td>7.594481e-01</td>
       <td>7.659296e-01</td>
       <td>9.116002e-02</td>
@@ -1105,6 +1511,8 @@ Showing first 25 rows of 39.
       <td>0.871214</td>
       <td>0.794713</td>
       <td>-0.093397</td>
+      <td>-0.026593</td>
+      <td>0.006574</td>
       <td>0.221590</td>
       <td>0.247683</td>
       <td>0.161511</td>
@@ -1116,6 +1524,12 @@ Showing first 25 rows of 39.
       <td>0.793678</td>
       <td>0.792967</td>
       <td>0.810604</td>
+      <td>0.839986</td>
+      <td>0.792849</td>
+      <td>0.786884</td>
+      <td>0.839078</td>
+      <td>0.033536</td>
+      <td>-0.015692</td>
       <td>7.829083e-01</td>
       <td>7.898135e-01</td>
       <td>9.043972e-02</td>
@@ -1141,6 +1555,8 @@ Showing first 25 rows of 39.
       <td>0.920405</td>
       <td>0.805840</td>
       <td>-0.035400</td>
+      <td>0.016943</td>
+      <td>0.045933</td>
       <td>0.233432</td>
       <td>0.269583</td>
       <td>0.172274</td>
@@ -1152,6 +1568,12 @@ Showing first 25 rows of 39.
       <td>0.774722</td>
       <td>0.817249</td>
       <td>0.832930</td>
+      <td>0.869362</td>
+      <td>0.817239</td>
+      <td>0.812250</td>
+      <td>0.869847</td>
+      <td>0.034657</td>
+      <td>0.000270</td>
       <td>8.128112e-01</td>
       <td>8.217682e-01</td>
       <td>9.259457e-02</td>
@@ -1177,233 +1599,19 @@ Showing first 25 rows of 39.
       <td>0.934414</td>
       <td>0.840847</td>
       <td>-0.060260</td>
+      <td>0.016686</td>
+      <td>0.050352</td>
       <td>0.231054</td>
       <td>0.264337</td>
       <td>0.166251</td>
       <td>0.440811</td>
       <td>0.422084</td>
     </tr>
-    <tr>
-      <td>Cumulative_Spend</td>
-      <td>0.708244</td>
-      <td>0.689366</td>
-      <td>0.707227</td>
-      <td>6.782622e-01</td>
-      <td>6.849434e-01</td>
-      <td>7.630419e-02</td>
-      <td>6.447283e-01</td>
-      <td>5.812317e-01</td>
-      <td>4.002448e-01</td>
-      <td>-1.147990e-02</td>
-      <td>-2.942202e-03</td>
-      <td>2.737086e-02</td>
-      <td>0.710845</td>
-      <td>0.690736</td>
-      <td>0.726180</td>
-      <td>0.711372</td>
-      <td>0.857519</td>
-      <td>0.936667</td>
-      <td>0.960294</td>
-      <td>1.000000</td>
-      <td>-0.049545</td>
-      <td>0.309953</td>
-      <td>1.101051e-01</td>
-      <td>0.178404</td>
-      <td>0.724088</td>
-      <td>0.929685</td>
-      <td>0.716841</td>
-      <td>-0.074726</td>
-      <td>0.209725</td>
-      <td>0.246297</td>
-      <td>0.155374</td>
-      <td>0.398184</td>
-      <td>0.380603</td>
-    </tr>
-    <tr>
-      <td>Spend_pct_change</td>
-      <td>0.040230</td>
-      <td>0.005309</td>
-      <td>-0.002542</td>
-      <td>-3.490337e-02</td>
-      <td>-4.700138e-02</td>
-      <td>-5.248516e-02</td>
-      <td>-5.488324e-02</td>
-      <td>-5.525179e-02</td>
-      <td>-1.733616e-01</td>
-      <td>2.847391e-01</td>
-      <td>3.426060e-01</td>
-      <td>9.506229e-02</td>
-      <td>-0.156369</td>
-      <td>-0.068171</td>
-      <td>0.013054</td>
-      <td>-0.048140</td>
-      <td>-0.074695</td>
-      <td>-0.056553</td>
-      <td>-0.053102</td>
-      <td>-0.049545</td>
-      <td>1.000000</td>
-      <td>0.146932</td>
-      <td>1.652402e-01</td>
-      <td>0.173275</td>
-      <td>-0.038954</td>
-      <td>0.407637</td>
-      <td>-0.009765</td>
-      <td>0.172411</td>
-      <td>0.068277</td>
-      <td>0.051779</td>
-      <td>0.115413</td>
-      <td>0.139276</td>
-      <td>0.159682</td>
-    </tr>
-    <tr>
-      <td>Log_Spend</td>
-      <td>0.489738</td>
-      <td>0.389235</td>
-      <td>0.381788</td>
-      <td>3.837381e-01</td>
-      <td>3.752431e-01</td>
-      <td>2.859055e-02</td>
-      <td>3.591157e-01</td>
-      <td>3.682590e-01</td>
-      <td>-4.272894e-01</td>
-      <td>3.379758e-01</td>
-      <td>3.458936e-01</td>
-      <td>2.828353e-01</td>
-      <td>0.381383</td>
-      <td>0.278949</td>
-      <td>0.275855</td>
-      <td>0.225886</td>
-      <td>0.479169</td>
-      <td>0.439734</td>
-      <td>0.420670</td>
-      <td>0.309953</td>
-      <td>0.146932</td>
-      <td>1.000000</td>
-      <td>6.203983e-01</td>
-      <td>0.461092</td>
-      <td>0.383474</td>
-      <td>0.697440</td>
-      <td>0.378469</td>
-      <td>0.095295</td>
-      <td>0.217672</td>
-      <td>0.194016</td>
-      <td>0.184565</td>
-      <td>0.650400</td>
-      <td>0.651814</td>
-    </tr>
-    <tr>
-      <td>Spend_Index</td>
-      <td>0.410715</td>
-      <td>0.076784</td>
-      <td>0.071444</td>
-      <td>-6.481077e-17</td>
-      <td>-7.643988e-17</td>
-      <td>-3.469981e-17</td>
-      <td>-4.780861e-17</td>
-      <td>5.794060e-18</td>
-      <td>-3.196647e-01</td>
-      <td>5.099327e-01</td>
-      <td>4.981785e-01</td>
-      <td>6.847785e-01</td>
-      <td>0.141808</td>
-      <td>-0.051972</td>
-      <td>0.012384</td>
-      <td>-0.048345</td>
-      <td>0.229258</td>
-      <td>0.167369</td>
-      <td>0.123620</td>
-      <td>0.110105</td>
-      <td>0.165240</td>
-      <td>0.620398</td>
-      <td>1.000000e+00</td>
-      <td>0.771488</td>
-      <td>0.032352</td>
-      <td>0.614728</td>
-      <td>0.036619</td>
-      <td>0.144710</td>
-      <td>0.255283</td>
-      <td>0.246903</td>
-      <td>0.231007</td>
-      <td>0.795627</td>
-      <td>0.808957</td>
-    </tr>
-    <tr>
-      <td>High_Spend</td>
-      <td>0.393221</td>
-      <td>0.067256</td>
-      <td>0.063083</td>
-      <td>5.595216e-03</td>
-      <td>4.721907e-03</td>
-      <td>-5.422625e-03</td>
-      <td>6.151743e-03</td>
-      <td>8.249753e-03</td>
-      <td>-1.576006e-01</td>
-      <td>4.027853e-01</td>
-      <td>4.238715e-01</td>
-      <td>5.187723e-01</td>
-      <td>0.119794</td>
-      <td>-0.055398</td>
-      <td>0.149525</td>
-      <td>-0.081949</td>
-      <td>0.210392</td>
-      <td>0.193736</td>
-      <td>0.160952</td>
-      <td>0.178404</td>
-      <td>0.173275</td>
-      <td>0.461092</td>
-      <td>7.714878e-01</td>
-      <td>1.000000</td>
-      <td>0.021339</td>
-      <td>0.458368</td>
-      <td>0.036766</td>
-      <td>0.167240</td>
-      <td>0.215972</td>
-      <td>0.201907</td>
-      <td>0.198682</td>
-      <td>0.672660</td>
-      <td>0.680591</td>
-    </tr>
-    <tr>
-      <td>Traffic_Lag_1</td>
-      <td>0.679767</td>
-      <td>0.949120</td>
-      <td>0.947498</td>
-      <td>9.237328e-01</td>
-      <td>9.245247e-01</td>
-      <td>1.069761e-01</td>
-      <td>8.283659e-01</td>
-      <td>7.815870e-01</td>
-      <td>4.394149e-02</td>
-      <td>1.033990e-02</td>
-      <td>6.829511e-03</td>
-      <td>1.938433e-02</td>
-      <td>0.695218</td>
-      <td>0.632464</td>
-      <td>0.562562</td>
-      <td>0.619401</td>
-      <td>0.813780</td>
-      <td>0.812529</td>
-      <td>0.851557</td>
-      <td>0.724088</td>
-      <td>-0.038954</td>
-      <td>0.383474</td>
-      <td>3.235151e-02</td>
-      <td>0.021339</td>
-      <td>1.000000</td>
-      <td>0.938865</td>
-      <td>0.983947</td>
-      <td>-0.134529</td>
-      <td>0.348419</td>
-      <td>0.353641</td>
-      <td>0.315200</td>
-      <td>0.301333</td>
-      <td>0.295572</td>
-    </tr>
   </tbody>
 </table>
 
 <p>
-Showing first 25 rows of 33.
+Showing first 25 rows of 41.
 </p>
 
 
@@ -1436,7 +1644,7 @@ Showing first 25 rows of 33.
     </tr>
     <tr>
       <td>Columns</td>
-      <td>39</td>
+      <td>47</td>
     </tr>
     <tr>
       <td>DMAs</td>
@@ -1452,7 +1660,7 @@ Showing first 25 rows of 33.
     </tr>
     <tr>
       <td>Missing Values</td>
-      <td>1035</td>
+      <td>1069</td>
     </tr>
   </tbody>
 </table>
@@ -1494,6 +1702,36 @@ Showing first 25 rows of 33.
       <td>Transactions</td>
       <td>2.938079</td>
       <td>10.825548</td>
+    </tr>
+    <tr>
+      <td>Store_Count_Traffic</td>
+      <td>2.383379</td>
+      <td>6.849653</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits</td>
+      <td>2.801234</td>
+      <td>9.838859</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits_LY</td>
+      <td>2.824017</td>
+      <td>9.964966</td>
+    </tr>
+    <tr>
+      <td>Comp_Stores</td>
+      <td>2.396353</td>
+      <td>6.903661</td>
+    </tr>
+    <tr>
+      <td>Comp_Traffic</td>
+      <td>0.103964</td>
+      <td>1.227229</td>
+    </tr>
+    <tr>
+      <td>Comp_Store_Coverage</td>
+      <td>-4.234881</td>
+      <td>19.946856</td>
     </tr>
     <tr>
       <td>Store_Count</td>
@@ -1575,41 +1813,11 @@ Showing first 25 rows of 33.
       <td>3.206952</td>
       <td>13.806989</td>
     </tr>
-    <tr>
-      <td>Cumulative_Spend</td>
-      <td>3.819633</td>
-      <td>19.948695</td>
-    </tr>
-    <tr>
-      <td>Spend_pct_change</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>Log_Spend</td>
-      <td>-0.739913</td>
-      <td>-1.261317</td>
-    </tr>
-    <tr>
-      <td>Spend_Index</td>
-      <td>1.688385</td>
-      <td>3.325234</td>
-    </tr>
-    <tr>
-      <td>High_Spend</td>
-      <td>1.022287</td>
-      <td>-0.958070</td>
-    </tr>
-    <tr>
-      <td>Traffic_Lag_1</td>
-      <td>2.811777</td>
-      <td>9.911592</td>
-    </tr>
   </tbody>
 </table>
 
 <p>
-Showing first 25 rows of 33.
+Showing first 25 rows of 41.
 </p>
 
 
@@ -1963,12 +2171,12 @@ Showing first 25 rows of 34.
       <td>11.11</td>
     </tr>
     <tr>
-      <td>Traffic_pct_change</td>
+      <td>Traffic_Lag_1</td>
       <td>34</td>
       <td>5.56</td>
     </tr>
     <tr>
-      <td>Traffic_Lag_1</td>
+      <td>Traffic_pct_change</td>
       <td>34</td>
       <td>5.56</td>
     </tr>
@@ -1978,7 +2186,22 @@ Showing first 25 rows of 34.
       <td>5.56</td>
     </tr>
     <tr>
-      <td>DMA_Original_y</td>
+      <td>Comp_Traffic_Lag_1</td>
+      <td>34</td>
+      <td>5.56</td>
+    </tr>
+    <tr>
+      <td>DMA_Original_x</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>DMA</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Spend</td>
       <td>0</td>
       <td>0.00</td>
     </tr>
@@ -1998,37 +2221,7 @@ Showing first 25 rows of 34.
       <td>0.00</td>
     </tr>
     <tr>
-      <td>DMA_Original_x</td>
-      <td>0</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <td>DMA</td>
-      <td>0</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <td>Spend</td>
-      <td>0</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <td>Month_Number</td>
-      <td>0</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <td>Year</td>
-      <td>0</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <td>TradeAreaPopulation</td>
-      <td>0</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <td>DMA_Population</td>
+      <td>Store_Count</td>
       <td>0</td>
       <td>0.00</td>
     </tr>
@@ -2038,27 +2231,42 @@ Showing first 25 rows of 34.
       <td>0.00</td>
     </tr>
     <tr>
-      <td>Store_Count</td>
+      <td>DMA_Original_y</td>
       <td>0</td>
       <td>0.00</td>
     </tr>
     <tr>
-      <td>Total_Selling_SqFt</td>
+      <td>Comp_Store_Coverage</td>
       <td>0</td>
       <td>0.00</td>
     </tr>
     <tr>
-      <td>Avg_Selling_SqFt</td>
+      <td>Comp_Traffic</td>
       <td>0</td>
       <td>0.00</td>
     </tr>
     <tr>
-      <td>Rolling_Spend_3</td>
+      <td>Comp_Stores</td>
       <td>0</td>
       <td>0.00</td>
     </tr>
     <tr>
-      <td>Month_Name</td>
+      <td>Comp_Exits_LY</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Store_Count_Traffic</td>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Quarter</td>
       <td>0</td>
       <td>0.00</td>
     </tr>
@@ -2066,7 +2274,7 @@ Showing first 25 rows of 34.
 </table>
 
 <p>
-Showing first 25 rows of 39.
+Showing first 25 rows of 47.
 </p>
 
 
@@ -2341,6 +2549,12 @@ Showing first 25 rows of 39.
       <th>Spend</th>
       <th>Traffic</th>
       <th>Transactions</th>
+      <th>Store_Count_Traffic</th>
+      <th>Comp_Exits</th>
+      <th>Comp_Exits_LY</th>
+      <th>Comp_Stores</th>
+      <th>Comp_Traffic</th>
+      <th>Comp_Store_Coverage</th>
       <th>Store_Count</th>
       <th>Total_Selling_SqFt</th>
       <th>Avg_Selling_SqFt</th>
@@ -2366,6 +2580,8 @@ Showing first 25 rows of 39.
       <th>Traffic_Lag_12</th>
       <th>Rolling_Traffic_3</th>
       <th>Traffic_pct_change</th>
+      <th>Comp_Traffic_Lag_1</th>
+      <th>Rolling_Comp_Traffic_3</th>
       <th>Traffic_per_Store</th>
       <th>Transactions_per_Store</th>
       <th>Traffic_per_1000SqFt</th>
@@ -2376,6 +2592,12 @@ Showing first 25 rows of 39.
   <tbody>
     <tr>
       <td>count</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
+      <td>612.00</td>
       <td>612.00</td>
       <td>612.00</td>
       <td>612.00</td>
@@ -2404,6 +2626,8 @@ Showing first 25 rows of 39.
       <td>204.00</td>
       <td>612.00</td>
       <td>578.00</td>
+      <td>578.00</td>
+      <td>612.00</td>
       <td>612.00</td>
       <td>612.00</td>
       <td>612.00</td>
@@ -2415,6 +2639,12 @@ Showing first 25 rows of 39.
       <td>81931.37</td>
       <td>561741.22</td>
       <td>261255.85</td>
+      <td>17.56</td>
+      <td>561362.93</td>
+      <td>571172.29</td>
+      <td>17.33</td>
+      <td>-0.02</td>
+      <td>0.99</td>
       <td>23.62</td>
       <td>668611.32</td>
       <td>29166.92</td>
@@ -2440,6 +2670,8 @@ Showing first 25 rows of 39.
       <td>513086.41</td>
       <td>555407.14</td>
       <td>0.05</td>
+      <td>-0.02</td>
+      <td>-0.02</td>
       <td>22823.50</td>
       <td>10610.20</td>
       <td>818.88</td>
@@ -2451,6 +2683,12 @@ Showing first 25 rows of 39.
       <td>152561.41</td>
       <td>556416.26</td>
       <td>260845.96</td>
+      <td>14.36</td>
+      <td>556101.65</td>
+      <td>567516.25</td>
+      <td>14.21</td>
+      <td>0.05</td>
+      <td>0.04</td>
       <td>18.93</td>
       <td>571432.40</td>
       <td>3408.51</td>
@@ -2476,6 +2714,8 @@ Showing first 25 rows of 39.
       <td>516587.65</td>
       <td>541859.27</td>
       <td>0.26</td>
+      <td>0.05</td>
+      <td>0.04</td>
       <td>7844.67</td>
       <td>3369.99</td>
       <td>317.33</td>
@@ -2487,6 +2727,12 @@ Showing first 25 rows of 39.
       <td>-6000.00</td>
       <td>41259.00</td>
       <td>21354.00</td>
+      <td>3.00</td>
+      <td>41259.00</td>
+      <td>42160.00</td>
+      <td>3.00</td>
+      <td>-0.23</td>
+      <td>0.67</td>
       <td>5.00</td>
       <td>161480.00</td>
       <td>22463.09</td>
@@ -2512,6 +2758,8 @@ Showing first 25 rows of 39.
       <td>50110.00</td>
       <td>45564.33</td>
       <td>-0.50</td>
+      <td>-0.23</td>
+      <td>-0.18</td>
       <td>8251.80</td>
       <td>4270.80</td>
       <td>255.51</td>
@@ -2523,6 +2771,12 @@ Showing first 25 rows of 39.
       <td>0.00</td>
       <td>245657.25</td>
       <td>117130.50</td>
+      <td>9.00</td>
+      <td>245148.25</td>
+      <td>249931.50</td>
+      <td>9.00</td>
+      <td>-0.05</td>
+      <td>1.00</td>
       <td>12.00</td>
       <td>306280.00</td>
       <td>27026.50</td>
@@ -2548,6 +2802,8 @@ Showing first 25 rows of 39.
       <td>215010.50</td>
       <td>243827.67</td>
       <td>-0.17</td>
+      <td>-0.05</td>
+      <td>-0.04</td>
       <td>17324.38</td>
       <td>8148.13</td>
       <td>632.36</td>
@@ -2559,6 +2815,12 @@ Showing first 25 rows of 39.
       <td>28000.00</td>
       <td>355802.00</td>
       <td>163996.00</td>
+      <td>12.00</td>
+      <td>354847.50</td>
+      <td>368575.00</td>
+      <td>12.00</td>
+      <td>-0.02</td>
+      <td>1.00</td>
       <td>16.50</td>
       <td>473900.50</td>
       <td>28423.03</td>
@@ -2584,6 +2846,8 @@ Showing first 25 rows of 39.
       <td>332605.00</td>
       <td>356811.17</td>
       <td>0.02</td>
+      <td>-0.02</td>
+      <td>-0.02</td>
       <td>21686.12</td>
       <td>10137.59</td>
       <td>759.80</td>
@@ -2595,6 +2859,12 @@ Showing first 25 rows of 39.
       <td>96250.00</td>
       <td>681396.50</td>
       <td>324959.00</td>
+      <td>22.00</td>
+      <td>681396.50</td>
+      <td>691938.75</td>
+      <td>22.00</td>
+      <td>0.01</td>
+      <td>1.00</td>
       <td>30.00</td>
       <td>872685.00</td>
       <td>32149.21</td>
@@ -2620,6 +2890,8 @@ Showing first 25 rows of 39.
       <td>627605.00</td>
       <td>670212.17</td>
       <td>0.24</td>
+      <td>0.02</td>
+      <td>0.01</td>
       <td>27067.60</td>
       <td>12345.51</td>
       <td>927.24</td>
@@ -2631,6 +2903,12 @@ Showing first 25 rows of 39.
       <td>1825000.00</td>
       <td>3759759.00</td>
       <td>1796648.00</td>
+      <td>86.00</td>
+      <td>3759759.00</td>
+      <td>3809048.00</td>
+      <td>85.00</td>
+      <td>0.17</td>
+      <td>1.00</td>
       <td>99.00</td>
       <td>3122485.00</td>
       <td>34948.90</td>
@@ -2656,6 +2934,8 @@ Showing first 25 rows of 39.
       <td>3247183.00</td>
       <td>3266548.00</td>
       <td>0.88</td>
+      <td>0.17</td>
+      <td>0.16</td>
       <td>59633.17</td>
       <td>24727.67</td>
       <td>2758.97</td>
@@ -2698,6 +2978,30 @@ Showing first 25 rows of 39.
     <tr>
       <td>Transactions</td>
       <td>37</td>
+    </tr>
+    <tr>
+      <td>Store_Count_Traffic</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits_LY</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td>Comp_Stores</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td>Comp_Traffic</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>Comp_Store_Coverage</td>
+      <td>66</td>
     </tr>
     <tr>
       <td>Store_Count</td>
@@ -2763,35 +3067,11 @@ Showing first 25 rows of 39.
       <td>Rolling_Spend_12</td>
       <td>65</td>
     </tr>
-    <tr>
-      <td>Cumulative_Spend</td>
-      <td>75</td>
-    </tr>
-    <tr>
-      <td>Spend_pct_change</td>
-      <td>72</td>
-    </tr>
-    <tr>
-      <td>Log_Spend</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>Spend_Index</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <td>High_Spend</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>Traffic_Lag_1</td>
-      <td>43</td>
-    </tr>
   </tbody>
 </table>
 
 <p>
-Showing first 25 rows of 33.
+Showing first 25 rows of 41.
 </p>
 
 
@@ -3109,95 +3389,6 @@ Showing first 25 rows of 34.
       <td>1825000.00</td>
       <td>3759759.00</td>
       <td>1796648.00</td>
-    </tr>
-  </tbody>
-</table>
-
-</details>
-
-<br>
-
-
-
-<details>
-
-<summary>
-<b>reporting_metrics.csv</b>
-</summary>
-
-<br>
-
-<table border="1" class="dataframe dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>panel_rows</th>
-      <th>panel_dmas</th>
-      <th>panel_months</th>
-      <th>panel_start</th>
-      <th>panel_end</th>
-      <th>aggregate_incremental</th>
-      <th>aggregate_lower</th>
-      <th>aggregate_upper</th>
-      <th>aggregate_prob_positive</th>
-      <th>aggregate_lift</th>
-      <th>aggregate_dmas</th>
-      <th>positive_dma_count</th>
-      <th>negative_dma_count</th>
-      <th>bsts_pass_count</th>
-      <th>bsts_count</th>
-      <th>bsts_divergence_count</th>
-      <th>counterfactual_pass_count</th>
-      <th>counterfactual_count</th>
-      <th>counterfactual_mean_r2</th>
-      <th>placebo_tests</th>
-      <th>placebo_positive_rate</th>
-      <th>placebo_zero_crossing_rate</th>
-      <th>placebo_strong_positive_rate</th>
-      <th>placebo_strong_negative_rate</th>
-      <th>incremental_spend</th>
-      <th>spend_aggregate_impact</th>
-      <th>spend_impact_per_1k</th>
-      <th>spend_pearson</th>
-      <th>spend_pearson_p</th>
-      <th>spend_spearman</th>
-      <th>credible_direction_count</th>
-      <th>heterogeneity_count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>612</td>
-      <td>34</td>
-      <td>18</td>
-      <td>2025-02-01</td>
-      <td>2026-07-01</td>
-      <td>362785.262373</td>
-      <td>-3.036960e+06</td>
-      <td>3.777991e+06</td>
-      <td>0.595625</td>
-      <td>0.005808</td>
-      <td>9.0</td>
-      <td>6</td>
-      <td>5</td>
-      <td>9</td>
-      <td>11</td>
-      <td>2</td>
-      <td>11</td>
-      <td>11</td>
-      <td>0.969227</td>
-      <td>42</td>
-      <td>0.571429</td>
-      <td>0.809524</td>
-      <td>0.214286</td>
-      <td>0.047619</td>
-      <td>4.060636e+06</td>
-      <td>362785.262373</td>
-      <td>89.341973</td>
-      <td>0.572264</td>
-      <td>0.107353</td>
-      <td>0.216667</td>
-      <td>1</td>
-      <td>9</td>
     </tr>
   </tbody>
 </table>
@@ -4049,6 +4240,14 @@ Showing first 25 rows of 34.
       <td>1.000</td>
     </tr>
     <tr>
+      <td>Comp_Exits</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <td>Comp_Exits_LY</td>
+      <td>0.998</td>
+    </tr>
+    <tr>
       <td>Transactions</td>
       <td>0.997</td>
     </tr>
@@ -4071,6 +4270,14 @@ Showing first 25 rows of 34.
     <tr>
       <td>Store_Count</td>
       <td>0.925</td>
+    </tr>
+    <tr>
+      <td>Store_Count_Traffic</td>
+      <td>0.920</td>
+    </tr>
+    <tr>
+      <td>Comp_Stores</td>
+      <td>0.919</td>
     </tr>
     <tr>
       <td>DMA_Population</td>
@@ -4128,27 +4335,11 @@ Showing first 25 rows of 34.
       <td>Traffic_per_1000SqFt</td>
       <td>0.397</td>
     </tr>
-    <tr>
-      <td>Log_Spend</td>
-      <td>0.389</td>
-    </tr>
-    <tr>
-      <td>Spend_per_Store</td>
-      <td>0.336</td>
-    </tr>
-    <tr>
-      <td>Spend_per_1000SqFt</td>
-      <td>0.331</td>
-    </tr>
-    <tr>
-      <td>Avg_Selling_SqFt</td>
-      <td>0.107</td>
-    </tr>
   </tbody>
 </table>
 
 <p>
-Showing first 25 rows of 33.
+Showing first 25 rows of 41.
 </p>
 
 
@@ -4279,7 +4470,7 @@ Showing first 25 rows of 33.
 </table>
 
 <p>
-Showing first 25 rows of 423.
+Showing first 25 rows of 435.
 </p>
 
 

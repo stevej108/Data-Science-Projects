@@ -361,6 +361,22 @@ def apply_crosswalk(
         .replace(mapping)
     )
 
+    # -------------------------------------------------------
+    # Validate approved mappings
+    # -------------------------------------------------------
+
+    unapproved = crosswalk[
+        (crosswalk["Approved_DMA"] == "")
+        & (crosswalk["Spend_DMA"].isin(spend["DMA"].unique()))
+    ]
+
+    if not unapproved.empty:
+
+        raise ValueError(
+            "Unapproved DMA mappings remain:\n"
+            f"{unapproved[['Spend_DMA', 'Suggested_DMA', 'Status']].to_string(index=False)}"
+        )
+
 
     return (
         spend,
