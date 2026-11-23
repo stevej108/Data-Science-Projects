@@ -167,7 +167,9 @@ def add_calendar_features(
     future,
 ):
     """
-    Add model calendar features.
+    Add model calendar features using the
+    exact dtypes expected by the MLflow
+    model signature.
     """
 
     future = future.copy()
@@ -181,16 +183,19 @@ def add_calendar_features(
     future["Year"] = (
         future["Month"]
         .dt.year
+        .astype("int32")
     )
 
     future["Month_Number"] = (
         future["Month"]
         .dt.month
+        .astype("int32")
     )
 
     future["Quarter"] = (
         future["Month"]
         .dt.quarter
+        .astype("int32")
     )
 
     future["Holiday_Season"] = (
@@ -201,10 +206,11 @@ def add_calendar_features(
                 12,
             ]
         )
-        .astype(int)
+        .astype("int64")
     )
 
     return future
+
 
 
 def prepare_future_frame(

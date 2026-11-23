@@ -316,6 +316,26 @@ def test_calendar_features_are_correct():
         ]
     )
 
+    assert (
+        result["Year"].dtype
+        == np.dtype("int32")
+    )
+
+    assert (
+        result["Month_Number"].dtype
+        == np.dtype("int32")
+    )
+
+    assert (
+        result["Quarter"].dtype
+        == np.dtype("int32")
+    )
+
+    assert (
+        result["Holiday_Season"].dtype
+        == np.dtype("int64")
+    )
+
 
 # -------------------------------------------------
 # 5. Recursive forecasts feed later horizons
