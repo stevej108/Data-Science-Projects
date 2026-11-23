@@ -4,6 +4,10 @@ REGISTERED_MODEL_NAME = (
 
 MODEL_ALIAS = "Champion"
 
+SERVING_ENDPOINT_NAME = (
+    "marketing-traffic-forecast"
+)
+
 SOURCE_TABLE = (
     "workspace.default.synthetic_model_panel_v2"
 )
