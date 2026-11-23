@@ -296,6 +296,10 @@ def main():
                 input_example
             ),
 
+            code_paths=[
+                str(SRC_PATH),
+            ],
+
             pip_requirements=[
                 f"mlflow=={mlflow.__version__}",
                 f"pandas=={pd.__version__}",
