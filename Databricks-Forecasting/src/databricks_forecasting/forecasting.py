@@ -212,6 +212,68 @@ def add_calendar_features(
     return future
 
 
+def enforce_model_input_dtypes(
+    model_input,
+):
+    """
+    Enforce the exact dtypes required by the
+    registered MLflow model signature.
+    """
+
+    model_input = (
+        model_input.copy()
+    )
+
+    float_columns = [
+        "Traffic_Lag_1",
+        "Rolling_Traffic_3",
+        "Transactions_Lag_1",
+        "Transactions_Lag_3",
+        "Transactions_Lag_6",
+        "Total_Selling_SqFt",
+        "Avg_Selling_SqFt",
+        "DMA_Population",
+        "TradeAreaPopulation",
+        "Stores_per_Million",
+        "CX_Composite",
+        "Comp_Sales_Index",
+        "Avg_Competitors",
+        "Competitor_Density",
+        "Pct_A_Facility",
+    ]
+
+    int32_columns = [
+        "Year",
+        "Month_Number",
+        "Quarter",
+    ]
+
+    int64_columns = [
+        "Store_Count",
+        "Holiday_Season",
+    ]
+
+    for column in float_columns:
+        model_input[column] = (
+            model_input[column]
+            .astype("float64")
+        )
+
+    for column in int32_columns:
+        model_input[column] = (
+            model_input[column]
+            .astype("int32")
+        )
+
+    for column in int64_columns:
+        model_input[column] = (
+            model_input[column]
+            .astype("int64")
+        )
+
+    return model_input
+
+
 
 def prepare_future_frame(
     panel,
@@ -437,6 +499,12 @@ def generate_batch_forecast(
                     :,
                     model_features,
                 ]
+            )
+
+            model_input = (
+                enforce_model_input_dtypes(
+                    model_input
+                )
             )
 
             prediction = (

@@ -11,6 +11,7 @@ from databricks_forecasting.forecasting import (
     generate_batch_forecast,
     populate_static_features,
     prepare_future_frame,
+    enforce_model_input_dtypes,
 )
 
 
@@ -587,3 +588,83 @@ def test_nonpositive_forecast_horizon_raises():
             panel=panel,
             horizon=0,
         )
+
+def test_model_input_dtypes_match_mlflow_signature():
+
+    model_input = pd.DataFrame({
+        "Traffic_Lag_1": [100],
+        "Rolling_Traffic_3": [100],
+        "Transactions_Lag_1": [50],
+        "Transactions_Lag_3": [50],
+        "Transactions_Lag_6": [50],
+        "Store_Count": [33],
+        "Total_Selling_SqFt": [100000],
+        "Avg_Selling_SqFt": [10000],
+        "DMA_Population": [500000],
+        "TradeAreaPopulation": [400000],
+        "Stores_per_Million": [20],
+        "CX_Composite": [0.8],
+        "Comp_Sales_Index": [1.05],
+        "Avg_Competitors": [3],
+        "Competitor_Density": [0.25],
+        "Pct_A_Facility": [0.60],
+        "Year": [2026],
+        "Month_Number": [8],
+        "Quarter": [3],
+        "Holiday_Season": [0],
+    })
+
+    result = (
+        enforce_model_input_dtypes(
+            model_input
+        )
+    )
+
+    assert (
+        result["Year"].dtype
+        == np.dtype("int32")
+    )
+
+    assert (
+        result["Month_Number"].dtype
+        == np.dtype("int32")
+    )
+
+    assert (
+        result["Quarter"].dtype
+        == np.dtype("int32")
+    )
+
+    assert (
+        result["Store_Count"].dtype
+        == np.dtype("int64")
+    )
+
+    assert (
+        result["Holiday_Season"].dtype
+        == np.dtype("int64")
+    )
+
+    float_columns = [
+        "Traffic_Lag_1",
+        "Rolling_Traffic_3",
+        "Transactions_Lag_1",
+        "Transactions_Lag_3",
+        "Transactions_Lag_6",
+        "Total_Selling_SqFt",
+        "Avg_Selling_SqFt",
+        "DMA_Population",
+        "TradeAreaPopulation",
+        "Stores_per_Million",
+        "CX_Composite",
+        "Comp_Sales_Index",
+        "Avg_Competitors",
+        "Competitor_Density",
+        "Pct_A_Facility",
+    ]
+
+    for column in float_columns:
+        assert (
+            result[column].dtype
+            == np.dtype("float64")
+        )        
