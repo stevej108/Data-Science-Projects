@@ -283,6 +283,18 @@ def main():
         # Log packaged model
         # ---------------------------------------------
 
+        package_path = (
+            SRC_PATH
+            / "databricks_forecasting"
+        )
+
+        if not package_path.exists():
+            raise FileNotFoundError(
+                "Forecasting package path "
+                f"does not exist: {package_path}"
+            )
+
+
         mlflow.pyfunc.log_model(
             name="model",
 
@@ -297,11 +309,10 @@ def main():
             ),
 
             code_paths=[
-                str(SRC_PATH),
+                str(package_path),
             ],
 
-            pip_requirements=[
-                f"mlflow=={mlflow.__version__}",
+            extra_pip_requirements=[
                 f"pandas=={pd.__version__}",
                 f"xgboost=={xgboost.__version__}",
             ],
