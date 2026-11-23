@@ -17,48 +17,43 @@ This repository includes projects across:
 
 ---
 
+## Start Here
+
+If you're evaluating this portfolio, these projects best represent my current work:
+
+| Project | Focus |
+|---|---|
+| [Databricks Forecasting](https://github.com/stevej108/Data-Science-Projects/tree/main/Databricks-Forecasting) | Production ML, MLOps, forecasting, model deployment |
+| [Medicare Claims Intelligence Agent](https://github.com/stevej108/Medicare-Claims-Intelligence-Agent) | Healthcare AI, APIs, LLMs, CI/CD, production engineering |
+| [Marketing Incrementality](https://github.com/stevej108/Data-Science-Projects/tree/main/Marketing_Incrementality) | Experimentation, causal inference, marketing analytics |
+| [CMS Medicare Utilization Analytics](https://github.com/stevej108/CMS-Medicare-Utilization-Analytics) | Healthcare analytics and Medicare utilization |
+| [Productivity Optimization](https://github.com/stevej108/Data-Science-Projects/tree/main/Productivity%20Optimization) | Generative AI, RAG, enterprise knowledge |
+| [Production Forecasting](https://github.com/stevej108/Data-Science-Projects/tree/main/Forecasting) | Forecasting architecture, testing, ML engineering |
+
+---
+
+
 ## Featured Projects
 
 ### 1. Databricks Forecasting and Automated MLOps
 
 [Explore the Databricks Forecasting project](https://github.com/stevej108/Data-Science-Projects/tree/main/Databricks-Forecasting)
 
-An end-to-end forecasting and MLOps implementation developed using Databricks, MLflow, Delta Lake, Git, and automated multi-task workflows.
+An end-to-end forecasting and MLOps implementation using Databricks, MLflow, Delta Lake, automated model promotion, model serving, and batch inference.
 
-The project demonstrates how a forecasting model can move beyond experimentation into a governed production lifecycle:
-
-- Modular candidate training, validation, evaluation, and promotion
-- MLflow experiment tracking and model registration
-- Champion-versus-candidate model comparison
-- Automated model promotion based on validation criteria
-- Databricks Model Serving endpoint deployment
-- Batch forecasting through the promoted model
-- Delta Lake forecast outputs with controlled overwrite behavior
-- Git-integrated development using VS Code as the source of truth
-- Automated testing covering data validation, model behavior, and workflow logic
-- Databricks Jobs orchestration across the complete deployment pipeline
-
-**Core technologies:** Python, Databricks, MLflow, Delta Lake, XGBoost, scikit-learn, PySpark, pytest, Git, model serving, batch inference
+**Highlights:** Production ML · MLOps · MLflow · Databricks · Model Serving · Delta Lake · Automated Workflows
 
 ---
 
-### 2. Production Forecasting System
+### 2. Medicare Claims Intelligence Agent
 
-[Explore the Forecasting project](https://github.com/stevej108/Data-Science-Projects/tree/main/Forecasting)
+[Explore the Medicare Claims Intelligence Agent](https://github.com/stevej108/Medicare-Claims-Intelligence-Agent)
 
-A modular forecasting project focused on reproducible development, deployment configuration, automated testing, and production-oriented model design.
+A production-oriented healthcare AI application that combines Medicare claims intelligence with natural-language interaction and modern application architecture.
 
-This project provides the foundation for the Databricks implementation and demonstrates the separation of:
+The project extends analytical workflows into a deployable AI system, including API development, automated testing, containerization, CI, cloud deployment, and configurable LLM integration.
 
-- Data preparation
-- Feature engineering
-- Model training and evaluation
-- Forecast generation
-- Configuration management
-- Testing and validation
-- Deployment-oriented workflows
-
-**Core technologies:** Python, pandas, scikit-learn, XGBoost, MLflow, pytest, Git
+**Highlights:** Healthcare AI · Generative AI · FastAPI · Docker · CI/CD · LLM Integration · Production Engineering
 
 ---
 
@@ -66,42 +61,43 @@ This project provides the foundation for the Databricks implementation and demon
 
 [Explore the Marketing Incrementality project](https://github.com/stevej108/Data-Science-Projects/tree/main/Marketing_Incrementality)
 
-A business-focused marketing measurement project designed to estimate incremental impact rather than relying only on surface-level attribution metrics.
+A business-focused marketing measurement project designed to estimate incremental impact rather than relying solely on attribution metrics.
 
-The analysis emphasizes:
-
-- Treatment and control comparisons
-- Incremental lift estimation
-- Campaign performance measurement
-- Statistical validation
-- Translating model output into business recommendations
-- Reproducible analytical reporting
-
-**Core methods:** Incrementality measurement, experimentation, causal analysis, statistical inference, marketing analytics, Python
+**Highlights:** Causal Analysis · Incrementality · Experimentation · Statistical Inference · Marketing Analytics
 
 ---
 
-### 4. Enterprise Knowledge Assistant and Productivity Optimization
+### 4. CMS Medicare Utilization Analytics
+
+[Explore CMS Medicare Utilization Analytics](https://github.com/stevej108/CMS-Medicare-Utilization-Analytics)
+
+An applied healthcare analytics project focused on Medicare utilization data and translating complex healthcare datasets into decision-oriented insights.
+
+**Highlights:** Medicare · CMS Data · Healthcare Analytics · Utilization Analysis · Statistical Modeling
+
+---
+
+### 5. Enterprise Knowledge Assistant and Productivity Optimization
 
 [Explore the Productivity Optimization project](https://github.com/stevej108/Data-Science-Projects/tree/main/Productivity%20Optimization)
 
-An applied AI and analytics project focused on improving information discovery, knowledge access, and organizational productivity.
+An applied AI project focused on improving enterprise information discovery, knowledge access, and organizational productivity.
 
-The project explores how retrieval, natural-language interfaces, and structured analytical workflows can help users find relevant information and convert it into actionable business insight.
-
-**Core technologies and concepts:** Generative AI, retrieval-augmented generation, natural-language processing, enterprise search, knowledge management, productivity analytics
+**Highlights:** Generative AI · RAG · NLP · Enterprise Search · Knowledge Management
 
 ---
 
-### 5. Featured Analytics Projects
+### 6. Production Forecasting System
 
-[Browse the Featured Projects collection](https://github.com/stevej108/Data-Science-Projects/tree/main/Featured-Projects)
+[Explore the Forecasting project](https://github.com/stevej108/Data-Science-Projects/tree/main/Forecasting)
 
-A curated collection of applied analytics work selected for its business relevance, technical depth, and decision-making value.
+A modular forecasting system focused on reproducible model development, automated testing, deployment configuration, and production-oriented design.
 
-This collection provides a focused entry point for projects spanning forecasting, optimization, marketing analytics, customer behavior, and applied machine learning.
+**Highlights:** Forecasting · XGBoost · MLflow · Testing · Modular ML Engineering
 
 ---
+
+
 
 ## Additional Applied Analytics Projects
 
